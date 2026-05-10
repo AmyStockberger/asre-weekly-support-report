@@ -61,13 +61,8 @@
         },
         "national": {
           "headline": "National real estate news",
-          "items": [
-            {
-              "title": "Source unavailable",
-              "summary": "Source unavailable this week, check back next Sunday.",
-              "url": ""
-            }
-          ]
+          "items": [],
+          "note": "National news source is being upgraded. Regular weekly headlines resume next Sunday."
         },
         "partner": {
           "spotlight": {
@@ -85,14 +80,8 @@
         },
         "events": {
           "headline": "Client events this week",
-          "items": [
-            {
-              "title": "Source unavailable",
-              "when": "",
-              "where": "",
-              "notes": "Source unavailable this week, check back next Sunday."
-            }
-          ]
+          "items": [],
+          "note": "No client events on the calendar this week. Check back next Sunday for upcoming trainings and team events."
         }
       }
     }
