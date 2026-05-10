@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-10T13:14:25Z",
+  "updatedAt": "2026-05-10T13:34:31Z",
   "reports": [
     {
       "weekId": "2026-W19",
@@ -11,7 +11,7 @@
       "podcastDuration": "approx 4 min",
       "sections": {
         "marketStats": {
-          "headline": "Sioux Falls market stats",
+          "headline": "Sioux Falls market stats this week",
           "bullets": [
             "Source unavailable this week, check back next Sunday."
           ],
