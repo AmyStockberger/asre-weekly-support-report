@@ -379,93 +379,15 @@ def build_events():
         return fallback
 
 
-def build_market_stats():
-    fallback = {
-        "headline": "Sioux Falls market stats",
-        "bullets": ["Source unavailable this week, check back next Sunday."],
-        "chartTitle": "Median sale price, 12-month view",
-        "chart": [],
-        "sourceUrl": "",
-    }
-
-    try:
-        files = google_drive.list_files_in_folder(
-            GOOGLE_DRIVE["sf_market_stats_folder"]
-        )
-    except Exception as exc:
-        logger.warning("market stats folder list failed: %s", exc)
-        return fallback
-
-    if not files:
-        return fallback
-
-    latest = files[0]
-    file_id = latest["id"]
-    mime = latest.get("mimeType", "")
-
-    try:
-        content = google_drive.download_file(file_id)
-    except Exception as exc:
-        logger.warning("market stats download failed: %s", exc)
-        return fallback
-
-    extracted_text = ""
-    if isinstance(content, str):
-        extracted_text = content
-    elif isinstance(content, (bytes, bytearray)):
-        if "pdf" in mime.lower() or latest.get("name", "").lower().endswith(".pdf"):
-            try:
-                from PyPDF2 import PdfReader
-
-                reader = PdfReader(io.BytesIO(bytes(content)))
-                extracted_text = "\n".join(
-                    page.extract_text() or "" for page in reader.pages
-                )
-            except Exception as exc:
-                logger.warning("market stats PDF parse failed: %s", exc)
-                return fallback
-        else:
-            try:
-                extracted_text = content.decode("utf-8", errors="replace")
-            except Exception:
-                return fallback
-
-    if not extracted_text.strip():
-        return fallback
-
-    user_prompt = (
-        "Below is the latest RASE Sioux Falls market stats document. "
-        "Extract the headline numbers an agent needs this week. Return "
-        "strict JSON with keys headline, bullets, chartTitle, chart, "
-        "sourceUrl. headline is six to ten words sentence case. bullets "
-        "is three short sentences in Amy's voice covering median sale "
-        "price, pending sales year over year, and average days on "
-        "market. chartTitle is one short phrase. chart is an array of "
-        "twelve objects with month and value where month looks like "
-        "'May 25' and value is the median sale price in thousands as a "
-        "number. sourceUrl is empty if not given. JSON only. No code "
-        f"fences.\n\nDocument:\n{extracted_text[:9000]}"
+def build_market_stats(last_week_pending=None):
+    """Pull active/pending counts, weekly solds stats, and the 12-month median
+    chart from the SF Market Stats Drive folder. See lib/market_stats.py."""
+    from lib import market_stats as _ms
+    return _ms.build_market_stats_section(
+        google_drive,
+        GOOGLE_DRIVE["sf_market_stats_folder"],
+        last_week_pending=last_week_pending,
     )
-
-    raw = summarize(SYSTEM_PROMPT, user_prompt, max_tokens=1500)
-    if not raw:
-        return fallback
-
-    try:
-        cleaned = raw.strip().strip("`")
-        if cleaned.startswith("json"):
-            cleaned = cleaned[4:]
-        parsed = json.loads(cleaned)
-        return {
-            "headline": parsed.get("headline", fallback["headline"]),
-            "bullets": parsed.get("bullets", fallback["bullets"]),
-            "chartTitle": parsed.get("chartTitle", fallback["chartTitle"]),
-            "chart": parsed.get("chart", []),
-            "sourceUrl": parsed.get("sourceUrl", ""),
-        }
-    except Exception as exc:
-        logger.warning("market stats JSON parse failed: %s", exc)
-        return fallback
 
 
 def build_greeting(week_label: str, sections: dict) -> str:
@@ -573,13 +495,28 @@ def main():
 
     logger.info("Compiling %s (%s)", week_id, week_label)
 
-    market_stats = _safe_call("build_market_stats", build_market_stats, {
-        "headline": "Sioux Falls market stats",
-        "bullets": ["Source unavailable this week, check back next Sunday."],
-        "chartTitle": "Median sale price, 12-month view",
-        "chart": [],
-        "sourceUrl": "",
-    })
+    # Pull last week's pending count from the previous report so we can render
+    # a week-over-week trend bullet.
+    last_week_pending = None
+    prev_reports = (existing or {}).get("reports", []) or []
+    for r in prev_reports:
+        ms = (r or {}).get("sections", {}).get("marketStats", {})
+        internal = ms.get("_internal") or {}
+        if "pending_count" in internal:
+            last_week_pending = internal["pending_count"]
+            break
+
+    market_stats = _safe_call(
+        "build_market_stats",
+        lambda: build_market_stats(last_week_pending=last_week_pending),
+        {
+            "headline": "Sioux Falls market stats",
+            "bullets": ["Source unavailable this week, check back next Sunday."],
+            "chartTitle": "Median sale price, 12-month view",
+            "chart": [],
+            "sourceUrl": "",
+        },
+    )
 
     local_news, real_estate = _safe_call(
         "build_local_news_and_real_estate",
