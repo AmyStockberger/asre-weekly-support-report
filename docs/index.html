@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The ASRE Weekly Support Report</title>
+<style>
+  :root { --navy: #24327A; --yellow: #EED75F; --bg: #F7F8FB; --card: #FFFFFF; --text: #1A1F36; --muted: #5A6478; --border: #E5E8F0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.55; min-height: 100vh; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 24px 20px 80px; }
+  .brand-band-navy { background: var(--navy); height: 12px; }
+  .brand-band-yellow { background: var(--yellow); height: 6px; }
+  header.hero { background: var(--navy); color: #fff; padding: 36px 20px 28px; border-radius: 12px; margin-top: 18px; }
+  .hero-inner { max-width: 880px; margin: 0 auto; }
+  .kicker { font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--yellow); font-weight: 700; margin-bottom: 8px; }
+  h1 { font-size: 32px; margin: 0 0 6px; line-height: 1.2; font-weight: 800; }
+  .week-label { font-size: 16px; opacity: 0.9; margin: 0; }
+  .greeting { margin-top: 18px; font-size: 17px; background: rgba(255,255,255,0.08); padding: 16px 18px; border-radius: 8px; border-left: 4px solid var(--yellow); }
+  .podcast { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; margin: 22px 0; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .podcast-label { font-weight: 700; color: var(--navy); font-size: 14px; margin-right: 8px; }
+  .podcast audio { flex: 1 1 320px; min-width: 240px; }
+  .podcast-duration { color: var(--muted); font-size: 13px; }
+  section.report-section { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 22px 24px; margin: 18px 0; }
+  .section-headline { font-size: 20px; font-weight: 700; color: var(--navy); margin: 0 0 14px; }
+  ul { margin: 0 0 8px; padding-left: 22px; }
+  li { margin: 6px 0; }
+  a { color: var(--navy); text-decoration: underline; }
+  a:hover { color: #000; }
+  .item-card { border-top: 1px solid var(--border); padding-top: 12px; margin-top: 12px; }
+  .item-card:first-of-type { border-top: 0; padding-top: 0; margin-top: 0; }
+  .item-title { font-weight: 700; margin: 0 0 4px; font-size: 16px; }
+  .item-summary { color: var(--text); margin: 0 0 6px; font-size: 15px; }
+  .item-meta { color: var(--muted); font-size: 13px; }
+  .partner-spotlight { background: linear-gradient(135deg, #FFFCEC 0%, #FFF8D1 100%); border-left: 5px solid var(--yellow); }
+  .partner-name { font-size: 22px; font-weight: 800; color: var(--navy); margin: 0 0 4px; }
+  .partner-cat { color: var(--muted); font-size: 13px; margin: 0 0 12px; }
+  .partner-pitch { font-size: 16px; margin: 0 0 10px; }
+  .partner-contact { font-weight: 600; }
+  .discount-row { display: flex; justify-content: space-between; gap: 16px; padding: 8px 0; border-bottom: 1px dashed var(--border); }
+  .discount-row:last-child { border-bottom: 0; }
+  .discount-partner { font-weight: 600; }
+  .event-card { background: #F0F3FB; border-radius: 8px; padding: 12px 14px; margin: 10px 0; }
+  .event-title { font-weight: 700; margin: 0 0 4px; }
+  .event-when { color: var(--navy); font-weight: 600; font-size: 14px; }
+  .event-where { color: var(--muted); font-size: 14px; }
+  .event-notes { font-size: 14px; margin-top: 6px; }
+  .chart-wrap { margin-top: 12px; }
+  .chart-title { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+  table.chart-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  table.chart-table th, table.chart-table td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--border); }
+  table.chart-table th { color: var(--muted); font-weight: 600; }
+  footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 40px; padding: 20px 10px; border-top: 1px solid var(--border); }
+  footer .signoff { color: var(--navy); font-weight: 700; font-size: 14px; margin: 6px 0; }
+  .status-row { color: var(--muted); font-size: 12px; margin-top: 8px; }
+  .reload-btn { background: var(--navy); color: #fff; border: 0; padding: 8px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; }
+  .reload-btn:hover { background: #1A2660; }
+  .err { background: #FFF1F1; color: #8B1A1A; padding: 14px 18px; border-radius: 8px; border-left: 4px solid #C03A3A; margin: 22px 0; }
+</style>
+</head>
+<body>
+<div class="brand-band-navy"></div>
+<div class="brand-band-yellow"></div>
+<div class="wrap">
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="kicker">Amy Stockberger Real Estate</div>
+      <h1>The ASRE Weekly Support Report</h1>
+      <p class="week-label" id="week-label">Loading the latest week...</p>
+      <div class="greeting" id="greeting" style="display:none;"></div>
+    </div>
+  </header>
+  <div id="podcast" class="podcast" style="display:none;">
+    <span class="podcast-label">Listen instead</span>
+    <audio id="podcast-audio" controls preload="none"></audio>
+    <span class="podcast-duration" id="podcast-duration"></span>
+  </div>
+  <div id="report-body"></div>
+  <div class="status-row">
+    <span id="last-updated"></span>
+    <button class="reload-btn" id="reload-btn" style="margin-left:8px;">Reload</button>
+  </div>
+  <footer>
+    <div class="signoff">Serve. Serve. Serve. Sell.</div>
+    <div>Lifetime Home Support&trade; from Amy Stockberger Real Estate.</div>
+  </footer>
+</div>
+<script>
+(function () {
+  var FEED_URL = "https://raw.githubusercontent.com/AmyStockberger/asre-weekly-support-report/main/reports/reports.json";
+  function el(tag, attrs, children) { var e = document.createElement(tag); if (attrs) Object.keys(attrs).forEach(function (k) { if (k === "class") e.className = attrs[k]; else if (k === "html") e.innerHTML = attrs[k]; else e.setAttribute(k, attrs[k]); }); if (children) children.forEach(function (c) { if (typeof c === "string") e.appendChild(document.createTextNode(c)); else if (c) e.appendChild(c); }); return e; }
+  function safeText(s) { return s == null ? "" : String(s); }
+  function safeArr(a) { return Array.isArray(a) ? a : []; }
+  function renderItems(items) { var f = document.createDocumentFragment(); safeArr(items).forEach(function (it) { var c = el("div", { class: "item-card" }); c.appendChild(el("p", { class: "item-title" }, [safeText(it.title)])); c.appendChild(el("p", { class: "item-summary" }, [safeText(it.summary)])); if (it.url) { var a = el("a", { href: it.url, target: "_blank", rel: "noopener" }, ["Read source"]); var m = el("p", { class: "item-meta" }); m.appendChild(a); c.appendChild(m); } f.appendChild(c); }); return f; }
+  function buildSection(headline, contentNode) { var s = el("section", { class: "report-section" }); s.appendChild(el("h2", { class: "section-headline" }, [safeText(headline)])); s.appendChild(contentNode); return s; }
+  function renderMarketStats(ms) { var box = document.createDocumentFragment(); var bullets = safeArr(ms.bullets); if (bullets.length) { var ul = el("ul"); bullets.forEach(function (b) { ul.appendChild(el("li", null, [safeText(b)])); }); box.appendChild(ul); } if (ms.chartTitle) box.appendChild(el("p", { class: "chart-title" }, [safeText(ms.chartTitle)])); if (Array.isArray(ms.chart) && ms.chart.length) { var t = el("table", { class: "chart-table" }); var thead = el("thead"); thead.appendChild(el("tr", null, [el("th", null, ["Month"]), el("th", null, ["Value"])])); t.appendChild(thead); var tbody = el("tbody"); ms.chart.forEach(function (row) { if (typeof row === "object" && row) { tbody.appendChild(el("tr", null, [el("td", null, [safeText(row.month)]), el("td", null, [safeText(row.value)])])); } }); t.appendChild(tbody); box.appendChild(t); } if (ms.sourceUrl) { box.appendChild(el("p", { class: "item-meta" }, [el("a", { href: ms.sourceUrl, target: "_blank", rel: "noopener" }, ["Source"])])); } return buildSection(ms.headline || "Market stats", box); }
+  function renderMortgage(m) { var box = document.createDocumentFragment(); if (m.summary) box.appendChild(el("p", null, [safeText(m.summary)])); var pts = safeArr(m.keyPoints); if (pts.length) { var ul = el("ul"); pts.forEach(function (p) { ul.appendChild(el("li", null, [safeText(p)])); }); box.appendChild(ul); } if (m.sourceUrl) { box.appendChild(el("p", { class: "item-meta" }, [el("a", { href: m.sourceUrl, target: "_blank", rel: "noopener" }, ["Source"])])); } return buildSection(m.headline || "Rates and mortgage chatter", box); }
+  function renderPartner(p) { var box = document.createDocumentFragment(); var sp = p.spotlight || {}; var card = el("section", { class: "report-section partner-spotlight" }); card.appendChild(el("h2", { class: "section-headline" }, ["Home Support Partners spotlight"])); if (sp.name) card.appendChild(el("p", { class: "partner-name" }, [safeText(sp.name)])); if (sp.category) card.appendChild(el("p", { class: "partner-cat" }, [safeText(sp.category)])); if (sp.pitch) card.appendChild(el("p", { class: "partner-pitch" }, [safeText(sp.pitch)])); if (sp.contact) card.appendChild(el("p", { class: "partner-contact" }, [safeText(sp.contact)])); var discounts = safeArr(p.discounts); if (discounts.length) { var dWrap = el("div", { class: "report-section" }); dWrap.appendChild(el("h2", { class: "section-headline" }, ["This week's Home Support Partner discounts"])); discounts.forEach(function (d) { var row = el("div", { class: "discount-row" }); row.appendChild(el("span", { class: "discount-partner" }, [safeText(d.partner)])); row.appendChild(el("span", null, [safeText(d.offer)])); dWrap.appendChild(row); }); box.appendChild(card); box.appendChild(dWrap); return box; } box.appendChild(card); return box; }
+  function renderEvents(e) { var box = document.createDocumentFragment(); safeArr(e.items).forEach(function (it) { var card = el("div", { class: "event-card" }); card.appendChild(el("p", { class: "event-title" }, [safeText(it.title)])); var meta = el("p"); meta.appendChild(el("span", { class: "event-when" }, [safeText(it.when)])); if (it.where) { meta.appendChild(document.createTextNode("  ")); meta.appendChild(el("span", { class: "event-where" }, [safeText(it.where)])); } card.appendChild(meta); if (it.notes) card.appendChild(el("p", { class: "event-notes" }, [safeText(it.notes)])); box.appendChild(card); }); if (!safeArr(e.items).length) { box.appendChild(el("p", null, ["No events listed for the next 7 days."])); } return buildSection(e.headline || "Client events this week", box); }
+  function fetchAndRender() { var status = document.getElementById("last-updated"); status.textContent = "Loading..."; var bust = "?_=" + Date.now(); fetch(FEED_URL + bust, { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }).then(function (data) { var reports = (data && data.reports) || []; if (!reports.length) throw new Error("No reports yet. Check back Sunday."); var report = reports[0]; document.getElementById("week-label").textContent = report.weekLabel || ""; var greet = document.getElementById("greeting"); if (report.greeting) { greet.textContent = report.greeting; greet.style.display = ""; } var pBox = document.getElementById("podcast"); if (report.podcastUrl) { document.getElementById("podcast-audio").src = report.podcastUrl; document.getElementById("podcast-duration").textContent = report.podcastDuration || ""; pBox.style.display = ""; } else { pBox.style.display = "none"; } var body = document.getElementById("report-body"); body.innerHTML = ""; var s = report.sections || {}; if (s.marketStats) body.appendChild(renderMarketStats(s.marketStats)); if (s.localNews) body.appendChild(buildSection(s.localNews.headline || "Sioux Falls this week", renderItems(s.localNews.items))); if (s.realEstate) body.appendChild(buildSection(s.realEstate.headline || "Local development to watch", renderItems(s.realEstate.items))); if (s.mortgage) body.appendChild(renderMortgage(s.mortgage)); if (s.national) body.appendChild(buildSection(s.national.headline || "National real estate news", renderItems(s.national.items))); if (s.partner) body.appendChild(renderPartner(s.partner)); if (s.events) body.appendChild(renderEvents(s.events)); var when = data.updatedAt ? new Date(data.updatedAt).toLocaleString() : ""; status.textContent = when ? ("Last updated " + when) : ""; }).catch(function (err) { var body = document.getElementById("report-body"); body.innerHTML = ""; body.appendChild(el("div", { class: "err" }, ["Could not load this week's report. ", el("br"), safeText(err.message)])); status.textContent = "Load failed"; }); }
+  document.getElementById("reload-btn").addEventListener("click", fetchAndRender);
+  fetchAndRender();
+})();
+</script>
+</body>
+</html>
