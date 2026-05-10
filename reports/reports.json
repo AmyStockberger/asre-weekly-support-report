@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-10T13:14:25Z",
+  "reports": [
+    {
+      "weekId": "2026-W19",
+      "weekLabel": "Week of May 4",
+      "publishedAt": "2026-05-10",
+      "greeting": "Here is your weekly read. Pour a coffee and tell us what lands with your clients.",
+      "podcastUrl": "https://raw.githubusercontent.com/AmyStockberger/asre-weekly-support-report/main/reports/audio/2026-W19.mp3",
+      "podcastDuration": "approx 4 min",
+      "sections": {
+        "marketStats": {
+          "headline": "Sioux Falls market stats",
+          "bullets": [
+            "Source unavailable this week, check back next Sunday."
+          ],
+          "chartTitle": "Median sale price, 12-month view",
+          "chart": [],
+          "sourceUrl": ""
+        },
+        "localNews": {
+          "headline": "Sioux Falls this week",
+          "items": [
+            {
+              "title": "Source unavailable",
+              "summary": "Source unavailable this week, check back next Sunday.",
+              "url": ""
+            }
+          ]
+        },
+        "realEstate": {
+          "headline": "Local development to watch",
+          "items": [
+            {
+              "title": "Source unavailable",
+              "summary": "Source unavailable this week, check back next Sunday.",
+              "url": ""
+            }
+          ]
+        },
+        "mortgage": {
+          "headline": "Rates and mortgage chatter",
+          "summary": "Source unavailable this week, check back next Sunday.",
+          "keyPoints": [],
+          "sourceUrl": "https://loganmohtashami.com/2026/05/08/understanding-labor-data-and-mortgage-rates/"
+        },
+        "national": {
+          "headline": "National real estate news",
+          "items": [
+            {
+              "title": "Source unavailable",
+              "summary": "Source unavailable this week, check back next Sunday.",
+              "url": ""
+            }
+          ]
+        },
+        "partner": {
+          "spotlight": {
+            "name": "Home Support Partners",
+            "category": "Sioux Falls",
+            "pitch": "Source unavailable this week, check back next Sunday.",
+            "contact": ""
+          },
+          "discounts": [
+            {
+              "partner": "Find a Home",
+              "offer": "Amy Stockberger Real Estate | Sioux Falls, SD Our Listings Our Open Houses Search All Listings Schedule an Appointment or Showing New Listing Alerts"
+            }
+          ]
+        },
+        "events": {
+          "headline": "Client events this week",
+          "items": [
+            {
+              "title": "Source unavailable",
+              "when": "",
+              "where": "",
+              "notes": "Source unavailable this week, check back next Sunday."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
