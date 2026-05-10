@@ -43,17 +43,34 @@ def _to_float(value):
 
 
 def _to_date(value):
-    """Parse a date cell from xlsx. Returns datetime or None."""
+    """Parse a date cell from xlsx. Handles datetime, date, Excel float serial,
+    and many common string formats. Returns datetime or None."""
+    import datetime as _dt
     if value is None:
         return None
-    if isinstance(value, datetime):
+    # Native datetime
+    if isinstance(value, _dt.datetime):
         return value
+    # Native date (no time)
+    if isinstance(value, _dt.date):
+        return _dt.datetime(value.year, value.month, value.day)
+    # Excel serial (days since 1899-12-30)
+    if isinstance(value, (int, float)) and value > 1000:
+        try:
+            return _dt.datetime(1899, 12, 30) + _dt.timedelta(days=float(value))
+        except Exception:
+            return None
     s = str(value).strip()
     if not s:
         return None
-    for fmt in ("%Y-%m-%d", "%m/%d/%Y", "%m/%d/%y", "%Y-%m-%d %H:%M:%S", "%m-%d-%Y"):
+    formats = (
+        "%Y-%m-%d", "%m/%d/%Y", "%m/%d/%y", "%Y-%m-%d %H:%M:%S",
+        "%m-%d-%Y", "%m/%d/%Y %H:%M:%S", "%m/%d/%y %H:%M:%S",
+        "%Y/%m/%d", "%d-%b-%Y", "%d-%b-%y", "%b %d, %Y", "%B %d, %Y",
+    )
+    for fmt in formats:
         try:
-            return datetime.strptime(s, fmt)
+            return _dt.datetime.strptime(s, fmt)
         except ValueError:
             continue
     return None
@@ -124,23 +141,46 @@ def summarize_active_pending(rows):
 
 def summarize_rase(rows, week_window_days=7):
     """Compute solds-this-week stats. RASE DATA is a year-to-date sold export
-    so we filter by Selling Date within the last week_window_days."""
-    cutoff = datetime.now(timezone.utc).replace(tzinfo=None) - timedelta(days=week_window_days)
-
-    week_rows = []
+    so we filter by Selling Date within the last week_window_days. If fewer
+    than 3 rows fall in the window (likely date parse failure or sparse week),
+    we fall back to the most recent 30 rows by date."""
+    parsed = []
+    parse_failures = 0
+    raw_samples = []
     for r in rows:
-        sd = _to_date(r.get("Selling Date"))
-        if sd and sd >= cutoff:
-            week_rows.append(r)
+        raw = r.get("Selling Date")
+        sd = _to_date(raw)
+        if sd is None and raw not in (None, "", 0):
+            parse_failures += 1
+            if len(raw_samples) < 3:
+                raw_samples.append((repr(raw), type(raw).__name__))
+        parsed.append((r, sd))
+    if parse_failures:
+        logger.warning(
+            "RASE date parse: %d failures out of %d rows. Sample raw values: %s",
+            parse_failures, len(rows), raw_samples,
+        )
 
-    if not week_rows:
-        # Fall back to most recent 7 sold rows by date if filtering window is empty
-        dated = [(r, _to_date(r.get("Selling Date"))) for r in rows]
-        dated = [(r, d) for r, d in dated if d]
-        dated.sort(key=lambda t: t[1], reverse=True)
-        week_rows = [r for r, _ in dated[:7]]
+    dated = [(r, d) for r, d in parsed if d is not None]
+    dated.sort(key=lambda t: t[1], reverse=True)
+
+    cutoff = datetime.now(timezone.utc).replace(tzinfo=None) - timedelta(days=week_window_days)
+    week_rows = [r for r, d in dated if d >= cutoff]
+
+    if len(week_rows) < 3 and dated:
+        # Sparse week or date issues. Use most recent 30 sold rows.
+        logger.info(
+            "RASE week filter caught only %d rows. Falling back to most recent 30.",
+            len(week_rows),
+        )
+        week_rows = [r for r, _ in dated[:30]]
 
     sold_count = len(week_rows)
+    logger.info(
+        "RASE summarize: %d rows total, %d parseable dates, %d in week (%dd window), final %d",
+        len(rows), len(dated), len([r for r, d in dated if d >= cutoff]),
+        week_window_days, sold_count,
+    )
 
     sale_prices = [_to_float(r.get("Selling Price")) for r in week_rows]
     sale_prices = [v for v in sale_prices if v]
