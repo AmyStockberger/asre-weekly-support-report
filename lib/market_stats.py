@@ -82,17 +82,31 @@ def parse_xlsx_rows(content_bytes):
     return out
 
 
-def find_file_by_pattern(files, pattern_substrings, mime_filter=None):
-    """Return the first file whose name contains all substrings, optionally
-    matching a mime_filter (e.g. 'sheet' or 'pdf')."""
-    for f in files:
+def find_file_by_pattern(files, pattern_substrings, mime_filter=None,
+                          alt_substrings=None):
+    """Return the most recently modified file whose name contains all
+    `pattern_substrings`, optionally matching a mime_filter ('sheet' or 'pdf').
+
+    `alt_substrings` is a fallback list of alternates: if no file matches
+    `pattern_substrings`, try this second pattern set."""
+    def matches(f, subs):
         name = (f.get("name") or "").lower()
         mime = (f.get("mimeType") or "").lower()
         if mime_filter and mime_filter not in mime:
-            continue
-        if all(p.lower() in name for p in pattern_substrings):
-            return f
-    return None
+            return False
+        return all(p.lower() in name for p in subs)
+
+    candidates = [f for f in files if matches(f, pattern_substrings)]
+    if not candidates and alt_substrings:
+        candidates = [f for f in files if matches(f, alt_substrings)]
+    if not candidates:
+        return None
+
+    def sort_key(f):
+        return f.get("modifiedTime") or f.get("name") or ""
+
+    candidates.sort(key=sort_key, reverse=True)
+    return candidates[0]
 
 
 def summarize_active_pending(rows):
@@ -235,11 +249,27 @@ def build_market_stats_section(google_drive, folder_id, last_week_pending=None):
     if not files:
         return fallback
 
-    ap_file = find_file_by_pattern(files, ["Active and Pending Data"], mime_filter="sheet")
-    rase_file = find_file_by_pattern(files, ["RASE DATA"], mime_filter="sheet")
-    monthly_pdf = find_file_by_pattern(files, ["MARKET STAT", "2026"], mime_filter="pdf")
-    if not monthly_pdf:
-        monthly_pdf = find_file_by_pattern(files, ["MARKET STAT"], mime_filter="pdf")
+    ap_file = find_file_by_pattern(
+        files,
+        ["active and pending data"],
+        mime_filter="sheet",
+        alt_substrings=["active and pending"],
+    )
+    rase_file = find_file_by_pattern(files, ["rase data"], mime_filter="sheet")
+    monthly_pdf = find_file_by_pattern(
+        files,
+        ["market stat", "2026"],
+        mime_filter="pdf",
+        alt_substrings=["market stat"],
+    )
+
+    logger.info(
+        "market stats files: ap=%s rase=%s monthly_pdf=%s (folder had %d files)",
+        ap_file.get("name") if ap_file else None,
+        rase_file.get("name") if rase_file else None,
+        monthly_pdf.get("name") if monthly_pdf else None,
+        len(files),
+    )
 
     actives = pendings = sold_count = 0
     median_price = median_dom = avg_sp_lp = None

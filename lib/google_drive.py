@@ -90,9 +90,19 @@ def list_files_in_folder(folder_id: str):
         q=query,
         fields="files(id, name, mimeType, modifiedTime, size)",
         orderBy="modifiedTime desc",
-        pageSize=50,
+        pageSize=100,
+        supportsAllDrives=True,
+        includeItemsFromAllDrives=True,
     ).execute()
-    return results.get("files", [])
+    files = results.get("files", [])
+    import logging as _logging
+    _logging.getLogger(__name__).info(
+        "list_files_in_folder(%s): %d files: %s",
+        folder_id,
+        len(files),
+        [f.get("name") for f in files],
+    )
+    return files
 
 
 def download_file(file_id: str):
