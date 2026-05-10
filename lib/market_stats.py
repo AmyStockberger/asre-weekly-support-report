@@ -139,11 +139,39 @@ def summarize_active_pending(rows):
     return {"active": active, "pending": pending}
 
 
-def summarize_rase(rows, week_window_days=7):
+def summarize_rase(rows, week_window_days=7, pre_filtered=False):
     """Compute solds-this-week stats. RASE DATA is a year-to-date sold export
     so we filter by Selling Date within the last week_window_days. If fewer
     than 3 rows fall in the window (likely date parse failure or sparse week),
     we fall back to the most recent 30 rows by date."""
+    if pre_filtered:
+        # File is already filtered to last 7 days at export time. Just compute
+        # stats on every Sold row in the file. No date math needed.
+        sold_rows = [r for r in rows if _norm(r.get("Status")) in {"sold", "sld", "closed"}]
+        sale_prices = [_to_float(r.get("Selling Price")) for r in sold_rows]
+        sale_prices = [v for v in sale_prices if v]
+        median_price = int(statistics.median(sale_prices)) if sale_prices else None
+        doms = [_to_float(r.get("Days on Market as Active")) for r in sold_rows]
+        doms = [v for v in doms if v is not None]
+        median_dom = int(round(statistics.median(doms))) if doms else None
+        sp_lp = [_to_float(r.get("SP%LP")) for r in sold_rows]
+        sp_lp = [v for v in sp_lp if v is not None]
+        if sp_lp:
+            normalized = [v * 100 if v <= 1.5 else v for v in sp_lp]
+            avg_sp_lp = round(statistics.mean(normalized), 1)
+        else:
+            avg_sp_lp = None
+        logger.info(
+            "RASE pre-filtered: %d rows, %d sold, median $%s, dom %s, sp/lp %s",
+            len(rows), len(sold_rows), median_price, median_dom, avg_sp_lp,
+        )
+        return {
+            "sold_count": len(sold_rows),
+            "median_price": median_price,
+            "median_dom": median_dom,
+            "avg_sp_lp_pct": avg_sp_lp,
+        }
+
     SOLD_STATUSES = {"sold", "sld", "closed", "clsd", "cld"}
     parsed = []
     parse_failures = 0
@@ -312,7 +340,17 @@ def build_market_stats_section(google_drive, folder_id, last_week_pending=None):
         mime_filter="sheet",
         alt_substrings=["active and pending"],
     )
-    rase_file = find_file_by_pattern(files, ["rase data"], mime_filter="sheet")
+    # Prefer the new "RASE WEEKLY SOLDS" export (already pre-filtered to last 7
+    # days). Fall back to the legacy YTD "RASE DATA" file for backward compat.
+    rase_file = find_file_by_pattern(
+        files,
+        ["rase weekly solds"],
+        mime_filter="sheet",
+        alt_substrings=["rase data"],
+    )
+    rase_is_pre_filtered = bool(
+        rase_file and "weekly solds" in (rase_file.get("name") or "").lower()
+    )
     monthly_pdf = find_file_by_pattern(
         files,
         ["market stat", "2026"],
@@ -349,7 +387,7 @@ def build_market_stats_section(google_drive, folder_id, last_week_pending=None):
             if isinstance(data, str):
                 data = data.encode()
             rows = parse_xlsx_rows(bytes(data))
-            r = summarize_rase(rows)
+            r = summarize_rase(rows, pre_filtered=rase_is_pre_filtered)
             sold_count = r["sold_count"]
             median_price = r["median_price"]
             median_dom = r["median_dom"]
