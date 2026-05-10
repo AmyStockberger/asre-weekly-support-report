@@ -174,22 +174,29 @@ def summarize_rase(rows, week_window_days=7):
     dated = [(r, d) for r, d in parsed if d is not None]
     dated.sort(key=lambda t: t[1], reverse=True)
 
-    cutoff = datetime.now(timezone.utc).replace(tzinfo=None) - timedelta(days=week_window_days)
-    week_rows = [r for r, d in dated if d >= cutoff]
+    today = datetime.now(timezone.utc).replace(tzinfo=None, hour=23, minute=59, second=59)
+    cutoff = today - timedelta(days=week_window_days)
+    # Bound the window on BOTH sides. Many MLS exports include scheduled
+    # future-dated closings still flagged Sold. Those are not "this week's".
+    week_rows = [r for r, d in dated if cutoff <= d <= today]
 
     if len(week_rows) < 3 and dated:
-        # Sparse week or date issues. Use most recent 30 sold rows.
+        # Sparse week or date issues. Use the 30 most recent sold rows that
+        # have already closed (not future-dated).
         logger.info(
-            "RASE week filter caught only %d rows. Falling back to most recent 30.",
+            "RASE week filter caught only %d rows. Falling back to most recent 30 closed.",
             len(week_rows),
         )
-        week_rows = [r for r, _ in dated[:30]]
+        closed_only = [(r, d) for r, d in dated if d <= today]
+        closed_only.sort(key=lambda t: t[1], reverse=True)
+        week_rows = [r for r, _ in closed_only[:30]]
 
     sold_count = len(week_rows)
     logger.info(
-        "RASE summarize: %d rows total, %d parseable dates, %d in week (%dd window), final %d",
-        len(rows), len(dated), len([r for r, d in dated if d >= cutoff]),
-        week_window_days, sold_count,
+        "RASE summarize: %d rows total, %d parseable dates, %d in [%s..%s], final %d",
+        len(rows), len(dated),
+        len([r for r, d in dated if cutoff <= d <= today]),
+        cutoff.date(), today.date(), sold_count,
     )
 
     sale_prices = [_to_float(r.get("Selling Price")) for r in week_rows]
