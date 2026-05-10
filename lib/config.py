@@ -25,7 +25,7 @@ WEB_SOURCES = {
 }
 
 # Gemini model used for all summarization (free tier)
-GEMINI_MODEL = "gemini-1.5-flash"
+ANTHROPIC_MODEL = "claude-haiku-4-5"
 
 # Cap reports.json at six months of weekly entries
 REPORT_HISTORY_CAP = 26
