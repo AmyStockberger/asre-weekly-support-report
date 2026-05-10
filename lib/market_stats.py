@@ -144,10 +144,16 @@ def summarize_rase(rows, week_window_days=7):
     so we filter by Selling Date within the last week_window_days. If fewer
     than 3 rows fall in the window (likely date parse failure or sparse week),
     we fall back to the most recent 30 rows by date."""
+    SOLD_STATUSES = {"sold", "sld", "closed", "clsd", "cld"}
     parsed = []
     parse_failures = 0
     raw_samples = []
+    skipped_status = 0
     for r in rows:
+        status = _norm(r.get("Status"))
+        if status and status not in SOLD_STATUSES:
+            skipped_status += 1
+            continue
         raw = r.get("Selling Date")
         sd = _to_date(raw)
         if sd is None and raw not in (None, "", 0):
@@ -155,6 +161,10 @@ def summarize_rase(rows, week_window_days=7):
             if len(raw_samples) < 3:
                 raw_samples.append((repr(raw), type(raw).__name__))
         parsed.append((r, sd))
+    logger.info(
+        "RASE status filter: kept %d sold rows, skipped %d non-sold rows",
+        len(parsed), skipped_status,
+    )
     if parse_failures:
         logger.warning(
             "RASE date parse: %d failures out of %d rows. Sample raw values: %s",
