@@ -1,20 +1,20 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-10T14:36:02Z",
+  "updatedAt": "2026-05-10T14:54:31Z",
   "reports": [
     {
       "weekId": "2026-W19",
       "weekLabel": "Week of May 4",
       "publishedAt": "2026-05-10",
-      "greeting": "We're holding steady in Sioux Falls with 726 pending sales and a list-to-sale ratio of 98.3%, which tells us the market remains balanced and predictable. Mortgage rates are the conversation starter with every client right now, so Kyle Swiden at Plains Commerce Bank is ready to walk through spring refinancing options that could save thousands. Know your labor data and mortgage fundamentals cold, because that knowledge converts hesitant buyers into confident clients.",
+      "greeting": "Welcome to the week of May 4. We've got 726 pending sales in Sioux Falls and a 98.0% list to sale ratio, which tells us the market is moving inventory efficiently. Stay sharp on the fundamentals: understand your local labor market and track mortgage rates like you track your listings because that knowledge closes deals.",
       "podcastUrl": "https://raw.githubusercontent.com/AmyStockberger/asre-weekly-support-report/main/reports/audio/2026-W19.mp3",
       "podcastDuration": "approx 4 min",
       "sections": {
         "marketStats": {
           "headline": "Sioux Falls market stats this week",
           "bullets": [
-            "Active: 1343. Pending: 726. Sold this week: 312.",
-            "Median sale price: $325,000. average days on market: 80. list to sale ratio: 98.3%.",
+            "Active: 1343. Pending: 726. Sold this week: 16.",
+            "Median sale price: $353,500. average days on market: 96. list to sale ratio: 98.0%.",
             "Pending count is flat versus last week. Steady week."
           ],
           "chartTitle": "Median sale price, 12-month view",
@@ -29,12 +29,12 @@
           "items": [
             {
               "title": "Health Care",
-              "summary": "Healthcare expansion shapes how people choose where to live and work in Sioux Falls. Your clients need to understand these trends when buying or selling.",
+              "summary": "Healthcare expansion shapes Sioux Falls' economic growth and workforce opportunities. Amy Stockberger Real Estate agents track these trends to identify neighborhoods with strong professional demand.",
               "url": "https://siouxfalls.business/category/healthcare/"
             },
             {
               "title": "Food & Drink",
-              "summary": "New restaurants and food concepts drive foot traffic and property values in neighborhoods. Smart agents track these openings to position listings effectively.",
+              "summary": "Restaurant and retail developments signal neighborhood vitality and foot traffic patterns. Agents use this data to advise clients on emerging commercial and residential areas.",
               "url": "https://siouxfalls.business/category/food-drink/"
             }
           ]
@@ -44,18 +44,18 @@
           "items": [
             {
               "title": "Development",
-              "summary": "Construction and development projects directly impact land availability and future property appreciation. Amy Stockberger Real Estate agents stay ahead by monitoring what gets built next.",
+              "summary": "New construction projects directly impact property values and market conditions across Sioux Falls. Amy Stockberger Real Estate stays ahead of development news to serve clients better.",
               "url": "https://siouxfalls.business/category/development/"
             }
           ]
         },
         "mortgage": {
           "headline": "Rates and mortgage chatter",
-          "summary": "Logan Mohtashami breaks down the labor data and mortgage rates to show us what's actually driving housing demand right now. You need to understand these numbers because they directly impact your clients' buying power and your pipeline. The jobs report tells us whether people have stable income to qualify for loans, and mortgage rates tell us what their payments look like. Amy Stockberger Real Estate agents stay ahead by knowing these metrics cold. Your clients are asking about affordability, rates, and job security. When you understand the connection between labor data and housing demand, you stop guessing and start closing deals. This is the intelligence that separates top producers from everyone else in South Dakota.",
+          "summary": "Logan Mohtashami breaks down the current labor data and mortgage rates to show agents what's actually driving housing demand right now. The jobs report matters because it signals whether buyers have the income and confidence to make moves. Agents who track employment trends and mortgage rate shifts gain an edge in their market. You win deals by understanding economic fundamentals, not by guessing what happens next. Know your local labor market and rate environment like you know your inventory. That knowledge converts leads into closed transactions.",
           "keyPoints": [
-            "Labor data determines client buying power and loan qualification",
-            "Mortgage rates directly affect monthly payments and housing demand",
-            "Understanding economic indicators gives you a competitive edge in sales conversations"
+            "Labor data directly impacts buyer purchasing power and market demand",
+            "Mortgage rates and employment trends shape housing activity",
+            "Agents who understand economic fundamentals outperform competitors"
           ],
           "sourceUrl": "https://loganmohtashami.com/2026/05/08/understanding-labor-data-and-mortgage-rates/"
         },
@@ -71,10 +71,10 @@
         },
         "partner": {
           "spotlight": {
-            "name": "Plains Commerce Bank",
-            "category": "Mortgage & Refinancing Solutions",
-            "pitch": "Spring refinancing can save you thousands over the life of your loan. Kyle Swiden and Plains Commerce Bank know South Dakota homeowners inside and out. Talk to them about whether a rate adjustment makes sense for your situation.",
-            "contact": "Kyle Swiden"
+            "name": "NewEdge Advisors",
+            "category": "Wealth & retirement planning",
+            "pitch": "Spring is when homeowners need to get serious about their financial strategy. NewEdge Advisors helps you align your home investments with your long-term wealth goals. Work with them to build a plan that actually protects your assets and sets you up for success.",
+            "contact": "NewEdge Advisors"
           },
           "discounts": [
             {
