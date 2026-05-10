@@ -58,6 +58,8 @@ def _section_teaser(report: dict, key: str, fallback_headline: str, fallback_tea
         if items:
             first = items[0]
             teaser = first.get("summary") or first.get("title") or ""
+        elif section.get("note"):
+            teaser = section["note"]
 
     if not teaser:
         teaser = fallback_teaser
