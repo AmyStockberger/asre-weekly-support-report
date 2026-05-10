@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-10T13:45:00Z",
+  "updatedAt": "2026-05-10T13:57:02Z",
   "reports": [
     {
       "weekId": "2026-W19",
@@ -13,11 +13,15 @@
         "marketStats": {
           "headline": "Sioux Falls market stats this week",
           "bullets": [
-            "Source unavailable this week, check back next Sunday."
+            "Active: 1343. Pending: 726. Sold this week: 1.",
+            "Median sale price: $20,000. average days on market: 129. list to sale ratio: 80.0%."
           ],
           "chartTitle": "Median sale price, 12-month view",
           "chart": [],
-          "sourceUrl": ""
+          "sourceUrl": "",
+          "_internal": {
+            "pending_count": 726
+          }
         },
         "localNews": {
           "headline": "Sioux Falls this week",
