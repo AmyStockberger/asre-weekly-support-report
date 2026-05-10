@@ -1,0 +1,39 @@
+name: Send Weekly Support Report Email
+
+on:
+  schedule:
+    # Sunday 18:00 UTC = 1:00 PM Central during DST, 12:00 PM during standard time
+    - cron: '0 18 * * 0'
+  workflow_dispatch:
+    inputs:
+      recipient_override:
+        description: 'Optional recipient email for dry-run testing. Leave blank to send to the agent list.'
+        required: false
+        type: string
+        default: ''
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Send email
+        env:
+          OUTLOOK_APP_PASSWORD: ${{ secrets.OUTLOOK_APP_PASSWORD }}
+          OUTLOOK_FROM_EMAIL: amy@amystockberger.com
+          AGENT_LIST_EMAIL: agents@amystockberger.com
+          ARTIFACT_URL: ${{ secrets.ARTIFACT_URL }}
+          RECIPIENT_OVERRIDE: ${{ inputs.recipient_override }}
+        run: python send_email.py
