@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-10T13:57:02Z",
+  "updatedAt": "2026-05-10T14:27:33Z",
   "reports": [
     {
       "weekId": "2026-W19",
       "weekLabel": "Week of May 4",
       "publishedAt": "2026-05-10",
-      "greeting": "Here is your weekly read. Pour a coffee and tell us what lands with your clients.",
+      "greeting": "We're seeing 726 pending sales in Sioux Falls right now, which tells me buyer activity remains steady despite a flat week compared to last week. That pending count is real inventory moving through the pipeline, and Amy Stockberger Real Estate agents are positioned to capitalize on it. If you're thinking about selling, this is the time to get ahead of the competition.",
       "podcastUrl": "https://raw.githubusercontent.com/AmyStockberger/asre-weekly-support-report/main/reports/audio/2026-W19.mp3",
       "podcastDuration": "approx 4 min",
       "sections": {
@@ -14,7 +14,8 @@
           "headline": "Sioux Falls market stats this week",
           "bullets": [
             "Active: 1343. Pending: 726. Sold this week: 1.",
-            "Median sale price: $20,000. average days on market: 129. list to sale ratio: 80.0%."
+            "Median sale price: $20,000. average days on market: 129. list to sale ratio: 80.0%.",
+            "Pending count is flat versus last week. Steady week."
           ],
           "chartTitle": "Median sale price, 12-month view",
           "chart": [],
@@ -27,9 +28,14 @@
           "headline": "Sioux Falls this week",
           "items": [
             {
-              "title": "Source unavailable",
-              "summary": "Source unavailable this week, check back next Sunday.",
-              "url": ""
+              "title": "Health Care",
+              "summary": "Health care growth in Sioux Falls affects property values and buyer decisions. Amy Stockberger Real Estate agents track these trends to match clients with neighborhoods that fit their lifestyle.",
+              "url": "https://siouxfalls.business/category/healthcare/"
+            },
+            {
+              "title": "Retail",
+              "summary": "Retail expansion shapes commercial corridors and residential demand patterns across the city. Our team watches these shifts to identify emerging neighborhoods before prices climb.",
+              "url": "https://siouxfalls.business/category/retail/"
             }
           ]
         },
@@ -37,16 +43,20 @@
           "headline": "Local development to watch",
           "items": [
             {
-              "title": "Source unavailable",
-              "summary": "Source unavailable this week, check back next Sunday.",
-              "url": ""
+              "title": "Development",
+              "summary": "New development projects drive market opportunity and client interest in specific areas. Amy Stockberger Real Estate agents use this intel to position properties and advise buyers on growth corridors.",
+              "url": "https://siouxfalls.business/category/development/"
             }
           ]
         },
         "mortgage": {
           "headline": "Rates and mortgage chatter",
-          "summary": "Source unavailable this week, check back next Sunday.",
-          "keyPoints": [],
+          "summary": "Logan Mohtashami breaks down the labor data and mortgage rates to show you what's really moving housing demand right now. The jobs report matters because it directly impacts whether your buyers have the income to qualify for loans and whether they feel confident making a big purchase. Understanding these economic indicators before your competition does gives you the edge you need in conversations with clients. You walk in knowing the data, and you control the narrative around whether now is the right time for them to buy or sell.",
+          "keyPoints": [
+            "Labor data and jobs reports drive mortgage rate movements and buyer confidence",
+            "Strong employment numbers give buyers the income stability lenders require",
+            "Agents who understand economic indicators ahead of time win more deals"
+          ],
           "sourceUrl": "https://loganmohtashami.com/2026/05/08/understanding-labor-data-and-mortgage-rates/"
         },
         "national": {
@@ -61,10 +71,10 @@
         },
         "partner": {
           "spotlight": {
-            "name": "Home Support Partners",
-            "category": "Sioux Falls",
-            "pitch": "Source unavailable this week, check back next Sunday.",
-            "contact": ""
+            "name": "NewEdge Advisors",
+            "category": "Wealth & Retirement Planning",
+            "pitch": "Your home is your biggest asset. NewEdge Advisors helps you protect it and build real wealth around it. When you work with Amy Stockberger Real Estate, we connect you with advisors who understand homeownership finances inside and out.",
+            "contact": "NewEdge Advisors"
           },
           "discounts": [
             {
