@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-11T12:54:23Z",
+  "updatedAt": "2026-05-11T13:18:53Z",
   "reports": [
     {
       "weekId": "2026-W19",
@@ -28,24 +28,19 @@
           "headline": "Sioux Falls this week",
           "items": [
             {
-              "title": "Health Care",
-              "summary": "Healthcare expansion shapes Sioux Falls' economic growth and workforce opportunities. Amy Stockberger Real Estate agents track these trends to identify neighborhoods with strong professional demand.",
-              "url": "https://siouxfalls.business/category/healthcare/"
+              "title": "Sanford Health to merge with Minnesota's North Memorial Health",
+              "summary": "Sanford expands into the Twin Cities market through a new merger with North Memorial Health. Watch for downstream effects on Sioux Falls jobs, hiring patterns, and the housing demand that follows a major employer's growth.",
+              "url": "https://siouxfalls.business/"
             },
             {
-              "title": "Food & Drink",
-              "summary": "Restaurant and retail developments signal neighborhood vitality and foot traffic patterns. Agents use this data to advise clients on emerging commercial and residential areas.",
-              "url": "https://siouxfalls.business/category/food-drink/"
-            }
-          ]
-        },
-        "realEstate": {
-          "headline": "Local development to watch",
-          "items": [
+              "title": "Spring Parade of Homes features standout barndominium",
+              "summary": "A luxury barndominium hits the spring Parade of Homes tour. Worth a drive-through if you have clients chasing unique-property dreams or entertaining space outside the standard build.",
+              "url": "https://siouxfalls.business/"
+            },
             {
-              "title": "Development",
-              "summary": "New construction projects directly impact property values and market conditions across Sioux Falls. Amy Stockberger Real Estate stays ahead of development news to serve clients better.",
-              "url": "https://siouxfalls.business/category/development/"
+              "title": "Upscale Mexican restaurant opens at Lake Lorraine",
+              "summary": "A full-service Mexican restaurant lands at Lake Lorraine on the west side. Useful talk track for clients eyeing west-side neighborhoods or anyone you want to take to a new spot.",
+              "url": "https://siouxfalls.business/"
             }
           ]
         },

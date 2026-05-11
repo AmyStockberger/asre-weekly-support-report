@@ -90,7 +90,6 @@ def build_email_html(report: dict, artifact_url: str) -> str:
     sections_meta = [
         ("marketStats", "Sioux Falls market stats", "Latest numbers from the local board."),
         ("localNews", "Sioux Falls this week", "What is moving around town."),
-        ("realEstate", "Local development to watch", "Projects worth tracking for clients."),
         ("mortgage", "Rates and mortgage chatter", "What Logan Mohtashami is calling out."),
         ("national", "National real estate news", "The headlines worth a glance."),
         ("partner", "Home Support Partners spotlight", "Who to lean on this week."),
