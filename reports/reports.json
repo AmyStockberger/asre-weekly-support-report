@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-10T15:10:20Z",
+  "updatedAt": "2026-05-11T12:54:23Z",
   "reports": [
     {
       "weekId": "2026-W19",
@@ -61,8 +61,23 @@
         },
         "national": {
           "headline": "National real estate news",
-          "items": [],
-          "note": "National news source is being upgraded. Regular weekly headlines resume next Sunday."
+          "items": [
+            {
+              "title": "3 Instagram updates agents need to know about",
+              "summary": "Instagram changed how reach works in 2026. The Broke Agent breaks down the algorithm shift and the new discovery feed so you adapt before your reach drops.",
+              "url": "https://nowbam.com/3-instagram-updates-agents-need-to-know-about-right-now/"
+            },
+            {
+              "title": "What today's youngest homebuyers want from agents",
+              "summary": "NAR's 2026 Generational Trends Report shows Gen Z makes up 4 percent of buyers but already changes how homes get bought. Read it before you treat your next Gen Z lead like a 35-year-old buyer.",
+              "url": "https://nowbam.com/what-todays-youngest-homebuyers-want-from-agents/"
+            },
+            {
+              "title": "10-minute AI workflow that turns old listing photos into new content",
+              "summary": "Krys Benyamein walks through a fast workflow using Higgsfield and ChatGPT to turn old listing photos into cinematic sunset reels. New content without a re-shoot.",
+              "url": "https://nowbam.com/the-10-minute-ai-workflow-that-turns-old-listing-photos-into-new-content/"
+            }
+          ]
         },
         "partner": {
           "spotlight": {
