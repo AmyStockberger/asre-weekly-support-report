@@ -7,7 +7,7 @@ build_email_html turns a single report into an inline-styled HTML email.
 
 import html as html_lib
 
-from .config import BRAND_NAVY, BRAND_YELLOW
+from .config import BRAND_NAVY, BRAND_YELLOW, SAMY_URL
 
 
 def _safe(value, default=""):
@@ -180,6 +180,10 @@ def build_email_html(report: dict, artifact_url: str) -> str:
                     <a href="{cta_url_safe}" style="display: inline-block; background: {BRAND_YELLOW}; color: {BRAND_NAVY}; font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; padding: 14px 28px; border-radius: 4px; text-decoration: none;">
                       Read this week's full report
                     </a>
+                    <div style="margin-top: 14px; font-family: Arial, Helvetica, sans-serif; font-size: 14px;">
+                      Stuck on a process or SOP?
+                      <a href="{SAMY_URL}" style="color: {BRAND_NAVY}; font-weight: bold;">Ask Samy in Teams</a>
+                    </div>
                   </td>
                 </tr>
                 {podcast_row}
