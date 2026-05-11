@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-11T13:18:53Z",
+  "updatedAt": "2026-05-11T13:21:41Z",
   "reports": [
     {
       "weekId": "2026-W19",
@@ -92,6 +92,11 @@
           "headline": "Client events this week",
           "items": [],
           "note": "No client events on the calendar this week. Check back next Sunday for upcoming trainings and team events."
+        },
+        "asreLab": {
+          "headline": "ASRE Lab",
+          "tipHeadline": "Send Mother's Day texts from a smarter starting point",
+          "tip": "Pick five past clients you have not connected with in 90 days. Feed Claude their name, the month they closed with you, and one detail you remember. Ask for a no-sales Mother's Day text in your voice. Send all five before tonight. Reply rates on personal-touch outreach run 3 to 5 times higher than mass send. Watch what comes back."
         }
       }
     }

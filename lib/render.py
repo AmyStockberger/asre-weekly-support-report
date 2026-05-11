@@ -40,7 +40,12 @@ def _section_teaser(report: dict, key: str, fallback_headline: str, fallback_tea
     headline = section.get("headline") or fallback_headline
     teaser = ""
 
-    if key == "marketStats":
+    if key == "asreLab":
+        teaser = section.get("tip") or ""
+        tip_headline = section.get("tipHeadline")
+        if tip_headline:
+            headline = tip_headline
+    elif key == "marketStats":
         bullets = section.get("bullets") or []
         if bullets:
             teaser = bullets[0]
@@ -93,6 +98,7 @@ def build_email_html(report: dict, artifact_url: str) -> str:
         ("mortgage", "Rates and mortgage chatter", "What Logan Mohtashami is calling out."),
         ("national", "National real estate news", "The headlines worth a glance."),
         ("partner", "Home Support Partners spotlight", "Who to lean on this week."),
+        ("asreLab", "ASRE Lab", "This week's smart move."),
         ("events", "Client events this week", "Where to bring your people."),
     ]
 
