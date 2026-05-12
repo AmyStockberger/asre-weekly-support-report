@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-11T13:21:41Z",
+  "updatedAt": "2026-05-12T18:54:01Z",
   "reports": [
     {
       "weekId": "2026-W19",
@@ -89,9 +89,27 @@
           ]
         },
         "events": {
-          "headline": "Client events this week",
-          "items": [],
-          "note": "No client events on the calendar this week. Check back next Sunday for upcoming trainings and team events."
+          "headline": "On the calendar this week",
+          "items": [
+            {
+              "title": "Agent Coaching",
+              "when": "Tuesday May 12, 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "Thursday May 14, 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Coaching w/ Marc",
+              "when": "Thursday May 14, 11:00 AM",
+              "where": "Zoom",
+              "notes": ""
+            }
+          ]
         },
         "asreLab": {
           "headline": "ASRE Lab",
