@@ -1,7 +1,101 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-12T18:54:01Z",
+  "updatedAt": "2026-05-17T11:58:52Z",
   "reports": [
+    {
+      "weekId": "2026-W20",
+      "weekLabel": "Week of May 11",
+      "publishedAt": "2026-05-17",
+      "greeting": "The Sioux Falls market stayed steady this week with 726 pending sales flat from last week and a list to sale ratio of 97.6 percent. That's the kind of consistency that lets us plan accordingly and capitalize on opportunities without chasing trends. Healthcare expansion continues driving employment growth in our market, which means strong buyer demand for Amy Stockberger Real Estate.",
+      "podcastUrl": "https://raw.githubusercontent.com/AmyStockberger/asre-weekly-support-report/main/reports/audio/2026-W20.mp3",
+      "podcastDuration": "approx 4 min",
+      "sections": {
+        "marketStats": {
+          "headline": "Sioux Falls market stats this week",
+          "bullets": [
+            "Active: 1343. Pending: 726. Sold this week: 30.",
+            "Median sale price: $340,750. average days on market: 68. list to sale ratio: 97.6%.",
+            "Pending count is flat versus last week. Steady week."
+          ],
+          "chartTitle": "Median sale price, 12-month view",
+          "chart": [],
+          "sourceUrl": "",
+          "_internal": {
+            "pending_count": 726
+          }
+        },
+        "localNews": {
+          "headline": "Sioux Falls this week",
+          "items": [
+            {
+              "title": "Food & Drink",
+              "summary": "New restaurants and food concepts shape Sioux Falls dining options. Our agents talk to clients about neighborhood amenities constantly.",
+              "url": "https://siouxfalls.business/category/food-drink/"
+            },
+            {
+              "title": "Health Care",
+              "summary": "Healthcare expansion drives employment and population growth in our market. Strong job markets mean strong buyer demand for Amy Stockberger Real Estate.",
+              "url": "https://siouxfalls.business/category/healthcare/"
+            }
+          ]
+        },
+        "realEstate": {
+          "headline": "Local development to watch",
+          "items": [
+            {
+              "title": "Development",
+              "summary": "New projects reshape Sioux Falls neighborhoods and commercial corridors. Our team tracks development activity to advise clients on emerging opportunities.",
+              "url": "https://siouxfalls.business/category/development/"
+            }
+          ]
+        },
+        "mortgage": {
+          "headline": "Rates and mortgage chatter",
+          "summary": "Inflation data swings mortgage rates like a pendulum, and agents who ignore purchase application trends get left behind. The market rewards those who stay sharp on economic signals and adjust their strategy accordingly. You need to understand what drives rates and how buyers respond to those shifts if you want to compete in today's market. Amy Stockberger Real Estate watches these metrics religiously because your commission depends on it. Stop guessing about what's coming next and start reading the data.",
+          "keyPoints": [
+            "Inflation directly impacts mortgage rates and buyer purchasing power",
+            "Purchase applications reflect real market demand and buyer confidence",
+            "Agents who track economic indicators outperform those who don't"
+          ],
+          "sourceUrl": "https://loganmohtashami.com/2026/05/14/how-recent-inflation-data-affects-mortgage-rates-purchase-applications/"
+        },
+        "national": {
+          "headline": "National real estate news",
+          "items": [
+            {
+              "title": "Source unavailable",
+              "summary": "Source unavailable this week, check back next Sunday.",
+              "url": ""
+            }
+          ]
+        },
+        "partner": {
+          "spotlight": {
+            "name": "Plains Commerce Bank",
+            "category": "Mortgage & refinancing solutions",
+            "pitch": "Spring brings the right moment to lock in better rates or refinance your existing mortgage. Kyle Swiden at Plains Commerce Bank works with Amy Stockberger Real Estate clients to streamline the financing process and get you into the right loan structure. Stop leaving money on the table when rates shift.",
+            "contact": "Kyle Swiden"
+          },
+          "discounts": [
+            {
+              "partner": "Find a Home",
+              "offer": "Amy Stockberger Real Estate listings and open houses in Sioux Falls, SD"
+            }
+          ]
+        },
+        "events": {
+          "headline": "Client events this week",
+          "items": [
+            {
+              "title": "Source unavailable",
+              "when": "",
+              "where": "",
+              "notes": "Source unavailable this week, check back next Sunday."
+            }
+          ]
+        }
+      }
+    },
     {
       "weekId": "2026-W19",
       "weekLabel": "Week of May 4",
