@@ -32,6 +32,7 @@ from lib import (
     render,
 )
 from lib.config import (
+    ASRE_TEAM_CALENDAR_ICS,
     AUDIO_RETENTION_DAYS,
     GOOGLE_DRIVE,
     REPORT_HISTORY_CAP,
@@ -40,7 +41,7 @@ from lib.gemini_summarize import SYSTEM_PROMPT, summarize
 from lib.sources import (
     asre_discounts,
     logan_mohtashami,
-    nowbam,
+    rismedia,
     siouxfalls_business,
 )
 
@@ -216,7 +217,7 @@ def build_national():
         ],
     }
 
-    articles = _safe_call("nowbam.fetch", nowbam.fetch, [])
+    articles = _safe_call("rismedia.fetch", rismedia.fetch, [])
     if not articles:
         return fallback
 
@@ -226,7 +227,7 @@ def build_national():
     )
     user_prompt = (
         "Below are three recent national real estate articles from "
-        "nowbam.com. Rewrite each summary in Amy's voice in exactly two "
+        "rismedia.com. Rewrite each summary in Amy's voice in exactly two "
         "sentences. Return strict JSON with key items. Each item has "
         "title, summary, url. Keep the original urls. JSON only. No code "
         f"fences.\n\nArticles:\n{listing}"
@@ -330,8 +331,9 @@ def build_partner(used_spotlights):
 
 
 def build_events():
+    import re as _re
     fallback = {
-        "headline": "Client events this week",
+        "headline": "What's Coming Up at ASRE",
         "items": [
             {
                 "title": "Source unavailable",
@@ -343,40 +345,61 @@ def build_events():
     }
 
     try:
-        text = google_drive.read_doc(GOOGLE_DRIVE["client_events_doc"])
+        import requests as _requests
+        resp = _requests.get(ASRE_TEAM_CALENDAR_ICS, timeout=15)
+        resp.raise_for_status()
+        ics_text = resp.text
     except Exception as exc:
-        logger.warning("events doc read failed: %s", exc)
+        logger.warning("events ICS fetch failed: %s", exc)
         return fallback
 
-    if not text:
+    today = dt.date.today()
+    cutoff = today + dt.timedelta(days=60)
+    items = []
+
+    for block in _re.findall(r"BEGIN:VEVENT(.*?)END:VEVENT", ics_text, _re.DOTALL):
+        def get_field(name, b=block):
+            m = _re.search(rf"(?m)^{name}[^:]*:(.*)", b)
+            return m.group(1).strip() if m else ""
+
+        dtstart = get_field("DTSTART")
+        summary = get_field("SUMMARY")
+        location = get_field("LOCATION")
+        description = get_field("DESCRIPTION")
+
+        date_str = dtstart[:8]
+        try:
+            event_date = dt.date(int(date_str[:4]), int(date_str[4:6]), int(date_str[6:8]))
+        except Exception:
+            continue
+
+        if event_date < today or event_date > cutoff:
+            continue
+
+        when = event_date.strftime("%-d %B %Y")
+        if len(dtstart) > 8 and "T" in dtstart:
+            try:
+                time_part = dtstart[dtstart.index("T") + 1:dtstart.index("T") + 5]
+                h, m = int(time_part[:2]), int(time_part[2:4])
+                period = "AM" if h < 12 else "PM"
+                h12 = h % 12 or 12
+                when += f" at {h12}:{m:02d} {period}"
+            except Exception:
+                pass
+
+        items.append({
+            "title": summary,
+            "when": when,
+            "where": location or "ASRE Training Room",
+            "notes": description[:120] if description else "",
+        })
+
+    items.sort(key=lambda e: e["when"])
+
+    if not items:
         return fallback
 
-    today = dt.date.today().isoformat()
-    user_prompt = (
-        f"Today is {today}. Below is the Amy Stockberger Real Estate "
-        "client events document. Extract every event happening in the "
-        "next seven days. Return strict JSON with key items. Each item "
-        "has title, when, where, notes. Notes is one short line on who "
-        "to invite and what to mention. JSON only. No code "
-        f"fences.\n\nDocument:\n{text[:8000]}"
-    )
-
-    raw = summarize(SYSTEM_PROMPT, user_prompt, max_tokens=1200)
-    if not raw:
-        return fallback
-
-    try:
-        cleaned = raw.strip().strip("`")
-        if cleaned.startswith("json"):
-            cleaned = cleaned[4:]
-        parsed = json.loads(cleaned)
-        items = parsed.get("items") or []
-        if not items:
-            return fallback
-        return {"headline": "Client events this week", "items": items}
-    except Exception as exc:
-        logger.warning("events JSON parse failed: %s", exc)
-        return fallback
+    return {"headline": "What's Coming Up at ASRE", "items": items}
 
 
 def build_market_stats(last_week_pending=None):
@@ -554,7 +577,7 @@ def main():
     )
 
     events = _safe_call("build_events", build_events, {
-        "headline": "Client events this week",
+        "headline": "What's Coming Up at ASRE",
         "items": [],
     })
 
