@@ -16,11 +16,17 @@ GOOGLE_DRIVE = {
     "parent_folder": "1evCpBGeoeIoiCoGHEw1FTaqrqYQHvpEK",
 }
 
+# ASRE team calendar (public Outlook ICS ‚Äî no auth required)
+ASRE_TEAM_CALENDAR_ICS = (
+    "https://outlook.office365.com/owa/calendar/"
+    "Natalie@amystockberger.com/ASRE_Team_Calendar/calendar.ics"
+)
+
 # Web sources scraped weekly
 WEB_SOURCES = {
     "siouxfalls_business": "https://siouxfalls.business",
     "logan_mohtashami": "https://loganmohtashami.com",
-    "nowbam_re_news": "https://nowbam.com/category/re-news",
+    "rismedia_re_news": "https://rismedia.com/feed/",
     "asre_discounts": "https://amystockberger.com/home-support-team-discounts",
 }
 
@@ -43,7 +49,6 @@ OUTLOOK_SMTP = {
 # Brand colors used by the email renderer
 BRAND_NAVY = "#24327A"
 BRAND_YELLOW = "#EED75F"
-
 
 # Samy 2.0 (digital employee in Microsoft Teams)
 SAMY_URL = "https://teams.microsoft.com/l/chat/19:a802f64e-a338-4ef2-8644-43e724592a48_f623cfbe-092c-420f-8300-99f6f7ccfe65@unq.gbl.spaces/conversations?context=%7B%22contextType%22%3A%22chat%22%7D"
