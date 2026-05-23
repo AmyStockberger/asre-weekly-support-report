@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-23T14:30:39Z",
+  "updatedAt": "2026-05-23T23:11:55Z",
   "reports": [
     {
       "weekId": "2026-W21",
       "weekLabel": "Week of May 18",
       "publishedAt": "2026-05-23",
-      "greeting": "Pending inventory jumped 19 units this week to 745, and that tells us demand is warming up across the Sioux Falls market. With a list-to-sale ratio sitting at 97.9%, sellers still hold real leverage right now. Stay sharp on pricing and positioning because this momentum matters for your clients' timing.",
+      "greeting": "Pending inventory holds steady at 745 units while we closed 107 homes this week, which tells you the market rewards agents who know their stuff. Housing starts remain constrained nationwide, so understanding supply and demand dynamics gives you the edge clients need to hear. Let's use these numbers to close more deals.",
       "podcastUrl": "https://raw.githubusercontent.com/AmyStockberger/asre-weekly-support-report/main/reports/audio/2026-W21.mp3",
       "podcastDuration": "approx 4 min",
       "sections": {
@@ -15,7 +15,7 @@
           "bullets": [
             "Active: 1369. Pending: 745. Sold this week: 107.",
             "Median sale price: $365,000. average days on market: 66. list to sale ratio: 97.9%.",
-            "Pending count is up by 19 versus last week. Demand is leaning warmer."
+            "Pending count is flat versus last week. Steady week."
           ],
           "chartTitle": "Median sale price, 12-month view",
           "chart": [],
@@ -28,14 +28,14 @@
           "headline": "Sioux Falls this week",
           "items": [
             {
-              "title": "Health Care",
-              "summary": "Medical expansion drives job growth and attracts new talent to Sioux Falls. Amy Stockberger Real Estate agents need to know where healthcare money moves the market.",
-              "url": "https://siouxfalls.business/category/healthcare/"
+              "title": "Food & Drink",
+              "summary": "New restaurants and food service businesses reshape where people spend their dollars and leisure time. Amy Stockberger Real Estate agents track these trends because they drive foot traffic and property values in neighborhoods.",
+              "url": "https://siouxfalls.business/category/food-drink/"
             },
             {
-              "title": "Food & Drink",
-              "summary": "Restaurant and hospitality projects reshape neighborhoods and increase foot traffic. Your clients want to invest where commerce clusters and communities gather.",
-              "url": "https://siouxfalls.business/category/food-drink/"
+              "title": "Health Care",
+              "summary": "Health care expansion signals job growth and population movement in Sioux Falls. Our agents know which corridors attract medical professionals and where families relocate for employment.",
+              "url": "https://siouxfalls.business/category/healthcare/"
             }
           ]
         },
@@ -44,18 +44,18 @@
           "items": [
             {
               "title": "Development",
-              "summary": "New construction projects create inventory shifts and pricing pressure across the market. Amy Stockberger Real Estate tracks every shovel in the ground to stay ahead of trends.",
+              "summary": "New construction projects reveal where builders invest capital and which neighborhoods are heating up. Amy Stockberger Real Estate agents use development news to identify emerging opportunities before the market catches on.",
               "url": "https://siouxfalls.business/category/development/"
             }
           ]
         },
         "mortgage": {
           "headline": "Rates and mortgage chatter",
-          "summary": "Housing starts have flatlined for years, and understanding why matters for your business. Logan Mohtashami breaks down the economic forces crushing new construction through data and analysis. You need to know these trends because they shape inventory, prices, and opportunity in your markets. When supply stays constrained, your existing inventory becomes more valuable. Your clients need agents who understand what's driving scarcity. Amy Stockberger Real Estate stays ahead by tracking these fundamentals. Knowing the enemy in this case means knowing the economic barriers to new building. That knowledge helps you position listings smarter and predict where deals will happen next.",
+          "summary": "Housing starts have flatlined, and you need to understand why. Logan Mohtashami breaks down the real data behind the slowdown. The housing market stays constrained by supply issues and economic headwinds that agents face every day. Stop guessing about market conditions and start looking at actual data. Amy Stockberger Real Estate knows the numbers matter when you talk to buyers and sellers. You compete better when you understand what's actually happening in housing supply and demand.",
           "keyPoints": [
-            "Housing starts have stalled for years due to specific economic barriers you need to understand",
-            "Constrained supply means higher prices and more leverage for sellers in your market",
-            "Data-driven market knowledge gives you the edge to serve clients better than competitors"
+            "Housing starts have stalled for years due to identifiable market constraints",
+            "Data analysis reveals the true reasons behind market trends, not assumptions",
+            "Understanding supply and demand dynamics gives agents a competitive edge with clients"
           ],
           "sourceUrl": "https://loganmohtashami.com/2026/05/22/housing-starts-stalled-understanding-the-trend/"
         },
@@ -71,10 +71,10 @@
         },
         "partner": {
           "spotlight": {
-            "name": "Josh Osborne – CrossCountry Mortgage",
-            "category": "Home financing options",
-            "pitch": "Josh Osborne at CrossCountry Mortgage helps Sioux Falls homeowners navigate financing options that fit their real life. Whether you're buying, refinancing, or building, Josh cuts through the noise and gets you into the right loan. Amy Stockberger Real Estate partners with Josh because he delivers results, not promises.",
-            "contact": "Josh Osborne, CrossCountry Mortgage"
+            "name": "Jensen Insurance",
+            "category": "Home & life coverage",
+            "pitch": "Jensen Insurance protects what matters most to your South Dakota family. Whether you're a new homeowner or refinancing, we work with Amy Stockberger Real Estate to make sure your coverage keeps pace with your life. Smart protection starts here.",
+            "contact": "Jensen Insurance"
           },
           "discounts": [
             {
@@ -84,13 +84,103 @@
           ]
         },
         "events": {
-          "headline": "Client events this week",
+          "headline": "What's Coming Up at ASRE",
           "items": [
             {
-              "title": "Source unavailable",
-              "when": "",
-              "where": "",
-              "notes": "Source unavailable this week, check back next Sunday."
+              "title": "Contract Training",
+              "when": "11 June 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Coaching w/ Marc",
+              "when": "11 June 2026 at 11:00 AM",
+              "where": "Zoom",
+              "notes": ""
+            },
+            {
+              "title": "Agent Coaching",
+              "when": "14 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "16 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "16 June 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "18 June 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "2 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "2 June 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "21 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "25 June 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "28 May 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "4 June 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "7 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "9 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Coaching w/ Marc",
+              "when": "9 July 2026 at 11:00 AM",
+              "where": "Zoom",
+              "notes": ""
+            },
+            {
+              "title": "Agent Coaching",
+              "when": "9 June 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
             }
           ]
         }
