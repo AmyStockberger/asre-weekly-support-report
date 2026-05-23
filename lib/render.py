@@ -99,7 +99,7 @@ def build_email_html(report: dict, artifact_url: str) -> str:
         ("national", "National real estate news", "The headlines worth a glance."),
         ("partner", "Home Support Partners spotlight", "Who to lean on this week."),
         ("asreLab", "ASRE Lab", "This week's smart move."),
-        ("events", "Client events this week", "Where to bring your people."),
+        ("events", "What's Coming Up at ASRE", "Where to bring your people."),
     ]
 
     teaser_rows = []
