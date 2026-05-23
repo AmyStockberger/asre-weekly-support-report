@@ -1,7 +1,101 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-17T11:58:52Z",
+  "updatedAt": "2026-05-23T14:30:39Z",
   "reports": [
+    {
+      "weekId": "2026-W21",
+      "weekLabel": "Week of May 18",
+      "publishedAt": "2026-05-23",
+      "greeting": "Pending inventory jumped 19 units this week to 745, and that tells us demand is warming up across the Sioux Falls market. With a list-to-sale ratio sitting at 97.9%, sellers still hold real leverage right now. Stay sharp on pricing and positioning because this momentum matters for your clients' timing.",
+      "podcastUrl": "https://raw.githubusercontent.com/AmyStockberger/asre-weekly-support-report/main/reports/audio/2026-W21.mp3",
+      "podcastDuration": "approx 4 min",
+      "sections": {
+        "marketStats": {
+          "headline": "Sioux Falls market stats this week",
+          "bullets": [
+            "Active: 1369. Pending: 745. Sold this week: 107.",
+            "Median sale price: $365,000. average days on market: 66. list to sale ratio: 97.9%.",
+            "Pending count is up by 19 versus last week. Demand is leaning warmer."
+          ],
+          "chartTitle": "Median sale price, 12-month view",
+          "chart": [],
+          "sourceUrl": "",
+          "_internal": {
+            "pending_count": 745
+          }
+        },
+        "localNews": {
+          "headline": "Sioux Falls this week",
+          "items": [
+            {
+              "title": "Health Care",
+              "summary": "Medical expansion drives job growth and attracts new talent to Sioux Falls. Amy Stockberger Real Estate agents need to know where healthcare money moves the market.",
+              "url": "https://siouxfalls.business/category/healthcare/"
+            },
+            {
+              "title": "Food & Drink",
+              "summary": "Restaurant and hospitality projects reshape neighborhoods and increase foot traffic. Your clients want to invest where commerce clusters and communities gather.",
+              "url": "https://siouxfalls.business/category/food-drink/"
+            }
+          ]
+        },
+        "realEstate": {
+          "headline": "Local development to watch",
+          "items": [
+            {
+              "title": "Development",
+              "summary": "New construction projects create inventory shifts and pricing pressure across the market. Amy Stockberger Real Estate tracks every shovel in the ground to stay ahead of trends.",
+              "url": "https://siouxfalls.business/category/development/"
+            }
+          ]
+        },
+        "mortgage": {
+          "headline": "Rates and mortgage chatter",
+          "summary": "Housing starts have flatlined for years, and understanding why matters for your business. Logan Mohtashami breaks down the economic forces crushing new construction through data and analysis. You need to know these trends because they shape inventory, prices, and opportunity in your markets. When supply stays constrained, your existing inventory becomes more valuable. Your clients need agents who understand what's driving scarcity. Amy Stockberger Real Estate stays ahead by tracking these fundamentals. Knowing the enemy in this case means knowing the economic barriers to new building. That knowledge helps you position listings smarter and predict where deals will happen next.",
+          "keyPoints": [
+            "Housing starts have stalled for years due to specific economic barriers you need to understand",
+            "Constrained supply means higher prices and more leverage for sellers in your market",
+            "Data-driven market knowledge gives you the edge to serve clients better than competitors"
+          ],
+          "sourceUrl": "https://loganmohtashami.com/2026/05/22/housing-starts-stalled-understanding-the-trend/"
+        },
+        "national": {
+          "headline": "National real estate news",
+          "items": [
+            {
+              "title": "Source unavailable",
+              "summary": "Source unavailable this week, check back next Sunday.",
+              "url": ""
+            }
+          ]
+        },
+        "partner": {
+          "spotlight": {
+            "name": "Josh Osborne – CrossCountry Mortgage",
+            "category": "Home financing options",
+            "pitch": "Josh Osborne at CrossCountry Mortgage helps Sioux Falls homeowners navigate financing options that fit their real life. Whether you're buying, refinancing, or building, Josh cuts through the noise and gets you into the right loan. Amy Stockberger Real Estate partners with Josh because he delivers results, not promises.",
+            "contact": "Josh Osborne, CrossCountry Mortgage"
+          },
+          "discounts": [
+            {
+              "partner": "Find a Home",
+              "offer": "Amy Stockberger Real Estate | Sioux Falls, SD Our Listings Our Open Houses Search All Listings Schedule an Appointment or Showing New Listing Alerts"
+            }
+          ]
+        },
+        "events": {
+          "headline": "Client events this week",
+          "items": [
+            {
+              "title": "Source unavailable",
+              "when": "",
+              "where": "",
+              "notes": "Source unavailable this week, check back next Sunday."
+            }
+          ]
+        }
+      }
+    },
     {
       "weekId": "2026-W20",
       "weekLabel": "Week of May 11",
