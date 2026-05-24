@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-23T23:11:55Z",
+  "updatedAt": "2026-05-24T12:00:19Z",
   "reports": [
     {
       "weekId": "2026-W21",
       "weekLabel": "Week of May 18",
-      "publishedAt": "2026-05-23",
-      "greeting": "Pending inventory holds steady at 745 units while we closed 107 homes this week, which tells you the market rewards agents who know their stuff. Housing starts remain constrained nationwide, so understanding supply and demand dynamics gives you the edge clients need to hear. Let's use these numbers to close more deals.",
+      "publishedAt": "2026-05-24",
+      "greeting": "We sold 107 homes this week in Sioux Falls with a 97.9% list to sale ratio, which tells you the market rewards agents who price smart and position their clients right. Housing starts have flatlined for years, and agents who understand the data behind that trend will outwork everyone else in their market. Stay sharp, stay informed, and keep closing deals with Amy Stockberger Real Estate.",
       "podcastUrl": "https://raw.githubusercontent.com/AmyStockberger/asre-weekly-support-report/main/reports/audio/2026-W21.mp3",
       "podcastDuration": "approx 4 min",
       "sections": {
@@ -28,14 +28,14 @@
           "headline": "Sioux Falls this week",
           "items": [
             {
-              "title": "Food & Drink",
-              "summary": "New restaurants and food service businesses reshape where people spend their dollars and leisure time. Amy Stockberger Real Estate agents track these trends because they drive foot traffic and property values in neighborhoods.",
-              "url": "https://siouxfalls.business/category/food-drink/"
+              "title": "Health Care",
+              "summary": "Healthcare expansion shapes our local market and affects where families choose to live. Amy Stockberger Real Estate agents track these trends to guide clients to the right neighborhoods.",
+              "url": "https://siouxfalls.business/category/healthcare/"
             },
             {
-              "title": "Health Care",
-              "summary": "Health care expansion signals job growth and population movement in Sioux Falls. Our agents know which corridors attract medical professionals and where families relocate for employment.",
-              "url": "https://siouxfalls.business/category/healthcare/"
+              "title": "Retail",
+              "summary": "New retail developments drive foot traffic and property values in Sioux Falls. Our agents stay ahead of these shifts to identify emerging investment opportunities.",
+              "url": "https://siouxfalls.business/category/retail/"
             }
           ]
         },
@@ -44,18 +44,18 @@
           "items": [
             {
               "title": "Development",
-              "summary": "New construction projects reveal where builders invest capital and which neighborhoods are heating up. Amy Stockberger Real Estate agents use development news to identify emerging opportunities before the market catches on.",
+              "summary": "Development projects reshape our skyline and create inventory for buyers and sellers. Amy Stockberger Real Estate stays locked on these projects to serve clients with current market intel.",
               "url": "https://siouxfalls.business/category/development/"
             }
           ]
         },
         "mortgage": {
           "headline": "Rates and mortgage chatter",
-          "summary": "Housing starts have flatlined, and you need to understand why. Logan Mohtashami breaks down the real data behind the slowdown. The housing market stays constrained by supply issues and economic headwinds that agents face every day. Stop guessing about market conditions and start looking at actual data. Amy Stockberger Real Estate knows the numbers matter when you talk to buyers and sellers. You compete better when you understand what's actually happening in housing supply and demand.",
+          "summary": "Housing starts have flatlined for years and understanding why matters for your business. Logan Mohtashami breaks down the data and trends that created this stalled market. As an agent at Amy Stockberger Real Estate, you need to know what's actually moving inventory and what's keeping new construction from ramping up. This isn't about blaming the market. It's about reading the signals so you position yourself ahead of agents who don't pay attention. Know the data. Know your market. That knowledge wins deals.",
           "keyPoints": [
-            "Housing starts have stalled for years due to identifiable market constraints",
-            "Data analysis reveals the true reasons behind market trends, not assumptions",
-            "Understanding supply and demand dynamics gives agents a competitive edge with clients"
+            "Housing starts have stalled for years due to identifiable structural factors",
+            "Data and charts reveal the specific reasons behind current market trends",
+            "Agents who understand these trends gain competitive advantage in their markets"
           ],
           "sourceUrl": "https://loganmohtashami.com/2026/05/22/housing-starts-stalled-understanding-the-trend/"
         },
@@ -71,10 +71,10 @@
         },
         "partner": {
           "spotlight": {
-            "name": "Jensen Insurance",
-            "category": "Home & life coverage",
-            "pitch": "Jensen Insurance protects what matters most to your South Dakota family. Whether you're a new homeowner or refinancing, we work with Amy Stockberger Real Estate to make sure your coverage keeps pace with your life. Smart protection starts here.",
-            "contact": "Jensen Insurance"
+            "name": "Josh Osborne – CrossCountry Mortgage",
+            "category": "Home financing options",
+            "pitch": "Josh Osborne at CrossCountry Mortgage delivers home financing solutions that work for your situation. Spring is the time to lock in your rate and get into the home you want. Let Amy Stockberger Real Estate connect you with Josh to make your move happen.",
+            "contact": "Josh Osborne – CrossCountry Mortgage"
           },
           "discounts": [
             {
@@ -137,6 +137,12 @@
             {
               "title": "Team Meeting",
               "when": "21 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "23 July 2026 at 10:30 AM",
               "where": "ASRE Training Room",
               "notes": ""
             },
