@@ -4,13 +4,13 @@ Weekly compile entrypoint for The ASRE Weekly Support Report.
 Run by .github/workflows/compile.yml every Sunday at 11:00 UTC.
 
 Steps:
-    1. Compute weekId and weekLabel.
-    2. Pull each web source and Drive item inside try/except.
-    3. Use Gemini to summarize each section.
-    4. Build the report dict.
-    5. Generate the ElevenLabs podcast mp3.
-    6. Prepend to reports.json, cap at 26, sort newest first, write.
-    7. Prune mp3 files older than AUDIO_RETENTION_DAYS.
+1. Compute weekId and weekLabel.
+2. Pull each web source and Drive item inside try/except.
+3. Use Gemini to summarize each section.
+4. Build the report dict.
+5. Generate the ElevenLabs podcast mp3.
+6. Prepend to reports.json, cap at 26, sort newest first, write.
+7. Prune mp3 files older than AUDIO_RETENTION_DAYS.
 
 Top-level try/except prints the failure to stderr and exits 1 so the
 workflow shows a red X.
@@ -43,6 +43,7 @@ from lib.sources import (
     logan_mohtashami,
     rismedia,
     siouxfalls_business,
+    social_trends,
 )
 
 logging.basicConfig(
@@ -55,7 +56,6 @@ REPO_ROOT = Path(__file__).resolve().parent
 REPORTS_DIR = REPO_ROOT / "reports"
 AUDIO_DIR = REPORTS_DIR / "audio"
 REPORTS_JSON = REPORTS_DIR / "reports.json"
-
 
 # ---------- Date helpers ----------
 
@@ -71,7 +71,6 @@ def compute_week_id_and_label(now=None):
     week_label = f"Week of {monday.strftime('%B').strip()} {monday.day}"
     return week_id, week_label
 
-
 # ---------- Section builders ----------
 
 def _safe_call(label, func, fallback):
@@ -81,7 +80,6 @@ def _safe_call(label, func, fallback):
     except Exception as exc:
         logger.warning("%s failed: %s", label, exc)
         return fallback
-
 
 def build_local_news_and_real_estate(used_urls):
     """
@@ -121,12 +119,12 @@ def build_local_news_and_real_estate(used_urls):
 
     user_prompt = (
         "Below are recent articles from siouxfalls.business. Pick the three "
-        "most useful for Amy Stockberger Real Estate agents this week. "
+        "most useful for agents this week. "
         "Group them into two buckets. Bucket A is general Sioux Falls "
         "interest. Bucket B is real estate development or commercial "
         "projects. Return strict JSON with two arrays named local_news and "
         "real_estate. Each entry has title, summary, url. Summary is two "
-        "sentences in Amy's voice.\n\n"
+        "factual sentences.\n\n"
         f"Articles:\n{listing}\n\n"
         "JSON only. No code fences."
     )
@@ -139,8 +137,8 @@ def build_local_news_and_real_estate(used_urls):
         cleaned = raw.strip()
         if cleaned.startswith("```"):
             cleaned = cleaned.strip("`")
-            if cleaned.startswith("json"):
-                cleaned = cleaned[4:]
+        if cleaned.startswith("json"):
+            cleaned = cleaned[4:]
         parsed = json.loads(cleaned)
         local_items = parsed.get("local_news", []) or []
         re_items = parsed.get("real_estate", []) or []
@@ -162,10 +160,10 @@ def build_local_news_and_real_estate(used_urls):
 
     return local, re_section
 
-
 def build_mortgage():
     fallback = {
         "headline": "Rates and mortgage chatter",
+        "rate": None,
         "summary": "Source unavailable this week, check back next Sunday.",
         "keyPoints": [],
         "sourceUrl": "",
@@ -176,11 +174,18 @@ def build_mortgage():
         return fallback
 
     user_prompt = (
-        "Read the Logan Mohtashami post below. Write one paragraph in "
-        "Amy's voice summarizing the takeaway for real estate agents. "
-        "Then list three short key points. Return strict JSON with keys "
-        "summary and keyPoints. keyPoints is an array of three short "
-        "strings. JSON only. No code fences.\n\n"
+        "Read the Logan Mohtashami post below. "
+        "First, find the specific 30-year fixed mortgage rate reported in the post "
+        "(a percentage like 6.89 or 7.12). "
+        "Then write one short paragraph summarizing the key takeaway for real estate agents. "
+        "Focus on facts: current rate, week-over-week direction, what moved rates, "
+        "and what it means for buyers right now. No marketing language. "
+        "Then list three short key points. "
+        "Return strict JSON with keys rate_30yr, summary, and keyPoints. "
+        "rate_30yr is the specific percentage as a string like '6.89%' "
+        "(use null if not stated in the post). "
+        "keyPoints is an array of three short strings. "
+        "JSON only. No code fences.\n\n"
         f"Title: {post['title']}\n\n"
         f"Body:\n{post['full_text'][:8000]}"
     )
@@ -196,6 +201,7 @@ def build_mortgage():
         parsed = json.loads(cleaned)
         return {
             "headline": "Rates and mortgage chatter",
+            "rate": parsed.get("rate_30yr"),
             "summary": parsed.get("summary", "").strip(),
             "keyPoints": parsed.get("keyPoints", [])[:3],
             "sourceUrl": post["url"],
@@ -203,7 +209,6 @@ def build_mortgage():
     except Exception as exc:
         logger.warning("mortgage JSON parse failed: %s", exc)
         return {**fallback, "sourceUrl": post["url"]}
-
 
 def build_national():
     fallback = {
@@ -227,8 +232,8 @@ def build_national():
     )
     user_prompt = (
         "Below are three recent national real estate articles from "
-        "rismedia.com. Rewrite each summary in Amy's voice in exactly two "
-        "sentences. Return strict JSON with key items. Each item has "
+        "rismedia.com. Rewrite each summary in plain factual language, "
+        "two sentences each. Return strict JSON with key items. Each item has "
         "title, summary, url. Keep the original urls. JSON only. No code "
         f"fences.\n\nArticles:\n{listing}"
     )
@@ -249,7 +254,6 @@ def build_national():
     except Exception as exc:
         logger.warning("national JSON parse failed: %s", exc)
         return fallback
-
 
 def build_partner(used_spotlights):
     fallback_spotlight = {
@@ -281,7 +285,8 @@ def build_partner(used_spotlights):
             "the next spotlight that has not been used yet. Already used "
             f"spotlight names: {used_str}. Return strict JSON with keys "
             "name, category, pitch, contact. Pitch is two to three "
-            "sentences in Amy's voice. JSON only. No code fences.\n\n"
+            "plain sentences describing what this partner does and why it is useful to clients. "
+            "JSON only. No code fences.\n\n"
             f"Document:\n{spotlight_doc_text[:8000]}"
         )
         raw = summarize(SYSTEM_PROMPT, user_prompt, max_tokens=800)
@@ -324,11 +329,10 @@ def build_partner(used_spotlights):
             except Exception as exc:
                 logger.warning("discounts JSON parse failed: %s", exc)
 
-        if not chosen_discounts:
-            chosen_discounts = discounts[:5]
+    if not chosen_discounts:
+        chosen_discounts = discounts[:5]
 
     return {"spotlight": spotlight, "discounts": chosen_discounts}
-
 
 def build_events():
     import re as _re
@@ -401,6 +405,47 @@ def build_events():
 
     return {"headline": "What's Coming Up at ASRE", "items": items}
 
+def build_social():
+    fallback = {
+        "headline": "Trending on IG and TikTok",
+        "items": [],
+    }
+
+    articles = _safe_call("social_trends.fetch", social_trends.fetch, [])
+    if not articles:
+        return fallback
+
+    listing = "\n".join(
+        f"- {idx + 1}. {a['title']} | {a['url']} | {a.get('summary', '')[:200]}"
+        for idx, a in enumerate(articles)
+    )
+    user_prompt = (
+        "Below are recent articles about social media trends in real estate. "
+        "Summarize the top two or three insights agents should know about "
+        "what is working on Instagram and TikTok this week. "
+        "For each, give a short headline and one to two sentence explanation "
+        "of what the trend is and why agents should pay attention to it. "
+        "Return strict JSON with key items. Each item has title and summary. "
+        "JSON only. No code fences.\n\n"
+        f"Articles:\n{listing}"
+    )
+
+    raw = summarize(SYSTEM_PROMPT, user_prompt, max_tokens=800)
+    if not raw:
+        return fallback
+
+    try:
+        cleaned = raw.strip().strip("`")
+        if cleaned.startswith("json"):
+            cleaned = cleaned[4:]
+        parsed = json.loads(cleaned)
+        items = parsed.get("items") or []
+        if not items:
+            return fallback
+        return {"headline": "Trending on IG and TikTok", "items": items[:3]}
+    except Exception as exc:
+        logger.warning("social JSON parse failed: %s", exc)
+        return fallback
 
 def build_market_stats(last_week_pending=None):
     """Pull active/pending counts, weekly solds stats, and the 12-month median
@@ -412,17 +457,16 @@ def build_market_stats(last_week_pending=None):
         last_week_pending=last_week_pending,
     )
 
-
 def build_greeting(week_label: str, sections: dict) -> str:
     fallback = (
         "Here is your weekly read. Pour a coffee and tell us what lands "
         "with your clients."
     )
     user_prompt = (
-        f"Write a one to three sentence greeting from Amy for the "
-        f"{week_label} edition of The ASRE Weekly Support Report. Reference "
-        "one concrete item from the sections below if you find one worth "
-        "calling out. Return plain text only.\n\n"
+        f"Write a one to three sentence opening for the "
+        f"{week_label} edition of The ASRE Weekly Support Report. "
+        "Reference one concrete item from the sections below if you find one worth "
+        "calling out. Keep it brief and direct. No self-promotion. Return plain text only.\n\n"
         f"Sections JSON:\n{json.dumps(sections)[:4000]}"
     )
 
@@ -430,7 +474,6 @@ def build_greeting(week_label: str, sections: dict) -> str:
     if not raw:
         return fallback
     return raw.strip().strip('"').strip()
-
 
 def build_podcast_script(report: dict) -> str:
     sections_compact = json.dumps(report.get("sections", {}))[:6000]
@@ -442,7 +485,7 @@ def build_podcast_script(report: dict) -> str:
         "through how this hits one of your clients."
     )
     user_prompt = (
-        "Write a 300 to 500 word podcast script in Amy's voice for The "
+        "Write a 300 to 500 word podcast script for The "
         "ASRE Weekly Support Report. Open with 'Hey team, Amy here. Here "
         "is your weekly read.' Walk through three to four highlights from "
         "the sections below. Close with a specific call to action like "
@@ -455,7 +498,6 @@ def build_podcast_script(report: dict) -> str:
     if not raw:
         return fallback
     return raw.strip()
-
 
 # ---------- Persistence ----------
 
@@ -472,7 +514,6 @@ def load_existing_reports():
         logger.warning("reports.json load failed, starting fresh: %s", exc)
         return {"version": 1, "updatedAt": "", "reports": []}
 
-
 def gather_used_spotlights(existing):
     names = set()
     for report in existing.get("reports", []):
@@ -482,13 +523,11 @@ def gather_used_spotlights(existing):
             names.add(name)
     return names
 
-
 def write_reports(payload):
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     with open(REPORTS_JSON, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2, ensure_ascii=False)
         f.write("\n")
-
 
 def prune_audio():
     if not AUDIO_DIR.exists():
@@ -501,7 +540,6 @@ def prune_audio():
                 logger.info("pruned old audio: %s", path.name)
         except Exception as exc:
             logger.warning("prune failed for %s: %s", path, exc)
-
 
 # ---------- Main ----------
 
@@ -552,6 +590,7 @@ def main():
 
     mortgage = _safe_call("build_mortgage", build_mortgage, {
         "headline": "Rates and mortgage chatter",
+        "rate": None,
         "summary": "Source unavailable this week, check back next Sunday.",
         "keyPoints": [],
         "sourceUrl": "",
@@ -581,6 +620,11 @@ def main():
         "items": [],
     })
 
+    social = _safe_call("build_social", build_social, {
+        "headline": "Trending on IG and TikTok",
+        "items": [],
+    })
+
     sections = {
         "marketStats": market_stats,
         "localNews": local_news,
@@ -589,6 +633,7 @@ def main():
         "national": national,
         "partner": partner,
         "events": events,
+        "social": social,
     }
 
     greeting = _safe_call(
@@ -641,7 +686,6 @@ def main():
 
     prune_audio()
     logger.info("Compile complete for %s", week_id)
-
 
 if __name__ == "__main__":
     try:
