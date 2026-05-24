@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-24T12:00:19Z",
+  "updatedAt": "2026-05-24T16:30:23Z",
   "reports": [
     {
       "weekId": "2026-W21",
       "weekLabel": "Week of May 18",
       "publishedAt": "2026-05-24",
-      "greeting": "We sold 107 homes this week in Sioux Falls with a 97.9% list to sale ratio, which tells you the market rewards agents who price smart and position their clients right. Housing starts have flatlined for years, and agents who understand the data behind that trend will outwork everyone else in their market. Stay sharp, stay informed, and keep closing deals with Amy Stockberger Real Estate.",
+      "greeting": "Sioux Falls saw 107 sales this week with pending inventory holding steady at 745 units. The median sale price sits at $365,000 with homes selling at 97.9 percent of list price. Consumer sentiment continues to decline nationally, falling to 44.8 in May as fuel prices rise.",
       "podcastUrl": "https://raw.githubusercontent.com/AmyStockberger/asre-weekly-support-report/main/reports/audio/2026-W21.mp3",
       "podcastDuration": "approx 4 min",
       "sections": {
@@ -29,13 +29,13 @@
           "items": [
             {
               "title": "Health Care",
-              "summary": "Healthcare expansion shapes our local market and affects where families choose to live. Amy Stockberger Real Estate agents track these trends to guide clients to the right neighborhoods.",
+              "summary": "Health care sector growth continues in Sioux Falls with new facilities and services expanding. Market conditions support ongoing investment in medical infrastructure.",
               "url": "https://siouxfalls.business/category/healthcare/"
             },
             {
-              "title": "Retail",
-              "summary": "New retail developments drive foot traffic and property values in Sioux Falls. Our agents stay ahead of these shifts to identify emerging investment opportunities.",
-              "url": "https://siouxfalls.business/category/retail/"
+              "title": "Food & Drink",
+              "summary": "Restaurant and food service businesses open and operate across Sioux Falls. Retail food establishments generate local employment and consumer activity.",
+              "url": "https://siouxfalls.business/category/food-drink/"
             }
           ]
         },
@@ -44,18 +44,19 @@
           "items": [
             {
               "title": "Development",
-              "summary": "Development projects reshape our skyline and create inventory for buyers and sellers. Amy Stockberger Real Estate stays locked on these projects to serve clients with current market intel.",
+              "summary": "Development projects shape Sioux Falls residential and commercial growth patterns. New construction activity indicates property demand and market movement.",
               "url": "https://siouxfalls.business/category/development/"
             }
           ]
         },
         "mortgage": {
           "headline": "Rates and mortgage chatter",
-          "summary": "Housing starts have flatlined for years and understanding why matters for your business. Logan Mohtashami breaks down the data and trends that created this stalled market. As an agent at Amy Stockberger Real Estate, you need to know what's actually moving inventory and what's keeping new construction from ramping up. This isn't about blaming the market. It's about reading the signals so you position yourself ahead of agents who don't pay attention. Know the data. Know your market. That knowledge wins deals.",
+          "rate": null,
+          "summary": "This post discusses housing starts stalling over recent years but does not report a current 30-year fixed mortgage rate. Logan Mohtashami addresses supply-side constraints in the housing market through analysis and charts. Agents seeking detailed market data can access Housing Tracker information through a HousingWire subscription.",
           "keyPoints": [
-            "Housing starts have stalled for years due to identifiable structural factors",
-            "Data and charts reveal the specific reasons behind current market trends",
-            "Agents who understand these trends gain competitive advantage in their markets"
+            "Post focuses on housing starts decline, not mortgage rates",
+            "No current rate data provided in this article",
+            "Supply-side factors have constrained housing production"
           ],
           "sourceUrl": "https://loganmohtashami.com/2026/05/22/housing-starts-stalled-understanding-the-trend/"
         },
@@ -63,18 +64,28 @@
           "headline": "National real estate news",
           "items": [
             {
-              "title": "Source unavailable",
-              "summary": "Source unavailable this week, check back next Sunday.",
-              "url": ""
+              "title": "Judge Orders MRED to Restore Listing Feeds, Zillow to Display Banned Properties",
+              "summary": "A judge ordered MRED to restore listing feeds to Zillow and directed Zillow to display properties that were previously banned from the platform. The ruling addresses disputes over listing access and data control among major real estate companies.",
+              "url": "https://www.rismedia.com/2026/05/22/judge-orders-mred-restore-listing-feeds-zillow-display-banned-properties/"
+            },
+            {
+              "title": "Consumer Sentiment Drops in Third Straight Month as Fuel Prices Continue to Rise",
+              "summary": "Consumer sentiment fell to 44.8 in May from 49.8 in April, marking a 10% decline for the third consecutive month. Rising fuel prices contributed to the drop in consumer confidence.",
+              "url": "https://www.rismedia.com/2026/05/22/consumer-sentiment-may-2026/"
+            },
+            {
+              "title": "Leading Economic Signals Continue to Show 'Fragile' Outlook",
+              "summary": "The economy faces challenges including a soft labor market and high inflation driven by the U.S.-Iran War and energy price increases. Leading economic indicators suggest fragile conditions ahead.",
+              "url": "https://www.rismedia.com/2026/05/22/leading-economic-signals-continue-to-show-fragile-outlook/"
             }
           ]
         },
         "partner": {
           "spotlight": {
-            "name": "Josh Osborne – CrossCountry Mortgage",
-            "category": "Home financing options",
-            "pitch": "Josh Osborne at CrossCountry Mortgage delivers home financing solutions that work for your situation. Spring is the time to lock in your rate and get into the home you want. Let Amy Stockberger Real Estate connect you with Josh to make your move happen.",
-            "contact": "Josh Osborne – CrossCountry Mortgage"
+            "name": "Jensen Insurance",
+            "category": "Home & life coverage",
+            "pitch": "Jensen Insurance provides homeowners with comprehensive coverage options that protect both their properties and families. Agents recommend this partner to clients who need straightforward home and life insurance solutions during the spring planning season.",
+            "contact": "Contact Jensen Insurance for coverage details"
           },
           "discounts": [
             {
@@ -189,6 +200,10 @@
               "notes": ""
             }
           ]
+        },
+        "social": {
+          "headline": "Trending on IG and TikTok",
+          "items": []
         }
       }
     },
