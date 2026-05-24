@@ -411,26 +411,19 @@ def build_social():
         "items": [],
     }
 
-    articles = _safe_call("social_trends.fetch", social_trends.fetch, [])
-    if not articles:
-        return fallback
-
-    listing = "\n".join(
-        f"- {idx + 1}. {a['title']} | {a['url']} | {a.get('summary', '')[:200]}"
-        for idx, a in enumerate(articles)
-    )
     user_prompt = (
-        "Below are recent articles about social media trends in real estate. "
-        "Summarize the top two or three insights agents should know about "
-        "what is working on Instagram and TikTok this week. "
-        "For each, give a short headline and one to two sentence explanation "
-        "of what the trend is and why agents should pay attention to it. "
+        "List the top three content trends real estate agents should be using "
+        "on Instagram and TikTok right now. "
+        "Be specific about format: for example, "
+        "'neighborhood walk-and-talk videos', '15-second rate update reels', "
+        "'before-and-after staging clips', 'just-listed story sequences'. "
+        "For each trend, write a short punchy headline and one to two sentences "
+        "explaining what the format looks like and why it is getting engagement. "
         "Return strict JSON with key items. Each item has title and summary. "
-        "JSON only. No code fences.\n\n"
-        f"Articles:\n{listing}"
+        "JSON only. No code fences."
     )
 
-    raw = summarize(SYSTEM_PROMPT, user_prompt, max_tokens=800)
+    raw = summarize(SYSTEM_PROMPT, user_prompt, max_tokens=600)
     if not raw:
         return fallback
 
