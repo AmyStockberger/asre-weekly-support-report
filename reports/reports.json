@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-24T17:33:55Z",
+  "updatedAt": "2026-05-24T17:41:26Z",
   "reports": [
     {
       "weekId": "2026-W21",
       "weekLabel": "Week of May 18",
       "publishedAt": "2026-05-24",
-      "greeting": "Pending inventory held steady at 745 units this week in the Sioux Falls market. Median sale price stands at $365,000 with a list to sale ratio of 97.9%. Consumer sentiment dropped nationally to 44.8 in May as fuel prices continued rising.",
+      "greeting": "The Sioux Falls market held steady this week with 107 homes sold and pending inventory flat at 745 units. The median sale price remained at $365,000 with homes selling at 97.9% of list price after an average of 66 days on market. Health care and restaurant expansion continues throughout the region, supporting ongoing commercial and residential development activity.",
       "podcastUrl": "https://raw.githubusercontent.com/AmyStockberger/asre-weekly-support-report/main/reports/audio/2026-W21.mp3",
       "podcastDuration": "approx 4 min",
       "sections": {
@@ -29,12 +29,12 @@
           "items": [
             {
               "title": "Health Care",
-              "summary": "Health care sector activity in Sioux Falls continues to develop. Industry updates affect local business conditions.",
+              "summary": "Health care sector expansion continues in Sioux Falls with new facilities and services. Market growth reflects increasing demand across the region.",
               "url": "https://siouxfalls.business/category/healthcare/"
             },
             {
               "title": "Food & Drink",
-              "summary": "Food and beverage businesses operate throughout Sioux Falls market. Sector trends influence commercial real estate demand.",
+              "summary": "Restaurant and hospitality businesses open new locations throughout Sioux Falls. Consumer spending in food service remains active.",
               "url": "https://siouxfalls.business/category/food-drink/"
             }
           ]
@@ -44,7 +44,7 @@
           "items": [
             {
               "title": "Development",
-              "summary": "Development projects shape the Sioux Falls landscape. Commercial and residential construction updates inform agent market knowledge.",
+              "summary": "Commercial and residential development projects advance across Sioux Falls. Construction activity reflects ongoing investment in area properties.",
               "url": "https://siouxfalls.business/category/development/"
             }
           ]
@@ -52,11 +52,11 @@
         "mortgage": {
           "headline": "Rates and mortgage chatter",
           "rate": null,
-          "summary": "The post does not contain current 30-year mortgage rate data. Logan Mohtashami discusses housing starts and market trends but provides no specific rate information or week-over-week direction for mortgage rates.",
+          "summary": "This post does not report a specific 30-year fixed mortgage rate. Logan Mohtashami discusses housing starts stalling over recent years but does not provide current rate data or week-over-week rate movement. The post focuses on broader housing market trends rather than mortgage rate specifics.",
           "keyPoints": [
-            "Post focuses on housing starts decline, not mortgage rates",
-            "No rate data or market movement information provided",
-            "Content promotional in nature rather than data-driven rate analysis"
+            "No mortgage rate data provided in this post",
+            "Post covers housing starts trends and market analysis",
+            "Mohtashami is a Lead Analyst at HousingWire covering the U.S. economy and housing market"
           ],
           "sourceUrl": "https://loganmohtashami.com/2026/05/22/housing-starts-stalled-understanding-the-trend/"
         },
@@ -64,28 +64,18 @@
           "headline": "National real estate news",
           "items": [
             {
-              "title": "Judge Orders MRED to Restore Listing Feeds, Zillow to Display Banned Properties",
-              "summary": "A judge ordered MRED to restore listing feeds and Zillow to display properties that were previously banned. The ruling addresses disputes over listing access and data control among real estate platforms.",
-              "url": "https://www.rismedia.com/2026/05/22/judge-orders-mred-restore-listing-feeds-zillow-display-banned-properties/"
-            },
-            {
-              "title": "Consumer Sentiment Drops in Third Straight Month as Fuel Prices Continue to Rise",
-              "summary": "Consumer sentiment fell to 44.8 in May from 49.8 in April, marking a third consecutive monthly decline. Rising fuel prices drove the 10 percent drop in the University of Michigan's consumer sentiment survey.",
-              "url": "https://www.rismedia.com/2026/05/22/consumer-sentiment-may-2026/"
-            },
-            {
-              "title": "Leading Economic Signals Continue to Show 'Fragile' Outlook",
-              "summary": "The labor market shows signs of improvement while inflation remains elevated due to the U.S.-Iran War and energy price increases. Economic indicators point to a fragile outlook for the months ahead.",
-              "url": "https://www.rismedia.com/2026/05/22/leading-economic-signals-continue-to-show-fragile-outlook/"
+              "title": "Source unavailable",
+              "summary": "Source unavailable this week, check back next Sunday.",
+              "url": ""
             }
           ]
         },
         "partner": {
           "spotlight": {
-            "name": "Jensen Insurance",
-            "category": "Home & life coverage",
-            "pitch": "Jensen Insurance provides home and life coverage tailored to protect homeowners' assets and families. Agents can refer clients to secure comprehensive policies that address their unique property and insurance needs. Spring is an ideal time for homeowners to review and update their coverage.",
-            "contact": "Jensen Insurance"
+            "name": "Josh Osborne – CrossCountry Mortgage",
+            "category": "Home Financing",
+            "pitch": "Josh Osborne at CrossCountry Mortgage provides home financing options for buyers at all stages. He works with clients to structure loans that fit their financial situation and timeline. Agents benefit from having a reliable financing partner to present to clients during the purchase process.",
+            "contact": "Josh Osborne, CrossCountry Mortgage"
           },
           "discounts": [
             {
@@ -203,7 +193,20 @@
         },
         "social": {
           "headline": "Trending on IG and TikTok",
-          "items": []
+          "items": [
+            {
+              "title": "Property Walk-Through POV Videos",
+              "summary": "First-person perspective videos where agents guide viewers through homes as if they're walking through themselves, often set to trending audio and shot in 15-60 second clips. This immersive format drives engagement because viewers feel like they're personally touring the property, making it easier to visualize themselves living there and boosting save rates for follow-up interest."
+            },
+            {
+              "title": "Before-and-After Staging Transformations",
+              "summary": "Quick-cut reels showing empty or poorly furnished rooms transformed into photogenic, move-in-ready spaces, typically compressed into 30-second videos with split-screen or swipe transitions. These perform exceptionally well because they showcase the power of design and create shareable, satisfying visual content that audiences find both educational and aspirational."
+            },
+            {
+              "title": "Market Insight Story Series",
+              "summary": "Multi-part Instagram Stories or TikTok video sequences breaking down local market data, interest rate changes, and neighborhood statistics into digestible 15-second clips with on-screen text and simple graphics. This positions agents as trusted local experts and drives engagement through educational value, while the series format encourages viewers to stay tuned for the next installment."
+            }
+          ]
         }
       }
     },
