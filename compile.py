@@ -423,7 +423,8 @@ def build_social():
         "JSON only. No code fences."
     )
 
-    raw = summarize(SYSTEM_PROMPT, user_prompt, max_tokens=1000)
+    _SOCIAL_PROMPT = "You output only valid JSON. No prose, no markdown, no code fences. Return a JSON object with one key: items. Each item has title and summary."
+    raw = summarize(_SOCIAL_PROMPT, user_prompt, max_tokens=1000)
     if not raw:
         return fallback
 
