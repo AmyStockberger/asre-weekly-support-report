@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-24T17:12:56Z",
+  "updatedAt": "2026-05-24T17:33:55Z",
   "reports": [
     {
       "weekId": "2026-W21",
       "weekLabel": "Week of May 18",
       "publishedAt": "2026-05-24",
-      "greeting": "The Sioux Falls market held steady this week with 745 pending sales and 107 homes sold. Median sale price remains at $365,000 with an average days on market of 66. Housing starts continue to stall nationally, reflecting ongoing supply constraints that agents should monitor.",
+      "greeting": "Pending inventory held steady at 745 units this week in the Sioux Falls market. Median sale price stands at $365,000 with a list to sale ratio of 97.9%. Consumer sentiment dropped nationally to 44.8 in May as fuel prices continued rising.",
       "podcastUrl": "https://raw.githubusercontent.com/AmyStockberger/asre-weekly-support-report/main/reports/audio/2026-W21.mp3",
       "podcastDuration": "approx 4 min",
       "sections": {
@@ -28,9 +28,14 @@
           "headline": "Sioux Falls this week",
           "items": [
             {
-              "title": "Source unavailable",
-              "summary": "Source unavailable this week, check back next Sunday.",
-              "url": ""
+              "title": "Health Care",
+              "summary": "Health care sector activity in Sioux Falls continues to develop. Industry updates affect local business conditions.",
+              "url": "https://siouxfalls.business/category/healthcare/"
+            },
+            {
+              "title": "Food & Drink",
+              "summary": "Food and beverage businesses operate throughout Sioux Falls market. Sector trends influence commercial real estate demand.",
+              "url": "https://siouxfalls.business/category/food-drink/"
             }
           ]
         },
@@ -38,20 +43,20 @@
           "headline": "Local development to watch",
           "items": [
             {
-              "title": "Source unavailable",
-              "summary": "Source unavailable this week, check back next Sunday.",
-              "url": ""
+              "title": "Development",
+              "summary": "Development projects shape the Sioux Falls landscape. Commercial and residential construction updates inform agent market knowledge.",
+              "url": "https://siouxfalls.business/category/development/"
             }
           ]
         },
         "mortgage": {
           "headline": "Rates and mortgage chatter",
           "rate": null,
-          "summary": "The post does not report a specific 30-year fixed mortgage rate. Logan Mohtashami discusses housing starts stalling over recent years and references detailed analysis with charts on this topic. The content focuses on structural trends in housing supply rather than current mortgage pricing or weekly rate movement.",
+          "summary": "The post does not contain current 30-year mortgage rate data. Logan Mohtashami discusses housing starts and market trends but provides no specific rate information or week-over-week direction for mortgage rates.",
           "keyPoints": [
-            "Housing starts have remained stalled for years, indicating persistent supply constraints",
-            "The post references extensive written analysis with charts examining reasons behind housing trends",
-            "No specific mortgage rate data or week-over-week rate direction provided in this content"
+            "Post focuses on housing starts decline, not mortgage rates",
+            "No rate data or market movement information provided",
+            "Content promotional in nature rather than data-driven rate analysis"
           ],
           "sourceUrl": "https://loganmohtashami.com/2026/05/22/housing-starts-stalled-understanding-the-trend/"
         },
@@ -59,18 +64,28 @@
           "headline": "National real estate news",
           "items": [
             {
-              "title": "Source unavailable",
-              "summary": "Source unavailable this week, check back next Sunday.",
-              "url": ""
+              "title": "Judge Orders MRED to Restore Listing Feeds, Zillow to Display Banned Properties",
+              "summary": "A judge ordered MRED to restore listing feeds and Zillow to display properties that were previously banned. The ruling addresses disputes over listing access and data control among real estate platforms.",
+              "url": "https://www.rismedia.com/2026/05/22/judge-orders-mred-restore-listing-feeds-zillow-display-banned-properties/"
+            },
+            {
+              "title": "Consumer Sentiment Drops in Third Straight Month as Fuel Prices Continue to Rise",
+              "summary": "Consumer sentiment fell to 44.8 in May from 49.8 in April, marking a third consecutive monthly decline. Rising fuel prices drove the 10 percent drop in the University of Michigan's consumer sentiment survey.",
+              "url": "https://www.rismedia.com/2026/05/22/consumer-sentiment-may-2026/"
+            },
+            {
+              "title": "Leading Economic Signals Continue to Show 'Fragile' Outlook",
+              "summary": "The labor market shows signs of improvement while inflation remains elevated due to the U.S.-Iran War and energy price increases. Economic indicators point to a fragile outlook for the months ahead.",
+              "url": "https://www.rismedia.com/2026/05/22/leading-economic-signals-continue-to-show-fragile-outlook/"
             }
           ]
         },
         "partner": {
           "spotlight": {
-            "name": "Josh Osborne – CrossCountry Mortgage",
-            "category": "Home financing options",
-            "pitch": "Josh Osborne at CrossCountry Mortgage provides home financing solutions tailored to individual buyer needs. He works with clients to secure competitive rates and terms that fit their financial situation. Agents benefit from having a trusted financing partner to streamline the purchase process for their clients.",
-            "contact": "Josh Osborne, CrossCountry Mortgage"
+            "name": "Jensen Insurance",
+            "category": "Home & life coverage",
+            "pitch": "Jensen Insurance provides home and life coverage tailored to protect homeowners' assets and families. Agents can refer clients to secure comprehensive policies that address their unique property and insurance needs. Spring is an ideal time for homeowners to review and update their coverage.",
+            "contact": "Jensen Insurance"
           },
           "discounts": [
             {
