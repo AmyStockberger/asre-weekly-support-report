@@ -1,42 +1,154 @@
 """
-Pull social and viral real estate content from BAM (nowbam.com) RSS.
-Returns articles that mention Instagram, TikTok, reels, or trending social content.
+Pull viral Instagram reels via Apify data-slayer/instagram-search-reels.
+
+Returns a dict with:
+  luxury  – one reel (the highest-play real-estate result, "featured walkthrough")
+  viral   – list of reels from a broad viral search for R&D inspiration
 """
 import logging
+import os
+import time
 
-import feedparser
+import requests
 
 logger = logging.getLogger(__name__)
 
-SOCIAL_KEYWORDS = {
-    "tiktok", "instagram", "reel", "reels", "viral", "trending",
-    "social media", "short video", "content creator", "hashtag",
-}
-
-BAM_RSS = "https://nowbam.com/feed/"
+APIFY_BASE = "https://api.apify.com/v2"
+ACTOR_ID = "data-slayer~instagram-search-reels"
+POLL_INTERVAL = 8   # seconds between status checks
+MAX_WAIT = 150       # seconds before giving up on a run
 
 
-def fetch() -> list[dict]:
-    """Return up to 4 recent social-focused articles from BAM RSS."""
-    try:
-        feed = feedparser.parse(BAM_RSS)
-        articles = []
-        for entry in feed.entries[:30]:
-            title = entry.get("title", "").lower()
-            summary = getattr(entry, "summary", "").lower()
-            combined = title + " " + summary
-            if any(kw in combined for kw in SOCIAL_KEYWORDS):
-                summary_text = getattr(entry, "summary", "") or ""
-                if len(summary_text) > 300:
-                    summary_text = summary_text[:297] + "..."
-                articles.append({
-                    "title": entry.get("title", "").strip(),
-                    "url": entry.get("link", ""),
-                    "summary": summary_text.strip(),
-                    "published": entry.get("published", ""),
-                })
-        logger.info("social_trends: found %d social articles", len(articles))
-        return articles[:4]
-    except Exception as exc:
-        logger.warning("social_trends.fetch failed: %s", exc)
+def _run_actor(query: str, max_results: int = 15) -> list[dict]:
+    """Start an Apify run, wait for completion, return raw dataset items."""
+    api_key = os.environ.get("APIFY_API_KEY", "")
+    if not api_key:
+        logger.warning("APIFY_API_KEY not set — skipping Instagram scrape for %r", query)
         return []
+
+    try:
+        run_resp = requests.post(
+            f"{APIFY_BASE}/acts/{ACTOR_ID}/runs",
+            params={"token": api_key},
+            json={
+                "searchQuery": query,
+                "maxResults": max_results,
+                "proxy": {"useApifyProxy": True},
+            },
+            timeout=30,
+        )
+        run_resp.raise_for_status()
+        run_data = run_resp.json().get("data", {})
+        run_id = run_data.get("id")
+        dataset_id = run_data.get("defaultDatasetId", "")
+        if not run_id:
+            logger.warning("Apify returned no run ID for query %r", query)
+            return []
+
+        # Poll until finished
+        deadline = time.time() + MAX_WAIT
+        status = "RUNNING"
+        while time.time() < deadline:
+            sr = requests.get(
+                f"{APIFY_BASE}/actor-runs/{run_id}",
+                params={"token": api_key},
+                timeout=15,
+            )
+            sr.raise_for_status()
+            run_info = sr.json().get("data", {})
+            status = run_info.get("status", "")
+            if not dataset_id:
+                dataset_id = run_info.get("defaultDatasetId", "")
+            if status in ("SUCCEEDED", "FAILED", "ABORTED", "TIMED-OUT"):
+                break
+            time.sleep(POLL_INTERVAL)
+
+        if status != "SUCCEEDED":
+            logger.warning("Apify run for %r ended with status: %s", query, status)
+            return []
+
+        if not dataset_id:
+            logger.warning("No dataset ID for Apify run %s", run_id)
+            return []
+
+        items_resp = requests.get(
+            f"{APIFY_BASE}/datasets/{dataset_id}/items",
+            params={"token": api_key, "clean": "true"},
+            timeout=30,
+        )
+        items_resp.raise_for_status()
+        items = items_resp.json() or []
+        logger.info("Apify %r → %d reels", query, len(items))
+        return items
+
+    except Exception as exc:
+        logger.warning("Apify scrape failed for %r: %s", query, exc)
+        return []
+
+
+def _fmt_count(n: int) -> str:
+    if n >= 1_000_000:
+        return f"{n / 1_000_000:.1f}M"
+    if n >= 1_000:
+        return f"{n / 1_000:.0f}K"
+    return str(n)
+
+
+def _to_reel(item: dict) -> dict | None:
+    """Convert a raw Apify item to our clean reel dict. Returns None if unusable."""
+    code = item.get("code") or item.get("shortcode") or ""
+    if not code:
+        return None
+    url = f"https://www.instagram.com/reel/{code}/"
+
+    plays = (
+        item.get("playCount")
+        or item.get("videoPlayCount")
+        or item.get("videoViewCount")
+        or 0
+    )
+    likes = item.get("likesCount") or item.get("likes") or 0
+    owner = item.get("ownerUsername") or item.get("username") or ""
+
+    caption = (item.get("caption") or item.get("text") or "").strip()
+    # Keep first sentence or first 140 chars
+    for sep in (".", "!", "?", "\n"):
+        idx = caption.find(sep)
+        if 20 < idx < 160:
+            caption = caption[: idx + 1].strip()
+            break
+    if len(caption) > 160:
+        caption = caption[:157].rstrip() + "…"
+    if not caption:
+        caption = f"Reel by @{owner}"
+
+    stats_parts = []
+    if plays:
+        stats_parts.append(f"{_fmt_count(plays)} plays")
+    if likes:
+        stats_parts.append(f"{_fmt_count(likes)} likes")
+
+    return {
+        "owner": owner,
+        "url": url,
+        "plays": plays,
+        "likes": likes,
+        "caption": caption,
+        "stats": ", ".join(stats_parts),
+    }
+
+
+def fetch() -> dict:
+    """Return {'luxury': reel_or_None, 'viral': [reel, ...]}"""
+    # Query 1 — real estate (we pick the single top result as the featured luxury pick)
+    re_raw = _run_actor("real estate", max_results=12)
+    re_reels = [r for r in (_to_reel(i) for i in re_raw) if r]
+    re_reels.sort(key=lambda r: r["plays"], reverse=True)
+    luxury = re_reels[0] if re_reels else None
+
+    # Query 2 — broad viral (R&D inspiration, not real estate)
+    viral_raw = _run_actor("viral trending 2026", max_results=12)
+    viral_reels = [r for r in (_to_reel(i) for i in viral_raw) if r]
+    viral_reels.sort(key=lambda r: r["plays"], reverse=True)
+
+    return {"luxury": luxury, "viral": viral_reels[:4]}
