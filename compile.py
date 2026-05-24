@@ -423,7 +423,7 @@ def build_social():
         "JSON only. No code fences."
     )
 
-    raw = summarize(SYSTEM_PROMPT, user_prompt, max_tokens=600)
+    raw = summarize(SYSTEM_PROMPT, user_prompt, max_tokens=1000)
     if not raw:
         return fallback
 
