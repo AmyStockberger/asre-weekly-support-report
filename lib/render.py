@@ -9,20 +9,18 @@ import html as html_lib
 
 from .config import BRAND_NAVY, BRAND_YELLOW, SAMY_URL
 
-
 def _safe(value, default=""):
     if value is None:
         return default
     return value
-
 
 def build_report(week_data: dict) -> dict:
     """
     Coerce the compile output into the reports.json schema.
 
     week_data keys expected:
-        weekId, weekLabel, publishedAt, greeting, podcastUrl, podcastDuration,
-        sections (dict matching the spec)
+    weekId, weekLabel, publishedAt, greeting, podcastUrl, podcastDuration,
+    sections (dict matching the spec)
     """
     return {
         "weekId": _safe(week_data.get("weekId")),
@@ -33,7 +31,6 @@ def build_report(week_data: dict) -> dict:
         "podcastDuration": _safe(week_data.get("podcastDuration"), "approx 4 min"),
         "sections": week_data.get("sections", {}),
     }
-
 
 def _section_teaser(report: dict, key: str, fallback_headline: str, fallback_teaser: str):
     section = report.get("sections", {}).get(key, {}) or {}
@@ -50,7 +47,12 @@ def _section_teaser(report: dict, key: str, fallback_headline: str, fallback_tea
         if bullets:
             teaser = bullets[0]
     elif key == "mortgage":
-        teaser = section.get("summary") or ""
+        rate = section.get("rate")
+        summary = section.get("summary") or ""
+        if rate:
+            teaser = f"{rate} 30-yr fixed. {summary}"
+        else:
+            teaser = summary
     elif key == "partner":
         spotlight = section.get("spotlight", {}) or {}
         teaser = spotlight.get("pitch") or ""
@@ -74,7 +76,6 @@ def _section_teaser(report: dict, key: str, fallback_headline: str, fallback_tea
         teaser = teaser[:177].rstrip() + "..."
 
     return headline, teaser
-
 
 def build_email_html(report: dict, artifact_url: str) -> str:
     """
@@ -100,6 +101,7 @@ def build_email_html(report: dict, artifact_url: str) -> str:
         ("partner", "Home Support Partners spotlight", "Who to lean on this week."),
         ("asreLab", "ASRE Lab", "This week's smart move."),
         ("events", "What's Coming Up at ASRE", "Where to bring your people."),
+        ("social", "Trending on IG and TikTok", "What is working on social this week."),
     ]
 
     teaser_rows = []
@@ -107,17 +109,17 @@ def build_email_html(report: dict, artifact_url: str) -> str:
         headline, teaser = _section_teaser(report, key, fallback_headline, fallback_teaser)
         teaser_rows.append(
             f"""
-            <tr>
-              <td style="padding: 10px 0; border-bottom: 1px solid #e6e6ea;">
-                <div style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; color: {BRAND_NAVY}; font-weight: bold;">
-                  {html_lib.escape(headline)}
-                </div>
-                <div style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #333; margin-top: 4px;">
-                  {html_lib.escape(teaser)}
-                </div>
-              </td>
-            </tr>
-            """
+<tr>
+<td style="padding: 10px 0; border-bottom: 1px solid #e6e6ea;">
+<div style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; color: {BRAND_NAVY}; font-weight: bold;">
+{html_lib.escape(headline)}
+</div>
+<div style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #333; margin-top: 4px;">
+{html_lib.escape(teaser)}
+</div>
+</td>
+</tr>
+"""
         )
 
     teasers_html = "".join(teaser_rows)
@@ -125,84 +127,84 @@ def build_email_html(report: dict, artifact_url: str) -> str:
     podcast_row = ""
     if podcast_url:
         podcast_row = f"""
-        <tr>
-          <td style="padding: 16px 0 0 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #333;">
-            Listen instead.
-            <a href="{html_lib.escape(podcast_url, quote=True)}" style="color: {BRAND_NAVY}; font-weight: bold;">Open the podcast.</a>
-          </td>
-        </tr>
-        """
+<tr>
+<td style="padding: 16px 0 0 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #333;">
+Listen instead.
+<a href="{html_lib.escape(podcast_url, quote=True)}" style="color: {BRAND_NAVY}; font-weight: bold;">Open the podcast.</a>
+</td>
+</tr>
+"""
 
     # Logo placeholder. Amy can swap the src later for a hosted logo URL.
     logo_html = f"""
-    <div style="font-family: Arial, Helvetica, sans-serif; font-size: 22px; font-weight: bold; color: {BRAND_NAVY}; letter-spacing: 0.5px;">
-      Amy Stockberger Real Estate
-    </div>
-    """
+<div style="font-family: Arial, Helvetica, sans-serif; font-size: 22px; font-weight: bold; color: {BRAND_NAVY}; letter-spacing: 0.5px;">
+Amy Stockberger Real Estate
+</div>
+"""
 
     html_doc = f"""<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>The ASRE Weekly Support Report</title>
+<meta charset="utf-8">
+<title>The ASRE Weekly Support Report</title>
 </head>
 <body style="margin: 0; padding: 0; background-color: #f4f4f7;">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #f4f4f7; padding: 24px 0;">
-    <tr>
-      <td align="center">
-        <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="background: #ffffff; border-radius: 6px; overflow: hidden; max-width: 600px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #f4f4f7; padding: 24px 0;">
+<tr>
+<td align="center">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="background: #ffffff; border-radius: 6px; overflow: hidden; max-width: 600px;">
 
-          <tr>
-            <td style="background: {BRAND_NAVY}; padding: 20px 24px;">
-              {logo_html.replace(BRAND_NAVY, "#ffffff")}
-            </td>
-          </tr>
+<tr>
+<td style="background: {BRAND_NAVY}; padding: 20px 24px;">
+{logo_html.replace(BRAND_NAVY, "#ffffff")}
+</td>
+</tr>
 
-          <tr>
-            <td style="background: {BRAND_YELLOW}; padding: 12px 24px; font-family: Arial, Helvetica, sans-serif; color: {BRAND_NAVY}; font-size: 14px; font-weight: bold; letter-spacing: 0.5px;">
-              The ASRE Weekly Support Report &middot; {week_label}
-            </td>
-          </tr>
+<tr>
+<td style="background: {BRAND_YELLOW}; padding: 12px 24px; font-family: Arial, Helvetica, sans-serif; color: {BRAND_NAVY}; font-size: 14px; font-weight: bold; letter-spacing: 0.5px;">
+The ASRE Weekly Support Report &middot; {week_label}
+</td>
+</tr>
 
-          <tr>
-            <td style="padding: 24px;">
-              <p style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #222; line-height: 1.5; margin: 0 0 18px 0;">
-                {greeting}
-              </p>
+<tr>
+<td style="padding: 24px;">
+<p style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #222; line-height: 1.5; margin: 0 0 18px 0;">
+{greeting}
+</p>
 
-              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-                {teasers_html}
-              </table>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+{teasers_html}
+</table>
 
-              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top: 24px;">
-                <tr>
-                  <td align="center">
-                    <a href="{cta_url_safe}" style="display: inline-block; background: {BRAND_YELLOW}; color: {BRAND_NAVY}; font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; padding: 14px 28px; border-radius: 4px; text-decoration: none;">
-                      Read this week's full report
-                    </a>
-                    <div style="margin-top: 14px; font-family: Arial, Helvetica, sans-serif; font-size: 14px;">
-                      Stuck on a process or SOP?
-                      <a href="{SAMY_URL}" style="color: {BRAND_NAVY}; font-weight: bold;">Ask Samy in Teams</a>
-                    </div>
-                  </td>
-                </tr>
-                {podcast_row}
-              </table>
-            </td>
-          </tr>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top: 24px;">
+<tr>
+<td align="center">
+<a href="{cta_url_safe}" style="display: inline-block; background: {BRAND_YELLOW}; color: {BRAND_NAVY}; font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; padding: 14px 28px; border-radius: 4px; text-decoration: none;">
+Read this week's full report
+</a>
+<div style="margin-top: 14px; font-family: Arial, Helvetica, sans-serif; font-size: 14px;">
+Stuck on a process or SOP?
+<a href="{SAMY_URL}" style="color: {BRAND_NAVY}; font-weight: bold;">Ask Samy in Teams</a>
+</div>
+</td>
+</tr>
+{podcast_row}
+</table>
+</td>
+</tr>
 
-          <tr>
-            <td style="background: {BRAND_NAVY}; padding: 18px 24px; font-family: Arial, Helvetica, sans-serif; color: #ffffff; font-size: 12px; line-height: 1.5; text-align: center;">
-              Lifetime Home Support&trade; from Amy Stockberger Real Estate.<br>
-              Before, during, and forever.<br>
-              <span style="color: {BRAND_YELLOW}; font-weight: bold; letter-spacing: 1px;">Serve. Serve. Serve. Sell.</span>
-            </td>
-          </tr>
+<tr>
+<td style="background: {BRAND_NAVY}; padding: 18px 24px; font-family: Arial, Helvetica, sans-serif; color: #ffffff; font-size: 12px; line-height: 1.5; text-align: center;">
+Lifetime Home Support&trade; from Amy Stockberger Real Estate.<br>
+Before, during, and forever.<br>
+<span style="color: {BRAND_YELLOW}; font-weight: bold; letter-spacing: 1px;">Serve. Serve. Serve. Sell.</span>
+</td>
+</tr>
 
-        </table>
-      </td>
-    </tr>
-  </table>
+</table>
+</td>
+</tr>
+</table>
 </body>
 </html>
 """
