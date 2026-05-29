@@ -410,36 +410,35 @@ def build_social():
         "headline": "Trending on IG and TikTok",
         "items": [],
     }
-
-    user_prompt = (
-        "List the top three content trends real estate agents should be using "
-        "on Instagram and TikTok right now. "
-        "Be specific about format: for example, "
-        "'neighborhood walk-and-talk videos', '15-second rate update reels', "
-        "'before-and-after staging clips', 'just-listed story sequences'. "
-        "For each trend, write a short punchy headline and one to two sentences "
-        "explaining what the format looks like and why it is getting engagement. "
-        "Return strict JSON with key items. Each item has title and summary. "
-        "JSON only. No code fences."
+    result = _safe_call(
+        "social_trends.fetch",
+        social_trends.fetch,
+        {"luxury": None, "viral": []},
     )
-
-    _SOCIAL_PROMPT = "You output only valid JSON. No prose, no markdown, no code fences. Return a JSON object with one key: items. Each item has title and summary."
-    raw = summarize(_SOCIAL_PROMPT, user_prompt, max_tokens=1000)
-    if not raw:
+    items = []
+    luxury = result.get("luxury")
+    if luxury:
+        owner = luxury.get("owner", "")
+        caption = luxury.get("caption", "")
+        stats = luxury.get("stats", "")
+        items.append({
+            "title": f"\U0001f3e0 Featured Luxury Walkthrough \u2014 @{owner}",
+            "summary": f"{caption} ({stats})" if stats else caption,
+            "url": luxury.get("url", ""),
+        })
+    for v in result.get("viral", []):
+        owner = v.get("owner", "")
+        caption = v.get("caption", "")
+        stats = v.get("stats", "")
+        items.append({
+            "title": f"@{owner}",
+            "summary": f"{caption} ({stats})" if stats else caption,
+            "url": v.get("url", ""),
+        })
+    if not items:
         return fallback
+    return {"headline": "Trending on IG and TikTok", "items": items}
 
-    try:
-        cleaned = raw.strip().strip("`")
-        if cleaned.startswith("json"):
-            cleaned = cleaned[4:]
-        parsed = json.loads(cleaned)
-        items = parsed.get("items") or []
-        if not items:
-            return fallback
-        return {"headline": "Trending on IG and TikTok", "items": items[:3]}
-    except Exception as exc:
-        logger.warning("social JSON parse failed: %s", exc)
-        return fallback
 
 def build_market_stats(last_week_pending=None):
     """Pull active/pending counts, weekly solds stats, and the 12-month median
