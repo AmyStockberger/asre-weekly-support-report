@@ -40,4 +40,5 @@ jobs:
           git config user.email "bot@amystockberger.com"
           git add reports/
           git diff --cached --quiet || git commit -m "Weekly compile: $(date -u +%Y-W%V)"
+          git pull --rebase origin main
           git push
