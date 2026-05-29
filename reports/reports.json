@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-29T16:05:23Z",
+  "updatedAt": "2026-05-29T16:20:45Z",
   "reports": [
     {
       "weekId": "2026-W22",
       "weekLabel": "Week of May 25",
       "publishedAt": "2026-05-29",
-      "greeting": "Sioux Falls inventory and transaction activity held steady this week with 1,369 active listings and 745 pending sales. The median sale price sits at $365,000 with a list-to-sale ratio of 97.9%, indicating balanced conditions in the market.",
+      "greeting": "Sioux Falls inventory remained steady this week with 1,369 active listings and 745 pending sales. The median sale price held at $365,000 with a list-to-sale ratio of 97.9%, indicating a balanced market. Mortgage rates remain above 6%, and agents should monitor bond market levels for direction on future rate movement.",
       "podcastUrl": "https://raw.githubusercontent.com/AmyStockberger/asre-weekly-support-report/main/reports/audio/2026-W22.mp3",
       "podcastDuration": "approx 4 min",
       "sections": {
@@ -29,13 +29,13 @@
           "items": [
             {
               "title": "Health Care",
-              "summary": "Health care sector continues to expand in Sioux Falls with new facilities and services. Medical professionals report strong demand for specialized care.",
+              "summary": "Health care sector activity shapes employment and commercial property demand in Sioux Falls. Market shifts in this sector affect office and clinic real estate valuations.",
               "url": "https://siouxfalls.business/category/healthcare/"
             },
             {
-              "title": "Food & Drink",
-              "summary": "New restaurants and food service businesses open in Sioux Falls. Consumer spending in food and beverage sector shows steady growth.",
-              "url": "https://siouxfalls.business/category/food-drink/"
+              "title": "Retail",
+              "summary": "Retail operations and store openings influence commercial property leasing rates across the market. Agent familiarity with retail trends informs investment property assessments.",
+              "url": "https://siouxfalls.business/category/retail/"
             }
           ]
         },
@@ -44,7 +44,7 @@
           "items": [
             {
               "title": "Development",
-              "summary": "Multiple development projects advance across Sioux Falls with new commercial and mixed-use properties. Construction activity remains consistent throughout the region.",
+              "summary": "New construction projects and development pipelines directly affect available inventory and pricing. Agents track development activity to identify emerging neighborhoods and growth corridors.",
               "url": "https://siouxfalls.business/category/development/"
             }
           ]
@@ -52,11 +52,11 @@
         "mortgage": {
           "headline": "Rates and mortgage chatter",
           "rate": null,
-          "summary": "Logan Mohtashami's podcast addresses mortgage rate direction in response to geopolitical developments. The discussion examines whether rates could fall below 6% and references specific bond market levels to monitor. Mohtashami cautions against unrealistic expectations about near-term rate declines.",
+          "summary": "Logan Mohtashami's podcast addresses mortgage rate direction if geopolitical conflict resolves, cautioning against expectations of rates dropping below 6% soon. The discussion centers on bond market levels as key indicators for future rate movement. Mohtashami provides specific technical levels to monitor rather than speculative predictions about rate direction.",
           "keyPoints": [
-            "No specific current mortgage rate is provided in the post",
-            "Discussion focuses on hypothetical rate movement tied to geopolitical events",
-            "Bond market levels serve as the key indicator to watch for rate direction"
+            "No specific 30-year mortgage rate is cited in this post",
+            "Discussion focuses on whether rates will fall below 6%, suggesting current rates remain above that threshold",
+            "Bond market levels serve as the primary indicator agents should watch for rate movement"
           ],
           "sourceUrl": "https://loganmohtashami.com/2026/05/27/impacts-of-ended-conflict-on-mortgage-rates/"
         },
@@ -72,10 +72,10 @@
         },
         "partner": {
           "spotlight": {
-            "name": "Fairway Home Mortgage – The Heartland Branch",
-            "category": "Mortgage & Refinancing",
-            "pitch": "Fairway Home Mortgage provides trusted mortgage guidance to homeowners in Sioux Falls. The Heartland Branch works with clients to evaluate financing options and refinancing strategies that align with their financial goals. Their team helps homeowners make informed decisions about their home loans.",
-            "contact": "Contact information available through Fairway Home Mortgage"
+            "name": "Jensen Insurance",
+            "category": "Home & life coverage",
+            "pitch": "Jensen Insurance provides comprehensive home and life coverage tailored to homeowners in Sioux Falls. Agents recommend this partner to clients who need to protect their properties and families with reliable insurance solutions during spring financial planning.",
+            "contact": "Not provided in document"
           },
           "discounts": [
             {
@@ -187,7 +187,33 @@
         },
         "social": {
           "headline": "Trending on IG and TikTok",
-          "items": []
+          "items": [
+            {
+              "title": "🏠 Featured Luxury Walkthrough — @soldbytyler",
+              "summary": "Which GTA house would you rather to live in? 🤔 \nList: @resnickandnash \nDM me for all Buying, Selling, and Leasing in LA. (6.8M plays, 692K likes)",
+              "url": "https://www.instagram.com/reel/DWzPi-IgcuY/"
+            },
+            {
+              "title": "@ankush__rajput007",
+              "summary": "मॉं आने वाली है सभी के घर 🏠🌍❤️ \n. (25.9M plays, 2.5M likes)",
+              "url": "https://www.instagram.com/reel/DVtK06JE-SN/"
+            },
+            {
+              "title": "@kavinskey_",
+              "summary": "Always obessed with this kinda weather🫶 (19.0M plays, 1.4M likes)",
+              "url": "https://www.instagram.com/reel/DWE-a85EhPh/"
+            },
+            {
+              "title": "@soren_170",
+              "summary": "Galti se reel bhej diya (12.8M plays)",
+              "url": "https://www.instagram.com/reel/DV2nM4fBJp9/"
+            },
+            {
+              "title": "@i.m_himanshu_o1",
+              "summary": "Same same but different \n. (10.9M plays, 117K likes)",
+              "url": "https://www.instagram.com/reel/DYnBnxjBRUr/"
+            }
+          ]
         }
       }
     },
