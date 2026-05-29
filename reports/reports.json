@@ -1,7 +1,196 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-24T17:41:26Z",
+  "updatedAt": "2026-05-29T15:46:58Z",
   "reports": [
+    {
+      "weekId": "2026-W22",
+      "weekLabel": "Week of May 25",
+      "publishedAt": "2026-05-29",
+      "greeting": "Sioux Falls recorded 107 sales this week with 745 pending transactions and a median sale price of $365,000. The pending count held steady week-over-week, signaling a stable market. Mortgage rate expectations remain cautious, with experts warning against assumptions of rates dropping below 6% in the near term.",
+      "podcastUrl": "https://raw.githubusercontent.com/AmyStockberger/asre-weekly-support-report/main/reports/audio/2026-W22.mp3",
+      "podcastDuration": "approx 4 min",
+      "sections": {
+        "marketStats": {
+          "headline": "Sioux Falls market stats this week",
+          "bullets": [
+            "Active: 1369. Pending: 745. Sold this week: 107.",
+            "Median sale price: $365,000. average days on market: 66. list to sale ratio: 97.9%.",
+            "Pending count is flat versus last week. Steady week."
+          ],
+          "chartTitle": "Median sale price, 12-month view",
+          "chart": [],
+          "sourceUrl": "",
+          "_internal": {
+            "pending_count": 745
+          }
+        },
+        "localNews": {
+          "headline": "Sioux Falls this week",
+          "items": [
+            {
+              "title": "Health Care",
+              "summary": "Health care sector developments impact employment and commercial real estate demand in Sioux Falls. Agents should track facility expansions and new medical office construction.",
+              "url": "https://siouxfalls.business/category/healthcare/"
+            },
+            {
+              "title": "Food & Drink",
+              "summary": "Restaurant and retail food establishments drive foot traffic patterns and neighborhood revitalization. New openings signal economic activity in specific market areas.",
+              "url": "https://siouxfalls.business/category/food-drink/"
+            }
+          ]
+        },
+        "realEstate": {
+          "headline": "Local development to watch",
+          "items": [
+            {
+              "title": "Development",
+              "summary": "Development projects outline future growth corridors and infrastructure improvements affecting property values. Agents need current information on approved and pending projects.",
+              "url": "https://siouxfalls.business/category/development/"
+            }
+          ]
+        },
+        "mortgage": {
+          "headline": "Rates and mortgage chatter",
+          "rate": null,
+          "summary": "Logan Mohtashami addresses mortgage rate expectations in a podcast discussing potential outcomes if current geopolitical conflict resolves. He cautions against assumptions that rates will drop below 6% soon and identifies specific bond market levels worth monitoring. The discussion centers on realistic rate scenarios based on market mechanics rather than speculation.",
+          "keyPoints": [
+            "No specific 30-year mortgage rate is stated in this post",
+            "Mohtashami warns against premature expectations of sub-6% rates",
+            "Bond market levels provide key indicators for predicting rate movement"
+          ],
+          "sourceUrl": "https://loganmohtashami.com/2026/05/27/impacts-of-ended-conflict-on-mortgage-rates/"
+        },
+        "national": {
+          "headline": "National real estate news",
+          "items": [
+            {
+              "title": "Source unavailable",
+              "summary": "Source unavailable this week, check back next Sunday.",
+              "url": ""
+            }
+          ]
+        },
+        "partner": {
+          "spotlight": {
+            "name": "Jensen Insurance",
+            "category": "Home & life coverage",
+            "pitch": "Jensen Insurance provides home and life coverage options that protect homeowners' assets and families. Agents recommend Jensen to clients who need comprehensive insurance solutions alongside their home purchase or refinance.",
+            "contact": "Jensen Insurance"
+          },
+          "discounts": [
+            {
+              "partner": "Find a Home",
+              "offer": "Amy Stockberger Real Estate | Sioux Falls, SD Our Listings Our Open Houses Search All Listings Schedule an Appointment or Showing New Listing Alerts"
+            }
+          ]
+        },
+        "events": {
+          "headline": "What's Coming Up at ASRE",
+          "items": [
+            {
+              "title": "Contract Training",
+              "when": "11 June 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Coaching w/ Marc",
+              "when": "11 June 2026 at 11:00 AM",
+              "where": "Zoom",
+              "notes": ""
+            },
+            {
+              "title": "Agent Coaching",
+              "when": "14 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "16 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "16 June 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "18 June 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "2 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "2 June 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "21 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "23 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "25 June 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "4 June 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "7 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "9 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Coaching w/ Marc",
+              "when": "9 July 2026 at 11:00 AM",
+              "where": "Zoom",
+              "notes": ""
+            },
+            {
+              "title": "Agent Coaching",
+              "when": "9 June 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            }
+          ]
+        },
+        "social": {
+          "headline": "Trending on IG and TikTok",
+          "items": []
+        }
+      }
+    },
     {
       "weekId": "2026-W21",
       "weekLabel": "Week of May 18",
