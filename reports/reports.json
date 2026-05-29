@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-29T15:46:58Z",
+  "updatedAt": "2026-05-29T16:05:23Z",
   "reports": [
     {
       "weekId": "2026-W22",
       "weekLabel": "Week of May 25",
       "publishedAt": "2026-05-29",
-      "greeting": "Sioux Falls recorded 107 sales this week with 745 pending transactions and a median sale price of $365,000. The pending count held steady week-over-week, signaling a stable market. Mortgage rate expectations remain cautious, with experts warning against assumptions of rates dropping below 6% in the near term.",
+      "greeting": "Sioux Falls inventory and transaction activity held steady this week with 1,369 active listings and 745 pending sales. The median sale price sits at $365,000 with a list-to-sale ratio of 97.9%, indicating balanced conditions in the market.",
       "podcastUrl": "https://raw.githubusercontent.com/AmyStockberger/asre-weekly-support-report/main/reports/audio/2026-W22.mp3",
       "podcastDuration": "approx 4 min",
       "sections": {
@@ -29,12 +29,12 @@
           "items": [
             {
               "title": "Health Care",
-              "summary": "Health care sector developments impact employment and commercial real estate demand in Sioux Falls. Agents should track facility expansions and new medical office construction.",
+              "summary": "Health care sector continues to expand in Sioux Falls with new facilities and services. Medical professionals report strong demand for specialized care.",
               "url": "https://siouxfalls.business/category/healthcare/"
             },
             {
               "title": "Food & Drink",
-              "summary": "Restaurant and retail food establishments drive foot traffic patterns and neighborhood revitalization. New openings signal economic activity in specific market areas.",
+              "summary": "New restaurants and food service businesses open in Sioux Falls. Consumer spending in food and beverage sector shows steady growth.",
               "url": "https://siouxfalls.business/category/food-drink/"
             }
           ]
@@ -44,7 +44,7 @@
           "items": [
             {
               "title": "Development",
-              "summary": "Development projects outline future growth corridors and infrastructure improvements affecting property values. Agents need current information on approved and pending projects.",
+              "summary": "Multiple development projects advance across Sioux Falls with new commercial and mixed-use properties. Construction activity remains consistent throughout the region.",
               "url": "https://siouxfalls.business/category/development/"
             }
           ]
@@ -52,11 +52,11 @@
         "mortgage": {
           "headline": "Rates and mortgage chatter",
           "rate": null,
-          "summary": "Logan Mohtashami addresses mortgage rate expectations in a podcast discussing potential outcomes if current geopolitical conflict resolves. He cautions against assumptions that rates will drop below 6% soon and identifies specific bond market levels worth monitoring. The discussion centers on realistic rate scenarios based on market mechanics rather than speculation.",
+          "summary": "Logan Mohtashami's podcast addresses mortgage rate direction in response to geopolitical developments. The discussion examines whether rates could fall below 6% and references specific bond market levels to monitor. Mohtashami cautions against unrealistic expectations about near-term rate declines.",
           "keyPoints": [
-            "No specific 30-year mortgage rate is stated in this post",
-            "Mohtashami warns against premature expectations of sub-6% rates",
-            "Bond market levels provide key indicators for predicting rate movement"
+            "No specific current mortgage rate is provided in the post",
+            "Discussion focuses on hypothetical rate movement tied to geopolitical events",
+            "Bond market levels serve as the key indicator to watch for rate direction"
           ],
           "sourceUrl": "https://loganmohtashami.com/2026/05/27/impacts-of-ended-conflict-on-mortgage-rates/"
         },
@@ -72,10 +72,10 @@
         },
         "partner": {
           "spotlight": {
-            "name": "Jensen Insurance",
-            "category": "Home & life coverage",
-            "pitch": "Jensen Insurance provides home and life coverage options that protect homeowners' assets and families. Agents recommend Jensen to clients who need comprehensive insurance solutions alongside their home purchase or refinance.",
-            "contact": "Jensen Insurance"
+            "name": "Fairway Home Mortgage – The Heartland Branch",
+            "category": "Mortgage & Refinancing",
+            "pitch": "Fairway Home Mortgage provides trusted mortgage guidance to homeowners in Sioux Falls. The Heartland Branch works with clients to evaluate financing options and refinancing strategies that align with their financial goals. Their team helps homeowners make informed decisions about their home loans.",
+            "contact": "Contact information available through Fairway Home Mortgage"
           },
           "discounts": [
             {
