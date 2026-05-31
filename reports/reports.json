@@ -1,40 +1,40 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-29T16:20:45Z",
+  "updatedAt": "2026-05-31T12:09:28Z",
   "reports": [
     {
       "weekId": "2026-W22",
       "weekLabel": "Week of May 25",
-      "publishedAt": "2026-05-29",
-      "greeting": "Sioux Falls inventory remained steady this week with 1,369 active listings and 745 pending sales. The median sale price held at $365,000 with a list-to-sale ratio of 97.9%, indicating a balanced market. Mortgage rates remain above 6%, and agents should monitor bond market levels for direction on future rate movement.",
+      "publishedAt": "2026-05-31",
+      "greeting": "Pending sales dropped 27 units this week to 718, signaling potential buyer hesitation in the Sioux Falls market. Active inventory stands at 1,425 with a median sale price of $360,000 and a list-to-sale ratio of 98.5%.",
       "podcastUrl": "https://raw.githubusercontent.com/AmyStockberger/asre-weekly-support-report/main/reports/audio/2026-W22.mp3",
       "podcastDuration": "approx 4 min",
       "sections": {
         "marketStats": {
           "headline": "Sioux Falls market stats this week",
           "bullets": [
-            "Active: 1369. Pending: 745. Sold this week: 107.",
-            "Median sale price: $365,000. average days on market: 66. list to sale ratio: 97.9%.",
-            "Pending count is flat versus last week. Steady week."
+            "Active: 1425. Pending: 718. Sold this week: 119.",
+            "Median sale price: $360,000. average days on market: 66. list to sale ratio: 98.5%.",
+            "Pending count is down by 27 versus last week. Watch for buyer hesitation."
           ],
           "chartTitle": "Median sale price, 12-month view",
           "chart": [],
           "sourceUrl": "",
           "_internal": {
-            "pending_count": 745
+            "pending_count": 718
           }
         },
         "localNews": {
           "headline": "Sioux Falls this week",
           "items": [
             {
-              "title": "Health Care",
-              "summary": "Health care sector activity shapes employment and commercial property demand in Sioux Falls. Market shifts in this sector affect office and clinic real estate valuations.",
-              "url": "https://siouxfalls.business/category/healthcare/"
+              "title": "Latest News",
+              "summary": "Siouxfalls.business publishes current business news affecting the Sioux Falls market. Check this section weekly for updates on local economic conditions and business developments.",
+              "url": "https://siouxfalls.business/latest-news/"
             },
             {
               "title": "Retail",
-              "summary": "Retail operations and store openings influence commercial property leasing rates across the market. Agent familiarity with retail trends informs investment property assessments.",
+              "summary": "Retail sector activity shapes foot traffic patterns and commercial property demand in Sioux Falls. Monitor retail announcements to understand neighborhood vitality and consumer behavior shifts.",
               "url": "https://siouxfalls.business/category/retail/"
             }
           ]
@@ -44,7 +44,7 @@
           "items": [
             {
               "title": "Development",
-              "summary": "New construction projects and development pipelines directly affect available inventory and pricing. Agents track development activity to identify emerging neighborhoods and growth corridors.",
+              "summary": "New development projects indicate future growth areas and infrastructure investment across Sioux Falls. Track development announcements to identify emerging neighborhoods and market opportunities.",
               "url": "https://siouxfalls.business/category/development/"
             }
           ]
@@ -52,13 +52,13 @@
         "mortgage": {
           "headline": "Rates and mortgage chatter",
           "rate": null,
-          "summary": "Logan Mohtashami's podcast addresses mortgage rate direction if geopolitical conflict resolves, cautioning against expectations of rates dropping below 6% soon. The discussion centers on bond market levels as key indicators for future rate movement. Mohtashami provides specific technical levels to monitor rather than speculative predictions about rate direction.",
+          "summary": "The post does not provide a specific 30-year fixed mortgage rate. Logan Mohtashami discusses the current mortgage rate environment in general terms, referencing a podcast episode and a new home sales report, but no precise rate percentage is stated in the provided text.",
           "keyPoints": [
-            "No specific 30-year mortgage rate is cited in this post",
-            "Discussion focuses on whether rates will fall below 6%, suggesting current rates remain above that threshold",
-            "Bond market levels serve as the primary indicator agents should watch for rate movement"
+            "No specific 30-year rate data included in this post",
+            "Content focuses on new home sales report and economic conditions",
+            "Assumes ceasefire deal holds and geopolitical tensions ease"
           ],
-          "sourceUrl": "https://loganmohtashami.com/2026/05/27/impacts-of-ended-conflict-on-mortgage-rates/"
+          "sourceUrl": "https://loganmohtashami.com/2026/05/29/mortgage-rates-the-good-bad-and-ugly-explained/"
         },
         "national": {
           "headline": "National real estate news",
@@ -72,9 +72,9 @@
         },
         "partner": {
           "spotlight": {
-            "name": "Jensen Insurance",
-            "category": "Home & life coverage",
-            "pitch": "Jensen Insurance provides comprehensive home and life coverage tailored to homeowners in Sioux Falls. Agents recommend this partner to clients who need to protect their properties and families with reliable insurance solutions during spring financial planning.",
+            "name": "Fairway Home Mortgage – The Heartland Branch",
+            "category": "Mortgage & refinancing solutions",
+            "pitch": "Fairway Home Mortgage provides trusted mortgage guidance to help homeowners navigate financing options for purchases and refinances. The team works with clients to find loan solutions that fit their financial situation and goals. Their expertise helps simplify the mortgage process during spring financial planning.",
             "contact": "Not provided in document"
           },
           "discounts": [
@@ -155,6 +155,12 @@
             },
             {
               "title": "Contract Training",
+              "when": "30 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
               "when": "4 June 2026 at 10:30 AM",
               "where": "ASRE Training Room",
               "notes": ""
@@ -189,29 +195,29 @@
           "headline": "Trending on IG and TikTok",
           "items": [
             {
-              "title": "🏠 Featured Luxury Walkthrough — @soldbytyler",
-              "summary": "Which GTA house would you rather to live in? 🤔 \nList: @resnickandnash \nDM me for all Buying, Selling, and Leasing in LA. (6.8M plays, 692K likes)",
-              "url": "https://www.instagram.com/reel/DWzPi-IgcuY/"
+              "title": "🏠 Featured Luxury Walkthrough — @exaltgroupflorida",
+              "summary": "At this point I’m just looking for: (4.1M plays, 91K likes)",
+              "url": "https://www.instagram.com/reel/DYDlzIET334/"
             },
             {
-              "title": "@ankush__rajput007",
-              "summary": "मॉं आने वाली है सभी के घर 🏠🌍❤️ \n. (25.9M plays, 2.5M likes)",
-              "url": "https://www.instagram.com/reel/DVtK06JE-SN/"
+              "title": "@paroyadav_0001",
+              "summary": "4K Video | रोटिया बेलही के परी | Srishti Bharti | Rotiya Belahi Ke Pari | Bhojpuri Video Song 2026\n. (101.3M plays, 612K likes)",
+              "url": "https://www.instagram.com/reel/DWUAVHsga1Z/"
             },
             {
-              "title": "@kavinskey_",
-              "summary": "Always obessed with this kinda weather🫶 (19.0M plays, 1.4M likes)",
-              "url": "https://www.instagram.com/reel/DWE-a85EhPh/"
+              "title": "@iv_ysaurr",
+              "summary": "❤️‍🔥\n\n[ Relatable, Trending, Fashion, Outfit, Heels, Reel, viral ]\n\n#instagram #relatable #2026 #trending #grwm (55.9M plays, 2.9M likes)",
+              "url": "https://www.instagram.com/reel/DTCX7eBjDOR/"
             },
             {
-              "title": "@soren_170",
-              "summary": "Galti se reel bhej diya (12.8M plays)",
-              "url": "https://www.instagram.com/reel/DV2nM4fBJp9/"
+              "title": "@thelavishcouple",
+              "summary": "Proposal straight out of dream’s ❤️❤️ (29.5M plays, 1.7M likes)",
+              "url": "https://www.instagram.com/reel/DT0mW4xAnYK/"
             },
             {
-              "title": "@i.m_himanshu_o1",
-              "summary": "Same same but different \n. (10.9M plays, 117K likes)",
-              "url": "https://www.instagram.com/reel/DYnBnxjBRUr/"
+              "title": "@mr._tejaa_013",
+              "summary": "Save The Date 26/4/2026🫶👀\nShoot + edit :-@rajdeep_Photo & Film’s / cinematic_Sonyaa_23\n. (11.9M plays, 104K likes)",
+              "url": "https://www.instagram.com/reel/DXO5w2-MGBr/"
             }
           ]
         }
