@@ -1,7 +1,218 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-31T12:09:28Z",
+  "updatedAt": "2026-06-07T12:19:14Z",
   "reports": [
+    {
+      "weekId": "2026-W23",
+      "weekLabel": "Week of June 1",
+      "publishedAt": "2026-06-07",
+      "greeting": "Pending sales dropped 24 units compared to last week in Sioux Falls. The median sale price held at $353,500 with 133 homes sold this week. Watch for signs of buyer hesitation as the market shifts.",
+      "podcastUrl": "https://raw.githubusercontent.com/AmyStockberger/asre-weekly-support-report/main/reports/audio/2026-W23.mp3",
+      "podcastDuration": "approx 4 min",
+      "sections": {
+        "marketStats": {
+          "headline": "Sioux Falls market stats this week",
+          "bullets": [
+            "Active: 1448. Pending: 694. Sold this week: 133.",
+            "Median sale price: $353,500. average days on market: 66. list to sale ratio: 98.0%.",
+            "Pending count is down by 24 versus last week. Watch for buyer hesitation."
+          ],
+          "chartTitle": "Median sale price, 12-month view",
+          "chart": [],
+          "sourceUrl": "",
+          "_internal": {
+            "pending_count": 694
+          }
+        },
+        "localNews": {
+          "headline": "Sioux Falls this week",
+          "items": [
+            {
+              "title": "Source unavailable",
+              "summary": "Source unavailable this week, check back next Sunday.",
+              "url": ""
+            }
+          ]
+        },
+        "realEstate": {
+          "headline": "Local development to watch",
+          "items": [
+            {
+              "title": "Source unavailable",
+              "summary": "Source unavailable this week, check back next Sunday.",
+              "url": ""
+            }
+          ]
+        },
+        "mortgage": {
+          "headline": "Rates and mortgage chatter",
+          "rate": null,
+          "summary": "Logan Mohtashami discussed labor data trends and mortgage rate implications in this podcast episode. The post does not report a specific 30-year fixed mortgage rate. Mohtashami noted that job data has not deteriorated as some predicted, which affects the outlook for rates going forward. The analysis focuses on economic context rather than current rate levels.",
+          "keyPoints": [
+            "Jobs data has remained more resilient than some forecasts predicted",
+            "Labor market strength influences mortgage rate direction",
+            "Current economic conditions require monitoring for rate trajectory"
+          ],
+          "sourceUrl": "https://loganmohtashami.com/2026/06/05/understanding-labor-market-effects-on-housing/"
+        },
+        "national": {
+          "headline": "National real estate news",
+          "items": [
+            {
+              "title": "Source unavailable",
+              "summary": "Source unavailable this week, check back next Sunday.",
+              "url": ""
+            }
+          ]
+        },
+        "partner": {
+          "spotlight": {
+            "name": "Jensen Insurance",
+            "category": "Home & life coverage",
+            "pitch": "Jensen Insurance provides home and life coverage options that protect Sioux Falls homeowners and their families. Agents use Jensen Insurance to help clients secure comprehensive protection for their properties and loved ones as part of a complete financial strategy.",
+            "contact": "Not provided in document"
+          },
+          "discounts": []
+        },
+        "events": {
+          "headline": "What's Coming Up at ASRE",
+          "items": [
+            {
+              "title": "Contract Training",
+              "when": "11 June 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Coaching w/ Marc",
+              "when": "11 June 2026 at 11:00 AM",
+              "where": "Zoom",
+              "notes": ""
+            },
+            {
+              "title": "Agent Coaching",
+              "when": "14 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "16 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "16 June 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "18 June 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "2 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "21 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "23 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "25 June 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "30 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "4 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "6 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "7 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "9 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Coaching w/ Marc",
+              "when": "9 July 2026 at 11:00 AM",
+              "where": "Zoom",
+              "notes": ""
+            },
+            {
+              "title": "Agent Coaching",
+              "when": "9 June 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            }
+          ]
+        },
+        "social": {
+          "headline": "Trending on IG and TikTok",
+          "items": [
+            {
+              "title": "🏠 Featured Luxury Walkthrough — @wasim.vierra",
+              "summary": "6.5 Million Views 🙏🏾🙏🏾 (7.1M plays, 96K likes)",
+              "url": "https://www.instagram.com/reel/DXZPsIbCEYP/"
+            },
+            {
+              "title": "@soren_170",
+              "summary": "Galti se reel bhej diya (12.9M plays)",
+              "url": "https://www.instagram.com/reel/DV2nM4fBJp9/"
+            },
+            {
+              "title": "@mr._tejaa_013",
+              "summary": "Save The Date 26/4/2026🫶👀\nShoot + edit :-@rajdeep_Photo & Film’s / cinematic_Sonyaa_23\n. (12.0M plays, 104K likes)",
+              "url": "https://www.instagram.com/reel/DXO5w2-MGBr/"
+            },
+            {
+              "title": "@manowar6519",
+              "summary": "Jharkhanidi Baba Viral Trending Bayan 2026 #jharkhandibaba #islamicshorts #trendingreels (9.7M plays, 533K likes)",
+              "url": "https://www.instagram.com/reel/DXKMuljAdZz/"
+            },
+            {
+              "title": "@xomon._",
+              "summary": "No disrespect to anyone!! Just for fun☺️\n. (7.7M plays, 463K likes)",
+              "url": "https://www.instagram.com/reel/DZA7_qhT2sK/"
+            }
+          ]
+        }
+      }
+    },
     {
       "weekId": "2026-W22",
       "weekLabel": "Week of May 25",
