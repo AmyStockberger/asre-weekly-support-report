@@ -1,7 +1,228 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-07T12:19:14Z",
+  "updatedAt": "2026-06-14T13:00:11Z",
   "reports": [
+    {
+      "weekId": "2026-W24",
+      "weekLabel": "Week of June 8",
+      "publishedAt": "2026-06-14",
+      "greeting": "Sioux Falls pending sales rose to 701 this week, up 7 from the previous week, signaling warming demand in the market. The median sale price sits at $318,950 with homes selling at 98.7% of list price. Active inventory stands at 1,468 properties.",
+      "podcastUrl": "https://raw.githubusercontent.com/AmyStockberger/asre-weekly-support-report/main/reports/audio/2026-W24.mp3",
+      "podcastDuration": "approx 4 min",
+      "sections": {
+        "marketStats": {
+          "headline": "Sioux Falls market stats this week",
+          "bullets": [
+            "Active: 1468. Pending: 701. Sold this week: 82.",
+            "Median sale price: $318,950. average days on market: 51. list to sale ratio: 98.7%.",
+            "Pending count is up by 7 versus last week. Demand is leaning warmer."
+          ],
+          "chartTitle": "Median sale price, 12-month view",
+          "chart": [],
+          "sourceUrl": "",
+          "_internal": {
+            "pending_count": 701
+          }
+        },
+        "localNews": {
+          "headline": "Sioux Falls this week",
+          "items": [
+            {
+              "title": "Latest News",
+              "summary": "Current business updates affecting the Sioux Falls market. Local developments shape agent awareness of market conditions.",
+              "url": "https://siouxfalls.business/latest-news/"
+            }
+          ]
+        },
+        "realEstate": {
+          "headline": "Local development to watch",
+          "items": [
+            {
+              "title": "Development",
+              "summary": "Commercial and residential construction projects impact property values and market opportunities. Agents track development timelines for client planning.",
+              "url": "https://siouxfalls.business/category/development/"
+            },
+            {
+              "title": "Real Estate",
+              "summary": "Direct coverage of residential and commercial property transactions and market trends. Agents reference market data from this category weekly.",
+              "url": "https://siouxfalls.business/category/real-estate/"
+            }
+          ]
+        },
+        "mortgage": {
+          "headline": "Rates and mortgage chatter",
+          "rate": null,
+          "summary": "The post does not report a specific 30-year fixed mortgage rate. Logan Mohtashami discusses oil prices, geopolitical events, and purchase application trends in relation to higher rates, but omits the actual rate figure needed for weekly market tracking.",
+          "keyPoints": [
+            "No specific mortgage rate provided in the post",
+            "Purchase applications continue rising despite higher rate environment",
+            "Post focuses on oil prices and geopolitical factors affecting markets"
+          ],
+          "sourceUrl": "https://loganmohtashami.com/2026/06/12/why-oil-prices-havent-increased-key-insights/"
+        },
+        "national": {
+          "headline": "National real estate news",
+          "items": [
+            {
+              "title": "Source unavailable",
+              "summary": "Source unavailable this week, check back next Sunday.",
+              "url": ""
+            }
+          ]
+        },
+        "partner": {
+          "spotlight": {
+            "name": "First Bank & Trust",
+            "category": "Lending & Wealth Services",
+            "pitch": "First Bank & Trust offers lending solutions and wealth management services for homeowners in Sioux Falls. The bank helps clients structure finances around home purchases, refinancing, and long-term wealth building.",
+            "contact": "Not provided"
+          },
+          "discounts": [
+            {
+              "partner": "Find a Home",
+              "offer": "Amy Stockberger Real Estate | Sioux Falls, SD Our Listings Our Open Houses Search All Listings Schedule an Appointment or Showing New Listing Alerts"
+            }
+          ]
+        },
+        "events": {
+          "headline": "What's Coming Up at ASRE",
+          "items": [
+            {
+              "title": "Agent Coaching",
+              "when": "11 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "13 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Coaching w/ Marc",
+              "when": "13 August 2026 at 11:00 AM",
+              "where": "Zoom",
+              "notes": ""
+            },
+            {
+              "title": "Agent Coaching",
+              "when": "14 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "16 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "16 June 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "18 June 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "2 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "21 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "23 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "25 June 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "30 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "4 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "6 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "7 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "9 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Coaching w/ Marc",
+              "when": "9 July 2026 at 11:00 AM",
+              "where": "Zoom",
+              "notes": ""
+            }
+          ]
+        },
+        "social": {
+          "headline": "Trending on IG and TikTok",
+          "items": [
+            {
+              "title": "🏠 Featured Luxury Walkthrough — @soldbytyler",
+              "summary": "Which would you choose? 🤔 DM me for all Buying, Selling, and Leasing in LA. (15.1M plays, 2.1M likes)",
+              "url": "https://www.instagram.com/reel/DYh59kksyVd/"
+            },
+            {
+              "title": "@queenchahat8",
+              "summary": "Diet plan 2026 ki 🥹❤️ (81.1M plays, 2.1M likes)",
+              "url": "https://www.instagram.com/reel/DW1JlUwgCLG/"
+            },
+            {
+              "title": "@iv_ysaurr",
+              "summary": "❤️‍🔥\n\n[ Relatable, Trending, Fashion, Outfit, Heels, Reel, viral ]\n\n#instagram #relatable #2026 #trending #grwm (56.7M plays, 3.0M likes)",
+              "url": "https://www.instagram.com/reel/DTCX7eBjDOR/"
+            },
+            {
+              "title": "@kavinskey_",
+              "summary": "Always obessed with this kinda weather🫶 (19.3M plays, 1.4M likes)",
+              "url": "https://www.instagram.com/reel/DWE-a85EhPh/"
+            },
+            {
+              "title": "@aakashsullaniyaofficial",
+              "summary": "Kuch nahi bas mirchi lagi\n. (9.9M plays, 145K likes)",
+              "url": "https://www.instagram.com/reel/DZi3iXlSBEO/"
+            }
+          ]
+        }
+      }
+    },
     {
       "weekId": "2026-W23",
       "weekLabel": "Week of June 1",
