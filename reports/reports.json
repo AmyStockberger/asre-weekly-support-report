@@ -1,7 +1,228 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-14T13:00:11Z",
+  "updatedAt": "2026-06-21T13:04:32Z",
   "reports": [
+    {
+      "weekId": "2026-W25",
+      "weekLabel": "Week of June 15",
+      "publishedAt": "2026-06-21",
+      "greeting": "Pending inventory dropped 19 units week-over-week to 682 active contracts, signaling potential buyer hesitation in the Sioux Falls market. The median sale price holds at $335,000 with 110 homes sold this week. Watch for how this inventory shift affects pricing and agent activity in the coming weeks.",
+      "podcastUrl": "https://raw.githubusercontent.com/AmyStockberger/asre-weekly-support-report/main/reports/audio/2026-W25.mp3",
+      "podcastDuration": "approx 4 min",
+      "sections": {
+        "marketStats": {
+          "headline": "Sioux Falls market stats this week",
+          "bullets": [
+            "Active: 1484. Pending: 682. Sold this week: 110.",
+            "Median sale price: $335,000. average days on market: 59. list to sale ratio: 98.5%.",
+            "Pending count is down by 19 versus last week. Watch for buyer hesitation."
+          ],
+          "chartTitle": "Median sale price, 12-month view",
+          "chart": [],
+          "sourceUrl": "",
+          "_internal": {
+            "pending_count": 682
+          }
+        },
+        "localNews": {
+          "headline": "Sioux Falls this week",
+          "items": [
+            {
+              "title": "Latest News",
+              "summary": "Sioux Falls business community updates cover current market activity and local economic conditions. Stories address developments affecting the broader business environment.",
+              "url": "https://siouxfalls.business/latest-news/"
+            }
+          ]
+        },
+        "realEstate": {
+          "headline": "Local development to watch",
+          "items": [
+            {
+              "title": "Development",
+              "summary": "Commercial and residential development projects shape Sioux Falls growth patterns. Projects report on construction timelines and property transformations.",
+              "url": "https://siouxfalls.business/category/development/"
+            },
+            {
+              "title": "Real Estate",
+              "summary": "Real estate market coverage tracks sales trends and property activity in Sioux Falls. Articles report on pricing movements and neighborhood changes.",
+              "url": "https://siouxfalls.business/category/real-estate/"
+            }
+          ]
+        },
+        "mortgage": {
+          "headline": "Rates and mortgage chatter",
+          "rate": null,
+          "summary": "The post discusses Fed Chair Kevin Warsh's potential impact on mortgage rates under a Trump administration but does not provide current mortgage rate data or week-over-week rate direction. Agents should seek rate information from other sources for this briefing period.",
+          "keyPoints": [
+            "Post focuses on Fed policy speculation rather than current market rates",
+            "No specific 30-year fixed mortgage rate reported",
+            "Rate movements and buyer impact details absent from this content"
+          ],
+          "sourceUrl": "https://loganmohtashami.com/2026/06/19/trump-and-warsh-impact-on-mortgage-rates/"
+        },
+        "national": {
+          "headline": "National real estate news",
+          "items": [
+            {
+              "title": "Source unavailable",
+              "summary": "Source unavailable this week, check back next Sunday.",
+              "url": ""
+            }
+          ]
+        },
+        "partner": {
+          "spotlight": {
+            "name": "Luminate Bank",
+            "category": "Lending & Financial Services",
+            "pitch": "Luminate Bank offers renovation and bridge loan products designed to help homeowners fund home improvements and navigate transitions between properties. These financing options support clients undertaking significant home upgrades or managing timing gaps during real estate transactions.",
+            "contact": "Contact Luminate Bank for details on renovation and bridge loan programs."
+          },
+          "discounts": [
+            {
+              "partner": "Find a Home",
+              "offer": "Amy Stockberger Real Estate | Sioux Falls, SD Our Listings Our Open Houses Search All Listings Schedule an Appointment or Showing New Listing Alerts"
+            }
+          ]
+        },
+        "events": {
+          "headline": "What's Coming Up at ASRE",
+          "items": [
+            {
+              "title": "Agent Coaching",
+              "when": "11 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "13 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Coaching w/ Marc",
+              "when": "13 August 2026 at 11:00 AM",
+              "where": "Zoom",
+              "notes": ""
+            },
+            {
+              "title": "Agent Coaching",
+              "when": "14 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "16 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "18 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "2 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "20 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "21 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "23 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "25 June 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "30 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "4 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "6 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "7 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "9 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Coaching w/ Marc",
+              "when": "9 July 2026 at 11:00 AM",
+              "where": "Zoom",
+              "notes": ""
+            }
+          ]
+        },
+        "social": {
+          "headline": "Trending on IG and TikTok",
+          "items": [
+            {
+              "title": "🏠 Featured Luxury Walkthrough — @concretecapital_",
+              "summary": "How big do you think the garage is? (23.1M plays, 1.4M likes)",
+              "url": "https://www.instagram.com/reel/DW5TYGrjMgY/"
+            },
+            {
+              "title": "@heyitsprishu",
+              "summary": "Pakke wala naraz😮‍💨\n\n[content creation, Reel, Viral, Explore, Trending, Mindset, Growth, Discipline, Consistency, Self Improvement, Life Lessons, Deep Though… (22.3M plays, 682K likes)",
+              "url": "https://www.instagram.com/reel/DWgjYmIkaXy/"
+            },
+            {
+              "title": "@mr._tejaa_013",
+              "summary": "Save The Date 26/4/2026🫶👀\nShoot + edit :-@rajdeep_Photo & Film’s / cinematic_Sonyaa_23\n. (13.7M plays, 114K likes)",
+              "url": "https://www.instagram.com/reel/DXO5w2-MGBr/"
+            },
+            {
+              "title": "@manowar6519",
+              "summary": "Jharkhanidi Baba Ka Viral Trending Bayan 2026 #jharkhandibaba #islamicshorts #trendingreels (10.6M plays, 541K likes)",
+              "url": "https://www.instagram.com/reel/DWby_y3jOP4/"
+            },
+            {
+              "title": "@ai.masterrr1",
+              "summary": "Siri Jaisi Voice Settings🔥😱\n. (4.4M plays, 81K likes)",
+              "url": "https://www.instagram.com/reel/DYzCAifB0bQ/"
+            }
+          ]
+        }
+      }
+    },
     {
       "weekId": "2026-W24",
       "weekLabel": "Week of June 8",
