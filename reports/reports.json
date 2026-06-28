@@ -1,7 +1,223 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-21T13:04:32Z",
+  "updatedAt": "2026-06-28T12:16:03Z",
   "reports": [
+    {
+      "weekId": "2026-W26",
+      "weekLabel": "Week of June 22",
+      "publishedAt": "2026-06-28",
+      "greeting": "Sioux Falls recorded 52 sales this week with a median price of $370,000 and a list-to-sale ratio of 98.8%. Pending inventory remained flat at 682 units. Average days on market sits at 68 days.",
+      "podcastUrl": "https://raw.githubusercontent.com/AmyStockberger/asre-weekly-support-report/main/reports/audio/2026-W26.mp3",
+      "podcastDuration": "approx 4 min",
+      "sections": {
+        "marketStats": {
+          "headline": "Sioux Falls market stats this week",
+          "bullets": [
+            "Active: 1484. Pending: 682. Sold this week: 52.",
+            "Median sale price: $370,000. average days on market: 68. list to sale ratio: 98.8%.",
+            "Pending count is flat versus last week. Steady week."
+          ],
+          "chartTitle": "Median sale price, 12-month view",
+          "chart": [],
+          "sourceUrl": "",
+          "_internal": {
+            "pending_count": 682
+          }
+        },
+        "localNews": {
+          "headline": "Sioux Falls this week",
+          "items": [
+            {
+              "title": "Source unavailable",
+              "summary": "Source unavailable this week, check back next Sunday.",
+              "url": ""
+            }
+          ]
+        },
+        "realEstate": {
+          "headline": "Local development to watch",
+          "items": [
+            {
+              "title": "Source unavailable",
+              "summary": "Source unavailable this week, check back next Sunday.",
+              "url": ""
+            }
+          ]
+        },
+        "mortgage": {
+          "headline": "Rates and mortgage chatter",
+          "rate": null,
+          "summary": "The post does not provide a specific 30-year fixed mortgage rate. Mohtashami discusses housing market conditions and construction data challenges but does not report current mortgage rates, week-over-week direction, or rate drivers.",
+          "keyPoints": [
+            "No mortgage rate data appears in this post",
+            "The post focuses on construction growth problems in the U.S. housing market",
+            "The content is promotional for HousingWire subscription services rather than a rate report"
+          ],
+          "sourceUrl": "https://loganmohtashami.com/2026/06/27/not-a-bad-week-for-housing-outside-construction/"
+        },
+        "national": {
+          "headline": "National real estate news",
+          "items": [
+            {
+              "title": "Source unavailable",
+              "summary": "Source unavailable this week, check back next Sunday.",
+              "url": ""
+            }
+          ]
+        },
+        "partner": {
+          "spotlight": {
+            "name": "Garage Living",
+            "category": "Outdoor Living & Summer Kickoff Prep",
+            "pitch": "Garage Living upgrades garage organization systems to maximize storage and functionality. Homeowners benefit from customized solutions that transform cluttered garages into organized, usable spaces. This service helps clients reclaim valuable storage area before summer entertaining season begins.",
+            "contact": "Contact information not provided in source document"
+          },
+          "discounts": [
+            {
+              "partner": "Find a Home",
+              "offer": "Amy Stockberger Real Estate | Sioux Falls, SD Our Listings Our Open Houses Search All Listings Schedule an Appointment or Showing New Listing Alerts"
+            }
+          ]
+        },
+        "events": {
+          "headline": "What's Coming Up at ASRE",
+          "items": [
+            {
+              "title": "Agent Coaching",
+              "when": "11 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "13 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Coaching w/ Marc",
+              "when": "13 August 2026 at 11:00 AM",
+              "where": "Zoom",
+              "notes": ""
+            },
+            {
+              "title": "Agent Coaching",
+              "when": "14 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "16 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "18 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "2 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "20 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "21 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "23 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "27 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "30 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "4 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "6 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "7 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "9 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Coaching w/ Marc",
+              "when": "9 July 2026 at 11:00 AM",
+              "where": "Zoom",
+              "notes": ""
+            }
+          ]
+        },
+        "social": {
+          "headline": "Trending on IG and TikTok",
+          "items": [
+            {
+              "title": "🏠 Featured Luxury Walkthrough — @soldbytyler",
+              "summary": "Which would you choose? 🤔 DM me for all Buying, Selling, and Leasing in LA. (18.0M plays, 2.5M likes)",
+              "url": "https://www.instagram.com/reel/DYh59kksyVd/"
+            },
+            {
+              "title": "@iryna.neuro",
+              "summary": "Главное правило 2026: не беси коня. (34.2M plays, 892K likes)",
+              "url": "https://www.instagram.com/reel/DRm5xG4iL3n/"
+            },
+            {
+              "title": "@rohit_tm_00",
+              "summary": "New reel 2026 @rohit_tm_00 (22.2M plays, 554K likes)",
+              "url": "https://www.instagram.com/reel/DSPPvDgEvtf/"
+            },
+            {
+              "title": "@indiasyndicate",
+              "summary": "Chetak Screen Awards 2026 creates viral moment on stage 🎬🔥🇮🇳\nThe Chetak Screen Awards 2026 is live right now and already grabbing massive attention online. (21.5M plays, 416K likes)",
+              "url": "https://www.instagram.com/reel/DWwk_C1FhH3/"
+            },
+            {
+              "title": "@uniquesongsmine",
+              "summary": "5 Pakistani Tracks That Went Viral in India This Year (4.2M plays)",
+              "url": "https://www.instagram.com/reel/DYM8ktbzMeZ/"
+            }
+          ]
+        }
+      }
+    },
     {
       "weekId": "2026-W25",
       "weekLabel": "Week of June 15",
