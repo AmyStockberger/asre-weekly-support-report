@@ -1,7 +1,234 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-28T12:16:03Z",
+  "updatedAt": "2026-07-05T12:13:26Z",
   "reports": [
+    {
+      "weekId": "2026-W27",
+      "weekLabel": "Week of June 29",
+      "publishedAt": "2026-07-05",
+      "greeting": "Sioux Falls inventory remains steady this week with 1,484 active listings and 682 pending sales flat versus the previous week. The median sale price holds at $370,000 with a list-to-sale ratio of 98.8%. Mortgage rates remain near yearly highs despite a missed jobs report, with multiple economic factors supporting elevated rate levels.",
+      "podcastUrl": "https://raw.githubusercontent.com/AmyStockberger/asre-weekly-support-report/main/reports/audio/2026-W27.mp3",
+      "podcastDuration": "approx 4 min",
+      "sections": {
+        "marketStats": {
+          "headline": "Sioux Falls market stats this week",
+          "bullets": [
+            "Active: 1484. Pending: 682. Sold this week: 52.",
+            "Median sale price: $370,000. average days on market: 68. list to sale ratio: 98.8%.",
+            "Pending count is flat versus last week. Steady week."
+          ],
+          "chartTitle": "Median sale price, 12-month view",
+          "chart": [],
+          "sourceUrl": "",
+          "_internal": {
+            "pending_count": 682
+          }
+        },
+        "localNews": {
+          "headline": "Sioux Falls this week",
+          "items": [
+            {
+              "title": "Latest News",
+              "summary": "General business news updates for Sioux Falls. Covers current market conditions and business activity.",
+              "url": "https://siouxfalls.business/latest-news/"
+            },
+            {
+              "title": "Retail",
+              "summary": "Retail sector developments in Sioux Falls market. Tracks store openings and closings affecting commercial corridors.",
+              "url": "https://siouxfalls.business/category/retail/"
+            }
+          ]
+        },
+        "realEstate": {
+          "headline": "Local development to watch",
+          "items": [
+            {
+              "title": "Development",
+              "summary": "Real estate development projects across Sioux Falls. Documents new construction and major site transformations.",
+              "url": "https://siouxfalls.business/category/development/"
+            }
+          ]
+        },
+        "mortgage": {
+          "headline": "Rates and mortgage chatter",
+          "rate": null,
+          "summary": "The post discusses mortgage rate movements following the jobs report but does not provide a specific 30-year fixed rate. Mohtashami notes that rates remain near yearly highs despite a missed jobs report, indicating that other economic factors are supporting elevated rate levels. Agents should track the podcast for detailed rate context and economic drivers affecting buyer demand.",
+          "keyPoints": [
+            "Jobs report missed expectations but did not push rates lower",
+            "Mortgage rates remain near yearly highs",
+            "Multiple economic factors beyond employment data influence rate movement"
+          ],
+          "sourceUrl": "https://loganmohtashami.com/2026/07/03/analyzing-mortgage-rates-post-jobs-report-key-insights/"
+        },
+        "national": {
+          "headline": "National real estate news",
+          "items": [
+            {
+              "title": "Source unavailable",
+              "summary": "Source unavailable this week, check back next Sunday.",
+              "url": ""
+            }
+          ]
+        },
+        "partner": {
+          "spotlight": {
+            "name": "All Around Surfaces",
+            "category": "Outdoor Living & Summer Kickoff Prep",
+            "pitch": "All Around Surfaces applies garage and patio coatings that protect concrete and enhance outdoor spaces. These durable finishes withstand Sioux Falls weather while improving the appearance of driveways, patios, and garage floors. Homeowners protect their investment and create cleaner, more attractive outdoor areas.",
+            "contact": "Not provided"
+          },
+          "discounts": [
+            {
+              "partner": "Find a Home",
+              "offer": "Amy Stockberger Real Estate | Sioux Falls, SD Our Listings Our Open Houses Search All Listings Schedule an Appointment or Showing New Listing Alerts"
+            }
+          ]
+        },
+        "events": {
+          "headline": "What's Coming Up at ASRE",
+          "items": [
+            {
+              "title": "Team Meeting",
+              "when": "1 September 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Agent Coaching",
+              "when": "11 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "13 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Coaching w/ Marc",
+              "when": "13 August 2026 at 11:00 AM",
+              "where": "Zoom",
+              "notes": ""
+            },
+            {
+              "title": "Agent Coaching",
+              "when": "14 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "16 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "18 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "20 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "21 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "23 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "27 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "3 September 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "30 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "4 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "6 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "7 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "9 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Coaching w/ Marc",
+              "when": "9 July 2026 at 11:00 AM",
+              "where": "Zoom",
+              "notes": ""
+            }
+          ]
+        },
+        "social": {
+          "headline": "Trending on IG and TikTok",
+          "items": [
+            {
+              "title": "🏠 Featured Luxury Walkthrough — @marymartinrealestate",
+              "summary": "Back and forth of a negotiation, because here’s the truth about real estate:⁣ (6.5M plays)",
+              "url": "https://www.instagram.com/reel/DW4JbAltOAj/"
+            },
+            {
+              "title": "@aakashsullaniyaofficial",
+              "summary": "Kuch nahi bas mirchi lagi\n. (45.4M plays, 700K likes)",
+              "url": "https://www.instagram.com/reel/DZi3iXlSBEO/"
+            },
+            {
+              "title": "@sursangini.music",
+              "summary": "Most requested reel 😌✨\n\nOriginal singers : @sheheryarrehanmusic @imzohawaseem \n\nThankyou for all the love and support! (36.3M plays, 2.1M likes)",
+              "url": "https://www.instagram.com/reel/DXjkrIrCdVU/"
+            },
+            {
+              "title": "@shouvikdattabanik123",
+              "summary": "On Saturday, April 11, 2026 07:12 AM IST Shouvik Datta Banik @shouvikdattabanik123 brings your morning updates! (18.4M plays, 348K likes)",
+              "url": "https://www.instagram.com/reel/DW-pcxmSxio/"
+            },
+            {
+              "title": "@mr._tejaa_013",
+              "summary": "Save The Date 26/4/2026🫶👀\nShoot + edit :-@rajdeep_Photo & Film’s / cinematic_Sonyaa_23\n. (14.6M plays, 119K likes)",
+              "url": "https://www.instagram.com/reel/DXO5w2-MGBr/"
+            }
+          ]
+        }
+      }
+    },
     {
       "weekId": "2026-W26",
       "weekLabel": "Week of June 22",
