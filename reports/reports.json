@@ -1,7 +1,228 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-05T12:13:26Z",
+  "updatedAt": "2026-07-12T11:56:37Z",
   "reports": [
+    {
+      "weekId": "2026-W28",
+      "weekLabel": "Week of July 6",
+      "publishedAt": "2026-07-12",
+      "greeting": "Pending inventory declined 60 units this week, dropping to 622 active pending sales. Monitor buyer activity closely as market conditions shift. Median sale price holds at $346,000 with homes selling at 99.2% of list price.",
+      "podcastUrl": "https://raw.githubusercontent.com/AmyStockberger/asre-weekly-support-report/main/reports/audio/2026-W28.mp3",
+      "podcastDuration": "approx 4 min",
+      "sections": {
+        "marketStats": {
+          "headline": "Sioux Falls market stats this week",
+          "bullets": [
+            "Active: 1515. Pending: 622. Sold this week: 71.",
+            "Median sale price: $346,000. average days on market: 69. list to sale ratio: 99.2%.",
+            "Pending count is down by 60 versus last week. Watch for buyer hesitation."
+          ],
+          "chartTitle": "Median sale price, 12-month view",
+          "chart": [],
+          "sourceUrl": "",
+          "_internal": {
+            "pending_count": 622
+          }
+        },
+        "localNews": {
+          "headline": "Sioux Falls this week",
+          "items": [
+            {
+              "title": "Latest News",
+              "summary": "Sioux Falls business community reports current market conditions and economic activity. Local businesses share updates on operations and growth.",
+              "url": "https://siouxfalls.business/latest-news/"
+            },
+            {
+              "title": "Health Care",
+              "summary": "Health care sector in Sioux Falls experiences expansion and facility improvements. Provider organizations invest in infrastructure and services.",
+              "url": "https://siouxfalls.business/category/healthcare/"
+            }
+          ]
+        },
+        "realEstate": {
+          "headline": "Local development to watch",
+          "items": [
+            {
+              "title": "Development",
+              "summary": "Commercial and residential development projects move forward in Sioux Falls. Construction activity increases across multiple districts.",
+              "url": "https://siouxfalls.business/category/development/"
+            }
+          ]
+        },
+        "mortgage": {
+          "headline": "Rates and mortgage chatter",
+          "rate": null,
+          "summary": "The post discusses home price records and affordability trends but does not report a specific 30-year fixed mortgage rate. Logan Mohtashami addresses the narrative around all-time high home prices and flat affordability gains over two years despite wage growth outpacing home price increases. Without rate data in this piece, agents lack current mortgage rate information to assess buyer purchasing power this week.",
+          "keyPoints": [
+            "No 30-year mortgage rate reported in this post",
+            "Post focuses on affordability narrative rather than current rate environment",
+            "Agents need to reference other sources for this week's mortgage rate data"
+          ],
+          "sourceUrl": "https://loganmohtashami.com/2026/07/10/how-wage-growth-affects-housing-affordability/"
+        },
+        "national": {
+          "headline": "National real estate news",
+          "items": [
+            {
+              "title": "Source unavailable",
+              "summary": "Source unavailable this week, check back next Sunday.",
+              "url": ""
+            }
+          ]
+        },
+        "partner": {
+          "spotlight": {
+            "name": "Sioux Falls Concrete Lifting",
+            "category": "Outdoor Living & Summer Prep",
+            "pitch": "Sioux Falls Concrete Lifting repairs and restores driveways and patios that settle or crack over time. This service helps homeowners extend the life of concrete surfaces and improve curb appeal before summer entertaining season. Professional concrete lifting costs less than replacement and produces faster results.",
+            "contact": "Not provided in document"
+          },
+          "discounts": [
+            {
+              "partner": "Find a Home",
+              "offer": "Access to Sioux Falls, SD listings, open house schedules, and new listing alerts through Amy Stockberger Real Estate"
+            }
+          ]
+        },
+        "events": {
+          "headline": "What's Coming Up at ASRE",
+          "items": [
+            {
+              "title": "Team Meeting",
+              "when": "1 September 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "10 September 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Coaching w/ Marc",
+              "when": "10 September 2026 at 11:00 AM",
+              "where": "Zoom",
+              "notes": ""
+            },
+            {
+              "title": "Agent Coaching",
+              "when": "11 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "13 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Coaching w/ Marc",
+              "when": "13 August 2026 at 11:00 AM",
+              "where": "Zoom",
+              "notes": ""
+            },
+            {
+              "title": "Agent Coaching",
+              "when": "14 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "16 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "18 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "20 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "21 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "23 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "27 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "3 September 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "30 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "4 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "6 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            }
+          ]
+        },
+        "social": {
+          "headline": "Trending on IG and TikTok",
+          "items": [
+            {
+              "title": "🏠 Featured Luxury Walkthrough — @soldbytyler",
+              "summary": "Which would you choose? 🤔 DM me for all Buying, Selling, and Leasing in LA. (18.9M plays, 2.6M likes)",
+              "url": "https://www.instagram.com/reel/DYh59kksyVd/"
+            },
+            {
+              "title": "@sursangini.music",
+              "summary": "Most requested reel 😌✨\n\nOriginal singers : @sheheryarrehanmusic @imzohawaseem \n\nThankyou for all the love and support! (36.6M plays, 2.1M likes)",
+              "url": "https://www.instagram.com/reel/DXjkrIrCdVU/"
+            },
+            {
+              "title": "@mr._tejaa_013",
+              "summary": "Save The Date 26/4/2026🫶👀\nShoot + edit :-@rajdeep_Photo & Film’s / cinematic_Sonyaa_23\n. (14.8M plays, 119K likes)",
+              "url": "https://www.instagram.com/reel/DXO5w2-MGBr/"
+            },
+            {
+              "title": "@saifithework",
+              "summary": "Pacho Aik Sath 🫣\n.\n.\n.\n.\n#siyagoyal #ketanagarwal #murder #muskan #relatable \n.\n.\n.\n.\n( pune murder case, muskan, niladram, drshejal, meme, kalachasma, song,… (8.3M plays)",
+              "url": "https://www.instagram.com/reel/DaBJpJsKIac/"
+            },
+            {
+              "title": "@jass_sika_",
+              "summary": "Fire up in 5 seconds ✨🔥 (8.0M plays, 243K likes)",
+              "url": "https://www.instagram.com/reel/DXHWF-kCQev/"
+            }
+          ]
+        }
+      }
+    },
     {
       "weekId": "2026-W27",
       "weekLabel": "Week of June 29",
