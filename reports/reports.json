@@ -1,7 +1,223 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-12T11:56:37Z",
+  "updatedAt": "2026-07-19T11:54:14Z",
   "reports": [
+    {
+      "weekId": "2026-W29",
+      "weekLabel": "Week of July 13",
+      "publishedAt": "2026-07-19",
+      "greeting": "Pending inventory rose to 623 units in Sioux Falls this week, up one from last week. The median sale price holds at $357,500 with a list-to-sale ratio of 98.1%. Mortgage rates remain a focal point for agents tracking buyer behavior, with 6.64% identified as a key threshold for assessing demand patterns.",
+      "podcastUrl": "https://raw.githubusercontent.com/AmyStockberger/asre-weekly-support-report/main/reports/audio/2026-W29.mp3",
+      "podcastDuration": "approx 4 min",
+      "sections": {
+        "marketStats": {
+          "headline": "Sioux Falls market stats this week",
+          "bullets": [
+            "Active: 1558. Pending: 623. Sold this week: 90.",
+            "Median sale price: $357,500. average days on market: 66. list to sale ratio: 98.1%.",
+            "Pending count is up by 1 versus last week. Demand is leaning warmer."
+          ],
+          "chartTitle": "Median sale price, 12-month view",
+          "chart": [],
+          "sourceUrl": "",
+          "_internal": {
+            "pending_count": 623
+          }
+        },
+        "localNews": {
+          "headline": "Sioux Falls this week",
+          "items": [
+            {
+              "title": "Source unavailable",
+              "summary": "Source unavailable this week, check back next Sunday.",
+              "url": ""
+            }
+          ]
+        },
+        "realEstate": {
+          "headline": "Local development to watch",
+          "items": [
+            {
+              "title": "Source unavailable",
+              "summary": "Source unavailable this week, check back next Sunday.",
+              "url": ""
+            }
+          ]
+        },
+        "mortgage": {
+          "headline": "Rates and mortgage chatter",
+          "rate": null,
+          "summary": "Logan Mohtashami identifies 6.64% as a critical threshold for mortgage rates since late 2022, questioning whether housing demand grows when rates remain above this level. The post does not provide current week-over-week rate direction or what specific factors moved rates this week. Agents should note that 6.64% represents a key psychological and market resistance point that has influenced buyer behavior patterns.",
+          "keyPoints": [
+            "6.64% serves as the key rate threshold since late 2022 for assessing housing demand",
+            "Post does not report this week's current 30-year fixed rate or week-over-week movement",
+            "Focus shifts to whether buyer demand sustains when rates hold above the established benchmark"
+          ],
+          "sourceUrl": "https://loganmohtashami.com/2026/07/17/will-housing-demand-rise-despite-higher-rates/"
+        },
+        "national": {
+          "headline": "National real estate news",
+          "items": [
+            {
+              "title": "Source unavailable",
+              "summary": "Source unavailable this week, check back next Sunday.",
+              "url": ""
+            }
+          ]
+        },
+        "partner": {
+          "spotlight": {
+            "name": "Ace Hardware",
+            "category": "Home Improvement & Project Supplies",
+            "pitch": "Ace Hardware provides homeowners with tools, materials, and rental equipment for outdoor and indoor projects. Whether preparing for seasonal updates or tackling backyard improvements, customers find what they need to complete projects efficiently.",
+            "contact": "Local Sioux Falls Ace Hardware locations"
+          },
+          "discounts": [
+            {
+              "partner": "Find a Home",
+              "offer": "Amy Stockberger Real Estate | Sioux Falls, SD Our Listings Our Open Houses Search All Listings Schedule an Appointment or Showing New Listing Alerts"
+            }
+          ]
+        },
+        "events": {
+          "headline": "What's Coming Up at ASRE",
+          "items": [
+            {
+              "title": "Team Meeting",
+              "when": "1 September 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "10 September 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Coaching w/ Marc",
+              "when": "10 September 2026 at 11:00 AM",
+              "where": "Zoom",
+              "notes": ""
+            },
+            {
+              "title": "Agent Coaching",
+              "when": "11 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "13 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Coaching w/ Marc",
+              "when": "13 August 2026 at 11:00 AM",
+              "where": "Zoom",
+              "notes": ""
+            },
+            {
+              "title": "Agent Coaching",
+              "when": "15 September 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "17 September 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "18 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "20 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "21 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "23 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "27 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "3 September 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "30 July 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "4 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "6 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            }
+          ]
+        },
+        "social": {
+          "headline": "Trending on IG and TikTok",
+          "items": [
+            {
+              "title": "🏠 Featured Luxury Walkthrough — @shoolin_properties",
+              "summary": "@shoolin_properties  150 sqyd modern house for sale in sector 124 sunny enclave near 200ft road (52.7M plays, 1.9M likes)",
+              "url": "https://www.instagram.com/reel/DFAdoctyBHJ/"
+            },
+            {
+              "title": "@apk_s0",
+              "summary": "Pehli baar iti ka sahi istemal 😅 #comedy #instagood #funnyvideos #viral #trending #funny #foryou #comedyvideos #prank #2026 #fun #reels (22.5M plays, 358K likes)",
+              "url": "https://www.instagram.com/reel/DR4drCsEiKx/"
+            },
+            {
+              "title": "@rohit_tm_00",
+              "summary": "New reel 2026 @rohit_tm_00 (22.2M plays, 553K likes)",
+              "url": "https://www.instagram.com/reel/DSPPvDgEvtf/"
+            },
+            {
+              "title": "@vivek_yadav_masti",
+              "summary": "Night enjoy😂…\n@vivek_yadav_masti \n\n#2008 #2026 #viral \n#explore #explorepage #reels \n#bhojpurireels #short #trending (11.2M plays, 584K likes)",
+              "url": "https://www.instagram.com/reel/DSlfm_UkvrT/"
+            },
+            {
+              "title": "@ii.am.parax",
+              "summary": "silence is the...!🤫💯\n.\n.\n@ii.am.parax follow for more 💯\n.\n.\n.\n.\n.\n#trending \n#reelitfeelit \n#instagood \n#2026 \n#viral \n.\n.\n.\n.\n.\ninstagram model barbers make… (6.1M plays, 325K likes)",
+              "url": "https://www.instagram.com/reel/Da7MU5rTgJ9/"
+            }
+          ]
+        }
+      }
+    },
     {
       "weekId": "2026-W28",
       "weekLabel": "Week of July 6",
