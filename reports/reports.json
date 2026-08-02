@@ -1,7 +1,223 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-26T12:00:32Z",
+  "updatedAt": "2026-08-02T11:59:12Z",
   "reports": [
+    {
+      "weekId": "2026-W31",
+      "weekLabel": "Week of July 27",
+      "publishedAt": "2026-08-02",
+      "greeting": "ASRE Weekly Support Report\nWeek of July 27\n\nPending inventory rose to 629 units, up 9 from the prior week, signaling warmer buyer demand in the Sioux Falls market. Active listings stand at 1577 with a median sale price of $365,000. Agents sold 79 properties this week with homes moving at 98.1% of list price.",
+      "podcastUrl": "https://raw.githubusercontent.com/AmyStockberger/asre-weekly-support-report/main/reports/audio/2026-W31.mp3",
+      "podcastDuration": "approx 4 min",
+      "sections": {
+        "marketStats": {
+          "headline": "Sioux Falls market stats this week",
+          "bullets": [
+            "Active: 1577. Pending: 629. Sold this week: 79.",
+            "Median sale price: $365,000. average days on market: 51. list to sale ratio: 98.1%.",
+            "Pending count is up by 9 versus last week. Demand is leaning warmer."
+          ],
+          "chartTitle": "Median sale price, 12-month view",
+          "chart": [],
+          "sourceUrl": "",
+          "_internal": {
+            "pending_count": 629
+          }
+        },
+        "localNews": {
+          "headline": "Sioux Falls this week",
+          "items": [
+            {
+              "title": "Health Care",
+              "summary": "Health care sector continues expansion in Sioux Falls market. New facilities and services address regional demand.",
+              "url": "https://siouxfalls.business/category/healthcare/"
+            },
+            {
+              "title": "Retail",
+              "summary": "Retail businesses report activity across Sioux Falls commercial corridors. Store openings and closures shape local shopping patterns.",
+              "url": "https://siouxfalls.business/category/retail/"
+            }
+          ]
+        },
+        "realEstate": {
+          "headline": "Local development to watch",
+          "items": [
+            {
+              "title": "Development",
+              "summary": "Development projects advance across Sioux Falls with mixed-use and residential components. Construction timelines and project details emerge.",
+              "url": "https://siouxfalls.business/category/development/"
+            }
+          ]
+        },
+        "mortgage": {
+          "headline": "Rates and mortgage chatter",
+          "rate": null,
+          "summary": "The post does not contain a specific 30-year fixed mortgage rate. Logan Mohtashami discusses the Fed's recent press event and announcement but does not provide current mortgage rate data, week-over-week direction, or rate movement information. Agents should consult other sources for current rate figures and market impact.",
+          "keyPoints": [
+            "No specific mortgage rate data provided in this post",
+            "Content focuses on Fed announcement clarification rather than mortgage market metrics",
+            "Agents need separate sources for current rate information and borrowing conditions"
+          ],
+          "sourceUrl": "https://loganmohtashami.com/2026/07/30/understanding-the-feds-latest-announcement-key-insights/"
+        },
+        "national": {
+          "headline": "National real estate news",
+          "items": [
+            {
+              "title": "Source unavailable",
+              "summary": "Source unavailable this week, check back next Sunday.",
+              "url": ""
+            }
+          ]
+        },
+        "partner": {
+          "spotlight": {
+            "name": "Sioux Falls Concrete Lifting",
+            "category": "Outdoor Living & Home Services",
+            "pitch": "Sioux Falls Concrete Lifting repairs and restores driveways, patios, and concrete surfaces that settle or crack over time. The company uses concrete lifting techniques to level surfaces and prevent further damage. Homeowners benefit from safer outdoor spaces and improved curb appeal without costly replacement.",
+            "contact": "Not provided in document"
+          },
+          "discounts": []
+        },
+        "events": {
+          "headline": "What's Coming Up at ASRE",
+          "items": [
+            {
+              "title": "Contract Training",
+              "when": "1 October 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "1 September 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "10 September 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Coaching w/ Marc",
+              "when": "10 September 2026 at 11:00 AM",
+              "where": "Zoom",
+              "notes": ""
+            },
+            {
+              "title": "Agent Coaching",
+              "when": "11 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "13 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Coaching w/ Marc",
+              "when": "13 August 2026 at 11:00 AM",
+              "where": "Zoom",
+              "notes": ""
+            },
+            {
+              "title": "Agent Coaching",
+              "when": "15 September 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "17 September 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "18 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "20 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "22 September 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "24 September 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "27 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "3 September 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Team Meeting",
+              "when": "4 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            },
+            {
+              "title": "Contract Training",
+              "when": "6 August 2026 at 10:30 AM",
+              "where": "ASRE Training Room",
+              "notes": ""
+            }
+          ]
+        },
+        "social": {
+          "headline": "Trending on IG and TikTok",
+          "items": [
+            {
+              "title": "🏠 Featured Luxury Walkthrough — @ca_mayur_mehta",
+              "summary": "The goal isn’t to work harder forever. (3.6M plays, 105K likes)",
+              "url": "https://www.instagram.com/reel/Da70aq6scRn/"
+            },
+            {
+              "title": "@proudthanekars",
+              "summary": "2nd August 2026 It’s very special day for our friendship 🫂❤️‍🩹 (25.4M plays, 1.1M likes)",
+              "url": "https://www.instagram.com/reel/Dbe7irDINPK/"
+            },
+            {
+              "title": "@abhishek_own_voice",
+              "summary": "✨🔥 KEYWORDS 🔥✨\nInViral Reels Boost\nUltra Trending Reel\nExplore Page Viral\nMassive Reach Boost\nViral Content 2026\n\n✨📈 HASHTAGS 📈✨\n#viral #reels #trending #fyp… (12.6M plays, 373K likes)",
+              "url": "https://www.instagram.com/reel/DbNfH3ru9L_/"
+            },
+            {
+              "title": "@curivo.iio",
+              "summary": "The post features a 10-second viral billiards clip where red balls are neatly arranged to spell “HAPPY 2026” on a green pool table. (5.4M plays, 144K likes)",
+              "url": "https://www.instagram.com/reel/DS9HiRvkz8e/"
+            },
+            {
+              "title": "@_0qnk",
+              "summary": "• \nAt the 2026 Joy Awards held in Riyadh as part of Riyadh Season, Turkish star Hande Erçel surprised the audience by speaking a few simple Arabic words whil… (5.4M plays, 360K likes)",
+              "url": "https://www.instagram.com/reel/Dad7GJ3MRrf/"
+            }
+          ]
+        }
+      }
+    },
     {
       "weekId": "2026-W30",
       "weekLabel": "Week of July 20",
